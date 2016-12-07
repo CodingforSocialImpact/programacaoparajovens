@@ -32,7 +32,7 @@ O Sense HAT tem a possibilidade de sentir uma grande variedade de condições e 
 Se ainda não compraste o teu Sense HAT, não tem mal!
 Podes começar a explorar as suas funcionalidades no emulador.
 
-<div>
+<div class="intrinsic-container">
 <iframe src="https://trinket.io/embed/python/1917547125" allowfullscreen></iframe>
 </div>
 
