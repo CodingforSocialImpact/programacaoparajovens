@@ -1,6 +1,6 @@
 ## Ligar LEDs com o Raspberry Pi
 
-O  Raspberry Pi pode ser ligado a componentes externos, tais como lâmpadas, sensores, motores, etc., e pode ser programado em várias linguagens, desde linguagens simples e introdutórias, como o Scratch, até linguagens profissionais, como o Python.
+O  Raspberry Pi pode ser ligado a componentes externos, tais como lâmpadas, sensores, motores, etc., e pode ser programado em várias linguagens, desde linguagens simples e introdutórias, como o Scratch, até linguagens profissionais, como o Python.
 
 ![](https://www.raspberrypi.org/documentation/usage/gpio/images/gpio-led.png)
 
@@ -11,7 +11,7 @@ Ao percorreres este desafio vais aprender:
 * Princípios básicos de eletrónica e montar um sistema eletrónico simples, com recurso a uma Breadboard, LEDs e resistências
 * Explorar como o RPi pode alimentar e controlar um sistema eletrónico externo com recurso aos pinos GPIO e a linha de comandos (`Shell`) do RPi
 
-Duração da atividade: `30 minutos.`
+Duração da atividade: `90 minutos.`
 
 ### Material
 
