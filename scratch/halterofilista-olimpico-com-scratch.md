@@ -1,9 +1,8 @@
 # Halterofilista Olímpico com Scratch
 
-Cria uma Cabine de Fotografias no Minecraft com blocos, quando o jogador entrar na cabine tira uma fotografia tua no mundo real.  
-Não te esqueças de sorrir!
+Com este tutorial vais conseguir desenvolver um jogo de levantamento de pesos com Scratch, usando para isso o teclado ou butões ligados ao teu Raspberry Pi.
 
-![](https://www.raspberrypi.org/learning/resources/minecraft-photobooth/cover.png)
+![](https://www.raspberrypi.org/learning/resources/scratch-olympics-weightlifter/cover.png)
 
 ### Objetivos
 
