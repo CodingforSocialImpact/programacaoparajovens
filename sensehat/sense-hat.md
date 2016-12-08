@@ -40,9 +40,6 @@ Podes começar a explorar as suas funcionalidades no emulador.
 <iframe src="https://trinket.io/embed/python/1917547125" height="450" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 
-<iframe src="https://trinket.io/embed/python/1917547125" height="450" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-
-
 ---
 Referências:
 * [A Guide to Astro Pi](https://www.raspberrypi.org/learning/astro-pi-guide/)
