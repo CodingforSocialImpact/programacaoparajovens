@@ -8,10 +8,10 @@ Com este tutorial vais conseguir desenvolver um jogo de levantamento de pesos co
 
 Ao percorreres este desafio vais aprender:
 
-* Como controlar o mundo do Minecraft com a API do Python
-* Como encontrar as coordenadas `x`,`y` e `z`
-* Como usar as coordenadas para desencadear o módulo da câmara
-* Como usar funções, ciclos `while`, e declarações `if`
+* Como animar disfarces no Scratch
+* Como usar seleção condicional e operadores booleanos para criares alterações no programa
+* Como usar ciclos condicionais num jogo
+* Como usar botões físicos no Scratch
 
 Duração da atividade: `90 minutos.`
 
@@ -20,7 +20,9 @@ Duração da atividade: `90 minutos.`
 | Nome | Quantidade | Preço |
 | --- | --- | --- |
 |Raspberry Pi |1 |35€ |
-|Pi Camera |1 |25€ |
+|Butão (opcional) |2 |1€ |
+|Breadboard (opcional) |1 |2,5€ |
+|Fios de ligação (opcional) |4 |0.5€ |
 
 ## Título
 ---
