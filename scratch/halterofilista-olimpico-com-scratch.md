@@ -20,7 +20,7 @@ Duração da atividade: `90 minutos.`
 | Nome | Quantidade | Preço |
 | --- | --- | --- |
 |Raspberry Pi |1 |35€ |
-|Butão (opcional) |2 |1€ |
+|Botão (opcional) |2 |1€ |
 |Breadboard (opcional) |1 |2,5€ |
 |Fios de ligação (opcional) |4 |0.5€ |
 
