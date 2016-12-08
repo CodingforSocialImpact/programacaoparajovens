@@ -1,10 +1,10 @@
 # Summary
 
 * [Introdução](README.md)
-* [Scratch](scratch/scratch.md)
-  * [Halterofilista Olímpico com Scratch](scratch/halterofilista-olimpico-com-scratch.md)
 * [Raspberry Pi](raspberrypi/raspberry-pi.md)
   * [Ligar LEDs com o Raspbeery Pi](raspberrypi/ligar-leds-com-raspberry-pi.md)
+* [Scratch](scratch/scratch.md)
+  * [Halterofilista Olímpico com Scratch](scratch/halterofilista-olimpico-com-scratch.md)
 * [Sense HAT](sensehat/sense-hat.md)
   * [Brilho Aleatório com Sense HAT](sensehat/brilho-aleatorio-com-sense-hat.md)
   * [Animal de pixeis interativo](sensehat/animal-de-pixeis-interativo.md)
