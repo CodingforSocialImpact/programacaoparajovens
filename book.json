@@ -3,6 +3,7 @@
         "responsive-iframes",
         "youtube",
         "-fontsettings",
-        "favicon"
+        "favicon",
+        "autosize-iframe"
     ]
 }
