@@ -3,6 +3,8 @@
 Um computador é uma máquina capaz de realizar tratamento automático de dados.
 O  Raspberry Pi (RPi) é um computador do tamanho de um cartão de crédito, todo integrado numa única placa, desenvolvido no Reino Unido pela Fundação Raspberry Pi.
 
+{% youtube %}https://www.youtube.com/watch?v=uXUjwk2-qx4{% endyoutube %}
+
 ### Componentes
 
 Os principais componentes de um computador são os seguintes:
@@ -38,8 +40,6 @@ A memória principal tem tamanhos inferiores ao dos discos rígidos, porque e�
  5. CSI
  6. GPIO: pinos usados para ligar outros dispositivos, envia corrente elétrica.
 5. LED de estado
-
-{% youtube %}https://www.youtube.com/watch?v=uXUjwk2-qx4{% endyoutube %}
 
 ### Ligar o Raspberry Pi
 
