@@ -1,6 +1,5 @@
 {
     "plugins": [
-        "responsive-iframes",
         "youtube",
         "-fontsettings",
         "favicon",
