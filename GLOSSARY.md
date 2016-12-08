@@ -22,6 +22,8 @@ Red Green Blue (Vermelho Verde Azul)
 ## Display
 Mostrador
 
+## Hardware
+
 ## Breadboard
 
 Uma breadboard permite-te desenhar um circuito de um modo organizado e não permanente.
