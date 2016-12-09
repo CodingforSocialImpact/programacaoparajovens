@@ -76,7 +76,17 @@ gpio –g write 18 0
 
 ### Programar LEDs com Scratch
 
+![](https://www.raspberrypi.org/learning/physical-computing-guide/images/scratch-icon.png)
 
+![](https://www.raspberrypi.org/learning/physical-computing-guide/images/Scratch-interface.png)
+
+![](https://www.raspberrypi.org/learning/physical-computing-guide/images/green_flag.png)
+
+![](https://www.raspberrypi.org/learning/physical-computing-guide/images/scratch_config.png)
+
+![](https://www.raspberrypi.org/learning/physical-computing-guide/images/green_flag_icon.png)
+
+![](https://www.raspberrypi.org/learning/physical-computing-guide/images/scratch_complete.png)
 
 ### Programar LEDs com Python
 
