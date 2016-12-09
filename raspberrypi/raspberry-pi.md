@@ -1,11 +1,11 @@
-## O que é o Raspberry Pi?
+# O que é o Raspberry Pi?
 
 Um computador é uma máquina capaz de realizar tratamento automático de dados.
 O  Raspberry Pi (RPi) é um computador do tamanho de um cartão de crédito, todo integrado numa única placa, desenvolvido no Reino Unido pela Fundação Raspberry Pi.
 
 {% youtube %}https://www.youtube.com/watch?v=uXUjwk2-qx4{% endyoutube %}
 
-### Componentes
+## Componentes
 
 Os principais componentes de um computador são os seguintes:
 
@@ -15,7 +15,7 @@ Os principais componentes de um computador são os seguintes:
 * Disco Rígido ou Sólido
 * Dispositivos de entrada + saída: monitor, teclado, rato
 
-### Como funciona
+## Como funciona
 
 Tudo funciona à base de 0’s e 1’s. Por isso o computador está cheio de pequenos interruptores que deixam passar corrente, ou não – os transístores. Se houver corrente é um 1, se não houver é um 0.
 
@@ -27,7 +27,7 @@ Tudo funciona à base de 0’s e 1’s. Por isso o computador está cheio de p
 
 A memória principal tem tamanhos inferiores ao dos discos rígidos, porque é muito mais cara. Mas é necessária porque é extremamente mais rápida.
 
-### E no Raspberry Pi?
+## E no Raspberry Pi?
 
 1. Microprocessador: idêntico aos que se encontram nos smartphones; pequeno, barato e consome pouca energia; possui controlador gráfico.
 2. RAM: 512 MB.
@@ -41,7 +41,7 @@ A memória principal tem tamanhos inferiores ao dos discos rígidos, porque e�
  6. GPIO: pinos usados para ligar outros dispositivos, envia corrente elétrica.
 5. LED de estado
 
-### Ligar o Raspberry Pi
+## Ligar o Raspberry Pi
 
 <div>
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">In case you’ve forgotten how to plug in your Pi, we’ve made a helpful gif. <a href="https://t.co/eTbdmQepFi">pic.twitter.com/eTbdmQepFi</a></p>&mdash; Raspberry Pi (@Raspberry_Pi) <a href="https://twitter.com/Raspberry_Pi/status/719830729883009024">April 12, 2016</a></blockquote>

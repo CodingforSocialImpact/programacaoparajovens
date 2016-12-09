@@ -1,10 +1,10 @@
-## Ligar LEDs com o Raspberry Pi
+# Ligar LEDs com o Raspberry Pi
 
 O  Raspberry Pi pode ser ligado a componentes externos, tais como lâmpadas, sensores, motores, etc., e pode ser programado em várias linguagens, desde linguagens simples e introdutórias, como o Scratch, até linguagens profissionais, como o Python.
 
 ![](https://www.raspberrypi.org/documentation/usage/gpio/images/gpio-led.png)
 
-### Objetivos
+## Objetivos
 
 Ao percorreres este desafio vais aprender:
 
@@ -15,7 +15,7 @@ Ao percorreres este desafio vais aprender:
 
 Duração da atividade: `90 minutos.`
 
-### Material
+## Material
 
 | Nome | Quantidade | Preço |
 | --- | --- | --- |

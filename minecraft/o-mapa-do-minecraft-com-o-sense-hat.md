@@ -38,9 +38,28 @@ O Sense HAT tem uma matriz de 8x8 LEDs, ou seja, 64 LEDs que podem assumir todas
 
 3. Cria uma nova pasta com o comando seguinte:
 
-```bash
-mkdir minecraft-map
-```
+ ```bash
+ mkdir minecraft-map
+ ```
+ `mkdir` significa criar diretoria (ou pasta).
+
+4. Abre o `Python 3` (Menu->Desenvolvimento->Python 3). 
+ 
+ ![](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/images/python3-app-menu.png)
+
+5. F
+
+6.
+
+7.
+
+8.
+
+9.
+
+10.
+
+##
 
 
 ---
