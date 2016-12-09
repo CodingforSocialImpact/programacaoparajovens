@@ -105,7 +105,7 @@ Agora vamos usar o Scratch para programar o nosso LED.
 
  ![](https://www.raspberrypi.org/learning/physical-computing-guide/images/green_flag_icon.png)
 
-Deverás ver o LED a acender e a apagar, de 1 em 1 segundo!
+ Deverás ver o LED a acender e a apagar, de 1 em 1 segundo!
 
  ![](https://www.raspberrypi.org/learning/physical-computing-guide/images/scratch_complete.png)
 
