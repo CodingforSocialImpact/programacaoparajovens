@@ -2,6 +2,7 @@
 
 |Nome  |Link  |
 |---|---|
+|A Visual Introduction to Python |[Ver aqui](https://hourofpython.trinket.io/a-visual-introduction-to-python#/welcome/an-hour-of-code) |
 |Code Academy Python Glossary  |[Ver aqui](https://www.codecademy.com/articles/glossary-python)  |  
 |Code Academy SQL  |[Ver aqui](https://www.codecademy.com/learn/learn-sql)  |  
 |Python 2 Documentation  |[Ver aqui](https://docs.python.org/2/)  |  
