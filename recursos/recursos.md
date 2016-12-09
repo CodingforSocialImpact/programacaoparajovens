@@ -1,8 +1,8 @@
-## Recursos
+# Recursos
 
 Aqui encontras uma coletânea dos melhores recursos para os teus projetos, grande parte deles encontram-se em Inglês. Brevemente serão elaborados alguns tutoriais visuais de Python em Português.
 
-### Tutoriais  
+## Tutoriais  
   
 |Nome  |Link  |
 |---|---|  
@@ -13,7 +13,7 @@ Aqui encontras uma coletânea dos melhores recursos para os teus projetos, grand
 |Mozilla's Codemoji - Cifras  |[Ver aqui](https://codemoji.org/#/welcome)  |  
 |Wolfram Mathematica  |[Ver mais](https://www.raspberrypi.org/learning/getting-started-with-mathematica/)  |  
 
-### Consulta  
+## Consulta  
 
 |Nome  |Link  |
 |---|---|
@@ -24,7 +24,7 @@ Aqui encontras uma coletânea dos melhores recursos para os teus projetos, grand
 |Python 3 Documentation  |[Ver aqui](https://docs.python.org/3/)  |  
 |Python 2 Documentation  |[Ver aqui](https://docs.python.org/2/)  |  
 
-### Projetos  
+## Projetos  
   
 |Nome  |Hardware Base  |Link  |Dificuldade |
 |---|---|---|---|
@@ -50,7 +50,7 @@ Aqui encontras uma coletânea dos melhores recursos para os teus projetos, grand
 |Setting Up Raspberry Pi  |Raspberry Pi  |[Ver aqui](http://lifehacker.com/the-always-up-to-date-guide-to-setting-up-your-raspberr-1781419054)  |1/10  |  
 |Build Your Own Mini NES With a Raspberry Pi and This 3D Printed Case  |Raspberry Pi, Impressora 3D  |[Ver mais](http://lifehacker.com/build-your-own-mini-nes-with-a-raspberry-pi-and-this-3d-1783674650)  |10/10 |
   
-### Software  
+## Software  
   
 |Nome  |Hardware Base  |Link  | 
 |---|---|---|   
@@ -58,7 +58,7 @@ Aqui encontras uma coletânea dos melhores recursos para os teus projetos, grand
 |8x8GridDraw |Sense HAT  |[Ver aqui](https://github.com/topshed/RPi_8x8GridDraw)  | 
 |OK Google Commands  |Vários  |[Ver aqui](http://ok-google.io)  |   
   
-### Hardware  
+## Hardware  
 
 |Nome  |Preço Médio  |Link  |
 |---|---|---|  
@@ -68,8 +68,8 @@ Aqui encontras uma coletânea dos melhores recursos para os teus projetos, grand
 |Sense HAT  |25€  |[Ver mais](https://www.raspberrypi.org/products/sense-hat/)  |
 |Arduino  |35€  |[Ver mais](https://store.arduino.cc/product/GBX00066)  |
   
-### Vídeos  
+## Vídeos  
   
-#### Collins Lab: Binary & Hex
+### Collins Lab: Binary & Hex
 [![Collins Lab: Binary & Hex](http://img.youtube.com/vi/jvx-NrILgpE/0.jpg)](https://www.youtube.com/watch?v=jvx-NrILgpE)  
   
