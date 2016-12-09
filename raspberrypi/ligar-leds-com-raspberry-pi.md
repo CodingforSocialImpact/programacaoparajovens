@@ -111,8 +111,29 @@ Agora vamos usar o Scratch para programar o nosso LED.
 
 ### Programar LEDs com Python
 
+Agora vamos usar Python para programar o nosso LED.
+
+1. Abre o `Python 3` (Menu->Desenvolvimento->Python 3).
+
+ ![](https://www.raspberrypi.org/learning/physical-computing-guide/images/open_idle.png)
+
+2. Cria um novo programa (File->New File).
+
+3. Escreve lá o seguinte código:
+
+ ```python
+import time
+import RPi.GPIO as GPIO
+GPIO.setmode(GPIO.BCM)
+GPIO.setwarnings(False)
+
+led = 18
+
+GPIO.setup(led,GPIO.OUT)
+```
 
 
 ---
 Referências: 
 * [Connecting and Controlling an LED with a Breadboard](https://www.raspberrypi.org/learning/physical-computing-guide/connect-leds/)
+* [Testing a Connected LED in Scratch](https://www.raspberrypi.org/learning/physical-computing-guide/test-led-scratch/)
