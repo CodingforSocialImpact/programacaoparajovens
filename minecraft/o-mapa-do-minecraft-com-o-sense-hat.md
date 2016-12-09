@@ -30,7 +30,7 @@ Duração da atividade: `90 minutos`.
 
 O Sense HAT tem uma matriz de 8x8 LEDs, ou seja, 64 LEDs que podem assumir todas as cores RGB.
 
-
+1. [Monta o teu Sense HAT](/sensehat/sense-hat.md#Montar o Sense HAT) no Raspberry Pi.
 
 ---
 Referências: 
