@@ -2,7 +2,7 @@
 
 * [Introdução](README.md)
 * [Raspberry Pi](raspberrypi/raspberry-pi.md)
- * [Ligar LEDs com o Raspbeery Pi](raspberrypi/ligar-leds-com-raspberry-pi.md)
+ * [Ligar LEDs com o Raspberry Pi](raspberrypi/ligar-leds-com-raspberry-pi.md)
 * [Scratch](scratch/scratch.md)
  * [Halterofilista Olímpico com Scratch](scratch/halterofilista-olimpico-com-scratch.md)
 * [Sense HAT](sensehat/sense-hat.md)
