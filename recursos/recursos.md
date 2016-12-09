@@ -43,7 +43,7 @@
 |Coding Resources |Vários |[Ver mais](http://resources.thecodingcorner.com/search/label/5%20Stars) |10/10  |  
 |Retro Gaming Recalbox  |Raspberry Pi  |[Ver mais](http://www.recalbox.com)  |2/10  |  
 |Setting Up Raspberry Pi  |Raspberry Pi  |[Ver aqui](http://lifehacker.com/the-always-up-to-date-guide-to-setting-up-your-raspberr-1781419054)  |1/10  |  
-|Build Your Own Mini NES With a Raspberry Pi and This 3D Printed Case  |Raspberry Pi, Impressora 3D  |[Ver mais](http://lifehacker.com/build-your-own-mini-nes-with-a-raspberry-pi-and-this-3d-1783674650)  |  
+|Build Your Own Mini NES With a Raspberry Pi and This 3D Printed Case  |Raspberry Pi, Impressora 3D  |[Ver mais](http://lifehacker.com/build-your-own-mini-nes-with-a-raspberry-pi-and-this-3d-1783674650)  |10/10 |
   
 ### Software  
   
