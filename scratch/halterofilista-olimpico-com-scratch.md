@@ -33,6 +33,8 @@ Pronto para usar uma linguagem de programação como os prós?
 
 Então visita [esta página](https://hourofpython.trinket.io/from-blocks-to-code-with-trinket#/blocks/dragging-and-dropping)!
 
+Se quiseres mais informações para consultares nos teus projetos futuros, visita a secção dos [Recursos](/recursos/recursos.md) deste livro.
+
 ---
 Referências: 
 * [The Scratch Olympics Weightlifter](https://www.raspberrypi.org/learning/scratch-olympics-weightlifter)
