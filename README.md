@@ -22,9 +22,13 @@ Pretendemos destinar os nossos esforços a jovens e crianças entre os 12 e os 1
 ## Sugestões e alterações
 
 Estamos sempre à procura de _feedback_ e este livro não é exceção!
-Podes sugerir alterações aproximando o rato do parágrafo que pretendes ver alterado e vai aparecer-te um `+`, clica nele, escreve o teu comentário e clica em `Post`.
+Podes sugerir alterações, para isso: 
 
-![Comentários](/assets/images/comentarios.png)
+1. Aproxima o rato do parágrafo que pretendes ver alterado. 
+2. Vai aparecer-te um `+`, clica nele, 
+3. Escreve o teu comentário e clica em `Post`.
+
+![](/assets/comentario.png)
 
 ---
 ![](/assets/images/apple-touch-icon-120x120.png)
