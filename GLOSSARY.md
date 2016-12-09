@@ -27,7 +27,7 @@ Mostrador
 ## Breadboard
 
 Uma breadboard permite-te desenhar um circuito de um modo organizado e não permanente.
-De uma perspetiva eletrónica, as linhas horizontais de buracos estão ligadas entre si e as 2 colunas verticais nos 2 lados estão tambem ligadas entre si.
+De uma perspetiva eletrónica, as linhas horizontais de furos estão ligadas entre si e as 2 colunas verticais nos 2 lados estão tambem ligadas entre si.
 
 ![Breadboard](https://www.raspberrypi.org/learning/physical-computing-guide/images/breadboard.png)
 

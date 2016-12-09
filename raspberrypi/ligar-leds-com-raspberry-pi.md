@@ -25,16 +25,16 @@ Duração da atividade: `90 minutos.`
 
 ## Conetar um LED com uma breadboard
 
-Na breadboard os buracos junto à linha vermelha estão todos ligados entre si, assim como os da linha azul, os burcaos horizontais entre as colunas vermelho-azul, estão também ligados entre si.
+Na breadboard os furos junto à linha vermelha estão todos ligados entre si, assim como os da linha azul, os burcaos horizontais entre as colunas vermelho-azul, estão também ligados entre si.
 
 ![Pinos GPIO](https://www.raspberrypi.org/learning/physical-computing-guide/images/gpio-numbers-pi2.png)
 
-1. Pega num `fio de ligação` e liga-o ao pino GPIO `Ground` no `RPi` e liga a outra ponta num buraco na `coluna azul` na `breadboard`, como demonstrado na imagem.
+1. Pega num `fio de ligação` e liga-o ao pino GPIO `Ground` no `RPi` e liga a outra ponta num furo na `coluna azul` na `breadboard`, como demonstrado na imagem.
 
  ![](https://www.raspberrypi.org/learning/physical-computing-guide/images/gpio-connect-ground.png)
 
 2. Agora pega num LED, uma das pernas é mais comprida (ânodo) do que a outra (cátodo). 
-3. Coloca a `ânodo` na coluna `E` na `breadboard` (Por exemplo `E3`), e o `cátodo` no buraco seguinte (por exemplo `E2`).
+3. Coloca a `ânodo` na coluna `E` na `breadboard` (Por exemplo `E3`), e o `cátodo` no furo seguinte (por exemplo `E2`).
 
  ![](https://www.raspberrypi.org/learning/physical-computing-guide/images/gpio-connect-red-led.png)
 
