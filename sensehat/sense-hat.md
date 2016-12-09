@@ -1,4 +1,4 @@
-## O que é o Sense Hat?
+# O que é o Sense Hat?
 
 O Sense HAT tem a possibilidade de sentir uma grande variedade de condições e de devolver esta informação num display matricial de LEDs.
 

@@ -4,7 +4,7 @@ Com este desafio vais explorar o hardware do Sense HAT e a sua libraria de Pytho
 
 ![](https://www.raspberrypi.org/learning/resources/getting-started-with-the-sense-hat/cover.png)
 
-### Objetivos
+## Objetivos
 
 Ao percorreres este desafio vais aprender:
 
@@ -14,7 +14,7 @@ Ao percorreres este desafio vais aprender:
 
 Duração da atividade: `90 minutos.`
 
-### Material
+## Material
 
 | Nome | Quantidade | Preço |
 | --- | --- | --- |

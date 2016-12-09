@@ -4,7 +4,7 @@ Com este tutorial vais conseguir desenvolver um jogo de levantamento de pesos co
 
 ![](https://www.raspberrypi.org/learning/resources/sense-hat-random-sparkles/cover.png)
 
-### Objetivos
+## Objetivos
 
 Ao percorreres este desafio vais aprender:
 
@@ -15,7 +15,7 @@ Ao percorreres este desafio vais aprender:
 
 Duração da atividade: `90 minutos.`
 
-### Material
+## Material
 
 | Nome | Quantidade | Preço |
 | --- | --- | --- |
