@@ -1,6 +1,6 @@
 ## Recursos
 
-Aqui encontras uma coletânea dos melhores recursos para os teus projetos, grande parte deles encontram-se em Inglês.
+Aqui encontras uma coletânea dos melhores recursos para os teus projetos, grande parte deles encontram-se em Inglês. Brevemente serão elaborados alguns tutoriais visuais de Python em Português.
 
 ### Tutoriais  
   
