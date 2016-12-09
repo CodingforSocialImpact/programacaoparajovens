@@ -201,7 +201,7 @@ Now you've explored the Minecraft world and seen the different block IDs that ar
 
 1. If you walk over a block that isn't in the dictionary, you'll get an error message. If you haven't found another block type yet, just jump in the air using the space bar, and you'll get this error:
 
-    ![Dictionary KeyError](images/dictionary-keyerror.png)
+    ![Dictionary KeyError](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/images/dictionary-keyerror.png)
 
     This error is a `KeyError`, which is a Python exception meaning you tried to look up the value of a key which isn't in the dictionary, like trying to get the telephone number of a name you haven't got recorded.
 
@@ -228,7 +228,7 @@ Now you've explored the Minecraft world and seen the different block IDs that ar
 
 1. Now add more blocks and colours to your dictionary!
 
-**Download a copy of [minecraft_colour.py](code/minecraft_colour.py)**
+**Download a copy of [minecraft_colour.py](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/code/minecraft_colour.py)**
 
 
 ## Definir LEDs individuais no Sense HAT
@@ -325,7 +325,7 @@ Until now, all you've done is set the whole Sense HAT LED display to the same co
 
     This should give you a checkerboard of red and blue pixels.
 
-**Download a copy of [pixels.py](code/pixels.py)**
+**Download a copy of [pixels.py](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/code/pixels.py)**
 
 ## Escreve uma função `Get_Blocks`
 
@@ -357,7 +357,7 @@ In order to make an 8x8 map, you'll need to retrieve the block IDs for all block
 
     Starting with a simple version, we want to look up the block the player is standing on, and the 3 blocks to the right of the player to return a list of four block IDs:
 
-    ![First get_blocks loop](images/first-get-blocks-loop.png)
+    ![First get_blocks loop](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/images/first-get-blocks-loop.png)
 
     Enter the following code into your function:
 
@@ -439,7 +439,7 @@ In order to make an 8x8 map, you'll need to retrieve the block IDs for all block
 
 1. Run the code and you should see a list of 64 block IDs. This time they should be the 8x8 grid of blocks surrounding your player, with you in the middle (there's no centre point of an 8x8 grid so you're just off-centre):
 
-    ![Third get_blocks loop](images/third-get-blocks-loop.png)
+    ![Third get_blocks loop](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/images/third-get-blocks-loop.png)
 
 1. Next, add a `while` loop to print the result of `get_blocks` every second:
 
@@ -573,7 +573,7 @@ Now all that's left to do is create the map. You've already learned how to look 
 
 1. You'll also need to define the variable `player_pos`. It'll need to be the number between `0` and `63` - the pixel which is the defined centre point of the grid. Since we used the range `x-3` to `x+5` and `z-3` to `z+5` the centre point will be the `(3, 3)` coordinate on the LED matrix, which is pixel number `27` as shown:
 
-    ![Sense HAT grid centre point](images/sense-hat-grid-centre-point.png)
+    ![Sense HAT grid centre point](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/images/sense-hat-grid-centre-point.png)
 
     Add the line `player_pos = 27` before your `while` loop.
 
