@@ -6,6 +6,13 @@ Uma livro interativo do [Coding for Social Impact Labs](http://codingforsocialim
 
 ## Contextualização
 
+{% youtube %}https://www.youtube.com/watch?v=EwxSPm9rNSQ{% endyoutube %}
+  
+  
+> "We don't have programming enough on the curriculum, but I certainly wouldn't put it like Math or Literacy (...)  
+There is lot of innovative stuff that make it more interesting." - Bill Gates *in [Gates: More kids should learn to program](https://www.youtube.com/watch?v=EwxSPm9rNSQ)*  
+  
+
 A programação de computadores é uma competência com uma crescente importância na formação de uma pessoa, em particular nos jovens. Mais do que habilitar para uma melhor utilização da enorme capacidade e funcionalidades computacionais hoje disponíveis, permite por si só desenvolver o raciocínio lógico agregado à capacidade de resolução de problemas.
 
 Como tal, o ensino da programação tem vindo a ser realizado a jovens e crianças cada vez mais novas, de todo o globo, com várias iniciativas como o code.org, Kodu Game Lab, Hour of Code, Khan Academy e novas ferramentas para o ensino da programação como o Scratch, Alice ou ToonTalk. Estas ferramentas e tecnologias são usadas em contexto curricular e extracurricular, na escola e em casa, com as devidas adaptações em termos de conteúdos, atividades, estratégias de ensino/aprendizagem e ferramentas de programação.
