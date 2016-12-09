@@ -1,12 +1,12 @@
-## Como colaborar em projetos de código
+# Como colaborar em projetos de código
 
 ![Bender](https://media.giphy.com/media/ECRWpamBUH3J6/giphy.gif)  
-### Objetivos  
+## Objetivos  
 
 O projeto terá como principal objetivo a criação de uma solução tecnológica que achem que poderá melhorar a vossa cidade.  
 Os projectos serão baseados nos computadores Raspberry Pi, os seus sensores e periféricos, e desenvolvidos utilizando várias linguagens de programação, desde o Scratch a Wolfram Language & Mathematica ou Python.
     
-### Regras
+## Regras
   
 [![Pair Programming](http://img.youtube.com/vi/dYBjVTMUQY0/0.jpg)](https://www.youtube.com/watch?v=dYBjVTMUQY0)  
   
@@ -20,7 +20,7 @@ Todos os projetos deverão ter no ficheiro [***README.MD***][README]:
 
 De modo a agilizar a criação do projeto, será facultado um repositório de exemplo para ser clonado por vós.
 
-### Instruções  
+## Instruções  
 
 {% youtube %}https://www.youtube.com/watch?v=uUuTYDg9XoI{% endyoutube %}
   

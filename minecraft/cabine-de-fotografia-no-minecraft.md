@@ -5,7 +5,7 @@ Não te esqueças de sorrir!
 
 ![](https://www.raspberrypi.org/learning/resources/minecraft-photobooth/cover.png)
 
-### Objetivos
+## Objetivos
 
 Ao percorreres este desafio vais aprender:
 
@@ -16,7 +16,7 @@ Ao percorreres este desafio vais aprender:
 
 Duração da atividade: `90 minutos.`
 
-### Material
+## Material
 
 | Nome | Quantidade | Preço |
 | --- | --- | --- |
