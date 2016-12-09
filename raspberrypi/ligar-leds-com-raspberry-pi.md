@@ -47,15 +47,35 @@ Pega nesse `fio de ligação` e liga-o ao `GPIO 18` no `RPi`, depois liga a outr
 
  ![](https://www.raspberrypi.org/learning/physical-computing-guide/images/gpio-complete-circuit.png)
 
-6. Agora que já acendeste um LED, podes adicionar ainda mais, sendo sempre preciso uma resistência para cada LED, fica aqui um exemplo com 3 LEDs ligados aos pinos GPIO `18`, `7` e `20`.
+6. Vamos agora programar o LED para acender, para isso abrimos a `linha de comandos` (Menu->Acessórios->LXTerminal).
+
+7. Agora que vais ter que inserir instruções para controlar o RPi.
+Define o `GPIO 18` para modo de escrita (`out`). Escreve a seguinte instrução na consola que abriste:
+```
+gpio -g mode 18 out
+```
+
+8. Liga o `GPIO 18`:
+
+ ```
+gpio –g write 18 1
+```
+Acabaste de informar o RPi que deve passar energia ao circuito (daí o número 1 no final das instrução). O LED irá acender!
+
+9. Para desligar o LED, vamos deixar de lhe passar energia. Como? Desliga o `GPIO 18`.
+
+ ```
+gpio –g write 18 0
+```
+
+10. Agora que já acendeste um LED, podes adicionar ainda mais, sendo sempre preciso uma resistência para cada LED, fica aqui um exemplo com 3 LEDs ligados aos pinos GPIO `18`, `7` e `20`.
 
  ![](https://www.raspberrypi.org/learning/physical-computing-guide/images/gpio-complete-circuit2.png)
 
-### Programar o LED na linha de comandos
+### Programar o LED com Scratch
 
-Vamos agora programar o nosso 
 
-1.
+
 ---
 Referências: 
 * [Connecting and Controlling an LED with a Breadboard](https://www.raspberrypi.org/learning/physical-computing-guide/connect-leds/)
