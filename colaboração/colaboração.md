@@ -1,3 +1,5 @@
+## Como colaborar em projetos de código
+
 ![Bender](https://media.giphy.com/media/ECRWpamBUH3J6/giphy.gif)  
 ### Objetivos  
 
