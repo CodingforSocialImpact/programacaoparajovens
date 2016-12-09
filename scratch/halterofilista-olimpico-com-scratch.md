@@ -25,6 +25,14 @@ Duração da atividade: `90 minutos.`
 |Fios de ligação (opcional) |4 |0.5€ |
 
 ## Título
+
+## E agora?
+
+Queres perceber o que se encontra por detrás de cada bloco que usaste?
+Pronto para usar uma linguagem de programação como os prós?
+
+Então visita [esta página](https://hourofpython.trinket.io/from-blocks-to-code-with-trinket#/blocks/dragging-and-dropping)!
+
 ---
 Referências: 
 * [The Scratch Olympics Weightlifter](https://www.raspberrypi.org/learning/scratch-olympics-weightlifter)
