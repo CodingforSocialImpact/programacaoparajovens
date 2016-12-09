@@ -30,7 +30,18 @@ Duração da atividade: `90 minutos`.
 
 O Sense HAT tem uma matriz de 8x8 LEDs, ou seja, 64 LEDs que podem assumir todas as cores RGB.
 
-1. [Monta o teu Sense HAT](/sensehat/sense-hat.md#Montar o Sense HAT) no Raspberry Pi.
+1. [Monta o teu Sense HAT](/sensehat/sense-hat.md) no Raspberry Pi.
+
+2. Abre o `LXTerminal` (Menu->Acessórios->LXTerminal)
+
+ ![](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/images/terminal-app-menu.png)
+
+3. Cria uma nova pasta com o comando seguinte:
+
+```shell
+mkdir minecraft-map
+```
+
 
 ---
 Referências: 
