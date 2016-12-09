@@ -191,6 +191,10 @@ Agora vamos usar Python para programar o nosso LED.
 
 11. Corre o teu programa `F5`. Parabéns ele já pisca!
 
+## E agora?
+
+Podes experimentar ligar mais LEDs ao teu circuito e faze-los alternar!
+
 ---
 Referências: 
 * [Connecting and Controlling an LED with a Breadboard](https://www.raspberrypi.org/learning/physical-computing-guide/connect-leds/)
