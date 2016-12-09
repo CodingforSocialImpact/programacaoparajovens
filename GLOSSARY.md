@@ -61,3 +61,6 @@ Este é um modo mais fácil para principiantes, por seguirem uma sequência lóg
 
 ![](https://www.raspberrypi.org/learning/physical-computing-guide/images/physical-pin-numbers.png)
 
+## Caching
+
+Basicamente, o termo cache pode ser compreendido como uma área de armazenamento onde dados ou processos frequentemente utilizados são guardados para um acesso futuro mais rápido, poupando tempo e uso desnecessário do seu hardware.

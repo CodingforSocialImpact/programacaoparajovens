@@ -49,19 +49,135 @@ O Sense HAT tem uma matriz de 8x8 LEDs, ou seja, 64 LEDs que podem assumir todas
 
 5. F
 
-6.
+6. 
 
-7.
+7. 
 
-8.
+8. 
 
-9.
+9. 
 
-10.
+10. 
 
-##
+## Explorar o mundo do Minecraft
 
+1. [Monta o teu Sense HAT](/sensehat/sense-hat.md) no Raspberry Pi.
 
+2. Abre o `LXTerminal` (Menu->Acessórios->LXTerminal)
+
+ ![](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/images/terminal-app-menu.png)
+
+3. Cria uma nova pasta com o comando seguinte:
+
+ ```bash
+ mkdir minecraft-map
+ ```
+ `mkdir` significa criar diretoria (ou pasta).
+
+4. Abre o `Python 3` (Menu->Desenvolvimento->Python 3). 
+ 
+ ![](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/images/python3-app-menu.png)
+
+5. F
+
+6. 
+
+7. 
+
+8. 
+
+9. 
+
+10. 
+
+## Caminhada colorida com o Minecraft e o Sense HAT
+
+1. [Monta o teu Sense HAT](/sensehat/sense-hat.md) no Raspberry Pi.
+
+2. Abre o `LXTerminal` (Menu->Acessórios->LXTerminal)
+
+ ![](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/images/terminal-app-menu.png)
+
+3. Cria uma nova pasta com o comando seguinte:
+
+ ```bash
+ mkdir minecraft-map
+ ```
+ `mkdir` significa criar diretoria (ou pasta).
+
+4. Abre o `Python 3` (Menu->Desenvolvimento->Python 3). 
+ 
+ ![](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/images/python3-app-menu.png)
+
+5. F
+
+6. 
+
+7. 
+
+8. 
+
+9. 
+
+10. 
+
+## Definir LEDs individuais no Sense HAT
+
+1. [Monta o teu Sense HAT](/sensehat/sense-hat.md) no Raspberry Pi.
+
+2. Abre o `LXTerminal` (Menu->Acessórios->LXTerminal)
+
+ ![](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/images/terminal-app-menu.png)
+
+3. Cria uma nova pasta com o comando seguinte:
+
+ ```bash
+ mkdir minecraft-map
+ ```
+ `mkdir` significa criar diretoria (ou pasta).
+
+4. Abre o `Python 3` (Menu->Desenvolvimento->Python 3). 
+ 
+ ![](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/images/python3-app-menu.png)
+
+5. F
+
+6. 
+
+## Escreve uma função `Get_Blocks`
+
+1. [Monta o teu Sense HAT](/sensehat/sense-hat.md) no Raspberry Pi.
+
+2. Abre o `LXTerminal` (Menu->Acessórios->LXTerminal)
+
+ ![](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/images/terminal-app-menu.png)
+
+3. Cria uma nova pasta com o comando seguinte:
+
+ ```bash
+ mkdir minecraft-map
+ ```
+ `mkdir` significa criar diretoria (ou pasta).
+
+4. Abre o `Python 3` (Menu->Desenvolvimento->Python 3). 
+ 
+ ![](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/images/python3-app-menu.png)
+
+5. F
+
+6. 
+
+7. 
+
+8. 
+
+9. 
+
+10. 
+
+11. 
+
+## Reduz a lentidão com caching
 ---
 Referências: 
 * [Sense HAT Minecraft Map](https://www.raspberrypi.org/learning/sense-hat-minecraft-map)
