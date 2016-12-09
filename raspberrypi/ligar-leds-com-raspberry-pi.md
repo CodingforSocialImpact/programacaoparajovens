@@ -72,8 +72,6 @@ gpio –g write 18 0
 
  ![](https://www.raspberrypi.org/learning/physical-computing-guide/images/gpio-complete-circuit2.png)
 
-### Programar o LED com Scratch
-
 
 
 ---
