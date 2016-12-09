@@ -85,9 +85,10 @@ Agora vamos usar o Scratch para programar o nosso LED.
  ![Scratch](https://www.raspberrypi.org/learning/physical-computing-guide/images/Scratch-interface.png)
 2. Clica em `Controle` no painel esquerdo e arrasta o `quando clicado` para a área de comandos.
 
- ![Bandeira Verde](https://www.raspberrypi.org/learning/physical-computing-guide/images/broadcast.png)
+ ![Bandeira Verde](https://www.raspberrypi.org/learning/physical-computing-guide/images/green_flag.png)
 
-3.
+3. Arrasta um bloco de `anuncie` para a tua area de comandos e junta-o ao bloco `quando clicado`
+
  ![](https://www.raspberrypi.org/learning/physical-computing-guide/images/scratch_config.png)
 
  ![](https://www.raspberrypi.org/learning/physical-computing-guide/images/green_flag_icon.png)
