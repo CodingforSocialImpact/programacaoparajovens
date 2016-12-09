@@ -17,5 +17,6 @@
 * [Avançado](avançado/avançado.md)
  * [Obter informação metereológia da Internet](avançado/obter-informacao-meteorologica-da-internet.md)
  * [Chat Bot](avançado/chat-bot.md)
+* [Recursos](recursos/recursos.md)
 
 
