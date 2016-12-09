@@ -21,7 +21,7 @@ Duração da atividade: `90 minutos.`
 |Breadboard |1 |2,5€ |
 |Fios de ligação |4 |0.1€ |
 |LED |1 |0.1€ |
-|Resitência 1kΩ |1 |0.01€ |
+|Resistência 1kΩ |1 |0.01€ |
 
 ## Conetar um LED com uma breadboard
 
