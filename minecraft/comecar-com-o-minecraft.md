@@ -4,7 +4,7 @@ O Minecraft é um jogo de mundo aberto onde existe uma versão gratuita para Ras
 
 ![](https://www.raspberrypi.org/learning/getting-started-with-minecraft-pi/images/minecraft-pi-banner.png)
 
-### Objetivos
+## Objetivos
 
 Ao percorreres este desafio vais aprender:
 
@@ -16,7 +16,7 @@ Ao percorreres este desafio vais aprender:
 
 Duração da atividade: `90 minutos`.
 
-### Material
+## Material
 
 | Nome | Quantidade | Preço |
 | --- | --- | --- |

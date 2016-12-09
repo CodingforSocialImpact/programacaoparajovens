@@ -1,4 +1,4 @@
-## Minecraft
+# Minecraft
 
 ![](https://minecraft.net/static/pages/img/minecraft-hero.df1112867f04.jpg)
 O Minecraft é um jogo de mundo aberto que promove a criatividade, colaboração e resolução de problemas num ambiente imersivo onde o único limite é tua imaginação.

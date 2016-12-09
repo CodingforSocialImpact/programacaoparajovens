@@ -4,7 +4,7 @@ Usa o Sense HAT apra criares um mapa do mundo à volta do teu jogador no Minecra
 
 ![](https://www.raspberrypi.org/learning/resources/sense-hat-minecraft-map/cover.png)
 
-### Objetivos
+## Objetivos
 
 Ao percorreres este desafio vais aprender:
 
@@ -19,7 +19,7 @@ Ao percorreres este desafio vais aprender:
 
 Duração da atividade: `90 minutos`.
 
-### Material
+## Material
 
 | Nome | Quantidade | Preço |
 | --- | --- | --- |
