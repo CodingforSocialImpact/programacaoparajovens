@@ -129,9 +129,9 @@ GPIO.setwarnings(False)
 
 led = 18
 
-GPIO.setup(led,GPIO.OUT)
-```
-
+ GPIO.setup(led,GPIO.OUT)
+ ```
+4. 
 
 ---
 Referências: 
