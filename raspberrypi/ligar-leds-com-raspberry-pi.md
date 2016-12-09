@@ -10,6 +10,8 @@ Ao percorreres este desafio vais aprender:
 
 * Princípios básicos de eletrónica e montar um sistema eletrónico simples, com recurso a uma Breadboard, LEDs e resistências
 * Explorar como o RPi pode alimentar e controlar um sistema eletrónico externo com recurso aos pinos GPIO e a linha de comandos (`Shell`) do RPi
+* Principios básicos de programação com Scratch
+* Principios básicos de programação com Python
 
 Duração da atividade: `90 minutos.`
 
