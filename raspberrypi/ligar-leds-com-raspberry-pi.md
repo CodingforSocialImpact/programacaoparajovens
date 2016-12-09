@@ -105,9 +105,17 @@ Agora vamos usar o Scratch para programar o nosso LED.
 
  ![](https://www.raspberrypi.org/learning/physical-computing-guide/images/green_flag_icon.png)
 
- Deverás ver o LED a acender e a apagar, de 1 em 1 segundo!
+ Deverás ver o LED a acender e a apagar.
 
  ![](https://www.raspberrypi.org/learning/physical-computing-guide/images/scratch_complete.png)
+
+10. Mas e se quisermos que acenda e apague consecutivamente (como uma árvore de natal)?
+Adiciona um bloco `espere 1 segundos` no último lugar e um bloco `sempre` no topo do nosso programa.
+
+11. Guarda o teu trabalho como `Teste LED` (File->Salvar Como).
+
+12. Clica na `bandeira verde` no canto superior direito.
+Deverás ver o LED a acender e a apagar, de 1 em 1 segundo!
 
 ### Programar LEDs com Python
 
@@ -122,18 +130,69 @@ Agora vamos usar Python para programar o nosso LED.
 3. Escreve lá o seguinte código:
 
  ```python
-import time
-import RPi.GPIO as GPIO
-GPIO.setmode(GPIO.BCM)
-GPIO.setwarnings(False)
+ import time
+ import RPi.GPIO as GPIO
+ GPIO.setmode(GPIO.BCM)
+ GPIO.setwarnings(False)
 
-led = 18
+ led = 18
 
  GPIO.setup(led,GPIO.OUT)
  ```
-4. 
+
+4. Debaixo do código que escreveste adiciona:
+ ```python
+ print("LED ligado")
+ GPIO.output(led,GPIO.HIGH)
+ ```
+
+5. O código até aqui apenas liga o LED, vamos agora adicionar o código para o desligar após algum tempo:
+
+ ```python
+ time.sleep(1)
+ print("LED Desligado")
+ GPIO.output(led,GPIO.LOW)
+ ```
+
+6. A parte final do teu programa é:
+
+ ```python
+ GPIO.cleanup()
+ ```
+
+7. Guarda o teu código (File->Save)
+
+8. Corre o teu programa `F5`. Ele só acendeu uma vez.
+
+9. Para acender consecutivamente temos que adicionar uma espera após desligar (para estar 1 segundo apagado) e adicionar um ciclo ao nosso programa:
+
+ ```python
+ import time
+ import RPi.GPIO as GPIO
+ GPIO.setmode(GPIO.BCM)
+ GPIO.setwarnings(False)
+
+ led = 18
+ GPIO.setup(led,GPIO.OUT)
+
+ # Este ciclo não termina
+ while True:
+    
+     print("LED ligado")
+     GPIO.output(led,GPIO.HIGH)
+     time.sleep(1)
+     print("LED Desligado")
+     GPIO.output(led,GPIO.LOW)
+     time.sleep(1)
+    
+ GPIO.cleanup()
+ ```
+10. Guarda o teu código (File->Save)
+
+11. Corre o teu programa `F5`. Parabéns ele já pisca!
 
 ---
 Referências: 
 * [Connecting and Controlling an LED with a Breadboard](https://www.raspberrypi.org/learning/physical-computing-guide/connect-leds/)
 * [Testing a Connected LED in Scratch](https://www.raspberrypi.org/learning/physical-computing-guide/test-led-scratch/)
+* [Testing a Connected LED in Python](https://www.raspberrypi.org/learning/physical-computing-guide/test-led-python/)
