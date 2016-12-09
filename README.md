@@ -19,6 +19,11 @@ Com base nestes conteúdos e objetivos, pretende-se selecionar, configurar e int
 
 Pretendemos destinar os nossos esforços a jovens e crianças entre os 12 e os 18 anos de idade e respetivos educadores, professores e encarregados de educação, com conteúdos em língua portuguesa.
 
+## Sugestões e alterações
+
+Estamos sempre à procura de feedback! E este livro não é exceção, podes sugerir alterações aproximando o rato do parágrafo que pretendes ver alterado e vai aparecer-te um `+`, clica nele, escreve o teu comentário e clica em `Post`.
+
+![](assets/images/comentarios.png)
 ---
 ![](/assets/images/apple-touch-icon-120x120.png)
 
