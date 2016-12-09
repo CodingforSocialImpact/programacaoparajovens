@@ -47,17 +47,27 @@ O Sense HAT tem uma matriz de 8x8 LEDs, ou seja, 64 LEDs que podem assumir todas
  
  ![](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/images/python3-app-menu.png)
 
-5. F
+5. No `Python 3` cria um novo ficheiro `File > New File`, vai abrir uma janela, é aí que vais introduzir o teu código.
 
-6. 
+6. Guarda o ficheiro (`CTRL+S`) como `colours.py` na tua pasta `minecraft-map`.
 
-7. 
+7. Adiciona o seguinte código:
 
-8. 
+ ```python
+ # Permite usar o módulo do Sense HAT
+ from sense_hat import SenseHat
 
-9. 
+ # Cria uma ligação com o Hardware chamada sense
+ sense = SenseHat()
+ 
+ # Varre o ecrã com a cor vermelha
+ sense.clear(255, 0, 0)
+ ```
 
-10. 
+8. Guarda as alterações (`CTRL+S`) e corre o código (`F5`).
+Os teus LEDs do Sense HAT deverão estar todos vermelhos!
+
+ Descarrega uma cópia do [colour.py](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/code/colour.py).
 
 ## Explorar o mundo do Minecraft
 

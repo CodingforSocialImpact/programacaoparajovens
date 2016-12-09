@@ -67,7 +67,7 @@ Com o Minecraft a correr, e o mundo criado, clica em `Tab` para que possas mover
 
 Podes escrever comandos diretamente na janela do Python ou criar um ficheiro para que possas guardar e correr o teu código numa outra vez.
 
-Se quiseres criar um ficheiro, vai a `File > New Window` (Nova Janela) e `File > Save` (Guardar). Guarda numa pasta à tua escolha.
+Se quiseres criar um ficheiro, vai a `File > New File` (Novo Ficheiro) e `File > Save` (Guardar). Guarda numa pasta à tua escolha.
 
 Começa por importar a libraria do Minecraft, o que irá criar uma ligação do Python ao jogo, podes testá-la com a mensagem Olá Mundo no ecrâ.
 
