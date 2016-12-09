@@ -71,171 +71,541 @@ Os teus LEDs do Sense HAT deverão estar todos vermelhos!
 
 ## Explorar o mundo do Minecraft
 
-1. [Monta o teu Sense HAT](/sensehat/sense-hat.md) no Raspberry Pi.
+Now you've had a go at setting the colours of the Sense HAT LED matrix, let's open up Minecraft and have a look around to see what block types you can identify.
 
-2. Abre o `LXTerminal` (Menu->Acessórios->LXTerminal)
+1. Open Minecraft from the application menu, under **Games**:
 
- ![](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/images/terminal-app-menu.png)
+    ![Open Minecraft](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/images/minecraft-app-menu.png)
 
-3. Cria uma nova pasta com o comando seguinte:
+1. Click **Start Game** and then either create a new world or enter an existing world.
 
- ```bash
- mkdir minecraft-map
- ```
- `mkdir` significa criar diretoria (ou pasta).
+1. Press the `Tab` key to regain access to the mouse cursor and then move the Minecraft window to one side of your screen.
 
-4. Abre o `Python 3` (Menu->Desenvolvimento->Python 3). 
- 
- ![](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/images/python3-app-menu.png)
+1. Return to the Python windows. Open another new window from the Python shell and save it as `minecraft-colours.py` in the same project folder.
 
-5. F
+1. Move this window so that it is on the other side of the screen, and you can see the Python window and the Minecraft window side by side.
 
-6. 
+1. Enter the following code to get started:
 
-7. 
+    ```python
+    from sense_hat import SenseHat
+    from mcpi.minecraft import Minecraft
+    from time import sleep
 
-8. 
+    sense = SenseHat()
+    mc = Minecraft.create()
 
-9. 
+    mc.postToChat("Hello Minecraft!")
+    sense.clear(0, 255, 0)
+    ```
 
-10. 
+1. Save and run your code!
+
+    You should see the text "Hello Minecraft" appear in the Minecraft window and the Sense HAT should turn green!
+
+1. Now you've created a connection to both the Sense HAT and the Minecraft world, let's look at how you can determine what type of block you're standing on. Remove the `postToChat` and `sense.clear` lines and add the following code:
+
+    ```python
+    while True:
+        x, y, z = mc.player.getTilePos()
+        block = mc.getBlock(x, y-1, z)
+        print(block)
+        sleep(0.1)
+    ```
+
+1. Save and run the code.
+
+    You should now see numbers being constantly printed to the Python shell. These numbers represent the IDs of the block your player is standing on. Walk around over different terrain and you'll see the number change. Note that you use the WASD keys to walk around, and the space bar to jump or fly
+
+    **How does it work?**
+
+    - `while True`: this is an infinite loop.
+    - `x, y, z = mc.player.getTilePos()`: this gets the coordinates of where your player is standing and sets them to variables `x`, `y` and `z`.
+    - `block = mc.getBlock(x, y-1, z)`: this looks up the ID of the block directly beneath the player (`y-1` means one below the player's `y` coordinate, which is the vertical axis).
+    - `print(block)`: this shows us which block ID was returned by `getBlock`.
+    - `sleep(0.1)`: this pauses for a tenth of a second each time the loop runs, so it's not printing out too fast.
+
+1. You need to know the block types that are represented by the IDs you're seeing. Some common ones are:
+
+    ```
+    Air:   0
+    Stone: 1
+    Grass: 2
+    Dirt:  3
+    Water: 8
+    Sand: 12
+    Ice:  79
+    ```
+
+    See which block types you can identify while walking around the Minecraft world.
+
 
 ## Caminhada colorida com o Minecraft e o Sense HAT
 
-1. [Monta o teu Sense HAT](/sensehat/sense-hat.md) no Raspberry Pi.
+Now you've explored the Minecraft world and seen the different block IDs that are printed out as you walk around, you're going to learn to make the Sense HAT show a different colour depending on what type of block you're standing on in the Minecraft world!
 
-2. Abre o `LXTerminal` (Menu->Acessórios->LXTerminal)
+1. You're going need a way to create a mapping from a block ID to a colour; for example, grass should map to green, so block ID `2` should map to the colour code `(0, 255, 0)`.
 
- ![](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/images/terminal-app-menu.png)
+    Start by adding some variables to identify block IDs. Add the following code above your `while` loop like so:
 
-3. Cria uma nova pasta com o comando seguinte:
+    ```python
+    # blocks
+    grass = 2
+    water = 9
+    sand = 12
+    ```
 
- ```bash
- mkdir minecraft-map
- ```
- `mkdir` significa criar diretoria (ou pasta).
+    The first line is a comment helping explain what that bit of code is for. These variables are all integers (whole numbers) because that's what block IDs are represented by.
 
-4. Abre o `Python 3` (Menu->Desenvolvimento->Python 3). 
- 
- ![](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/images/python3-app-menu.png)
+1. Below that, add the colours that represent these block types:
 
-5. F
+    ```python
+    # colours
+    green = (0, 255, 0)
+    blue = (0, 0, 255)
+    yellow = (255, 255, 0)
+    ```
+    These variables are tuples. A tuple is a data type (like an integer, string, or list) used to store a number of items in a particular order. These could be the `x`, `y` and `z` coordinates or, as in this case, the `R`, `G` and `B` values of a colour. These are 3-tuples because they each contain 3 values.
 
-6. 
+1. Next, below the colours, create a dictionary mapping each of the block types to a particular colour:
 
-7. 
+    ```python
+    # block: colour
+    colours = {
+        grass: green,
+        water: blue,
+        sand: yellow,
+    }
+    ```
+    A dictionary is a data type used for storing relations between two objects, like an address book mapping a name to a telephone number. The items in the dictionary are referred to as key-value pairs, so in an address book the name is the "key" and the phone number is the "value". In our case the block type is the "key" and the colour is the "value".
 
-8. 
+1. Now all that's left to do is to look up the block you're standing on, see which colour it should be, and use `sense.clear` to change the colour of the Sense HAT display accordingly!
 
-9. 
+    To look up a value in a dictionary, you pass in the key. If the dictionary was an address book, you'd pass in the name and be given that person's phone number. So to look up the block type `grass` you'd use `colours[2]` or `colours[grass]` and you'd get back the value for green which is `(0, 255, 0)`.
 
-10. 
+    Modify your `while` loop to look like this:
+
+    ```python
+    while True:
+        x, y, z = mc.player.getTilePos()
+        block = mc.getBlock(x, y-1, z)
+        colour = colours[block]
+        print(colour)
+        sleep(0.1)
+    ```
+    Here we're looking up the ID of the block the player is standing on, as before, and then looking that up in the `colours` dictionary, then printing out the colour code tuple.
+
+1. Save and run the code, and walk around the Minecraft world.
+
+    You should see the colour code of the block you're standing on. Walk around to see different colour codes. When you walk on grass you should see `(0, 255, 0)`, when you're on sand you should see `(255, 255, 0)`, and on water, `(0, 0, 255)`.
+
+1. If you walk over a block that isn't in the dictionary, you'll get an error message. If you haven't found another block type yet, just jump in the air using the space bar, and you'll get this error:
+
+    ![Dictionary KeyError](images/dictionary-keyerror.png)
+
+    This error is a `KeyError`, which is a Python exception meaning you tried to look up the value of a key which isn't in the dictionary, like trying to get the telephone number of a name you haven't got recorded.
+
+1. First of all, let's deal with the `KeyError`. Modify your colour lookup like so:
+
+    ```python
+    if block in colours:
+        colour = colours[block]
+        print(colour)
+    else:
+        print("Don't know block ID %s" % block)
+    sleep(0.1)
+    ```
+
+    Now it will check to see if the key is in the dictionary before looking up its value. If it's not, it will tell you which block ID it was.
+
+1. Finally, now you have a colour value representing the block type your player is standing on, you can tell the Sense HAT to show that colour on the LED display, simply by changing the `print(colour)` line to:
+
+    ```python
+    sense.clear(colour)
+    ```
+
+1. Save and run the code, and walk around the Minecraft world and your Sense HAT should show green, blue or yellow when you walk on grass, water and sand.
+
+1. Now add more blocks and colours to your dictionary!
+
+**Download a copy of [minecraft_colour.py](code/minecraft_colour.py)**
+
 
 ## Definir LEDs individuais no Sense HAT
 
-1. [Monta o teu Sense HAT](/sensehat/sense-hat.md) no Raspberry Pi.
+Until now, all you've done is set the whole Sense HAT LED display to the same colour. It's possible to set each pixel individually using the Sense Hat module's `set_pixel` method.
 
-2. Abre o `LXTerminal` (Menu->Acessórios->LXTerminal)
+1. Create a new Python file and save it as `pixels.py`.
 
- ![](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/images/terminal-app-menu.png)
+1. Write the following code:
 
-3. Cria uma nova pasta com o comando seguinte:
+    ```python
+    from sense_hat import SenseHat
+    from time import sleep
 
- ```bash
- mkdir minecraft-map
- ```
- `mkdir` significa criar diretoria (ou pasta).
+    sense  = SenseHat()
 
-4. Abre o `Python 3` (Menu->Desenvolvimento->Python 3). 
- 
- ![](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/images/python3-app-menu.png)
+    sense.clear()
+    sense.set_pixel(0, 0, 255, 255, 255)
+    ```
 
-5. F
+1. Save and run the code. It should clear the display and set the top left pixel to white.
 
-6. 
+    **How does it work?**
+
+    The `sense.set_pixel` method is used to set a particular pixel to a particular colour. The pixel is given as `x` and `y` and the colour is given as `R`, `G` and `B`. There are two ways of using the method:
+
+    - pass in the `R`, `G` and `B` values separately:
+
+    ```python
+    sense.set_pixel(x, y, r, g, b)
+    ```
+
+    - use a 3-tuple for the colour and pass it in as a variable:
+
+    ```python
+    white = (255, 255, 255)
+    sense.set_pixel(x, y, white)
+    ```
+
+1. Try a loop:
+
+    ```python
+    sense.clear()
+    for y in range(8):
+        for x in range(8):
+            sense.set_pixel(x, y, 255, 0, 0)
+            sleep(0.1)
+    ```
+
+    **Things to try:**
+
+    - What happens when you reverse the order of the loops? Try `for x in range(8)` then `for y in range(8)`.
+    - What happens if you add a `sense.clear()` before `sense.set_pixel()`?
+    - What happens if you try `range(8, -1, -1)`?
+
+1. Try this example using rows of colours:
+
+    ```python
+    white = (255, 255, 255)
+    red = (255, 0, 0)
+    green = (0, 255, 0)
+    blue = (0, 0, 255)
+    yellow = (255, 255, 0)
+
+    colours = [white, red, white, green, white, blue, white, yellow]
+
+    sense.clear()
+    for y in range(8):
+        colour = colours[y]
+        for x in range(8):
+            sense.set_pixel(x, y, colour)
+            sleep(0.1)
+    ```
+
+1. You can also use the `set_pixels()` method which takes in a list of 64 colour tuples. Try the following code as an example:
+
+    ```python
+    r = red
+    b = blue
+
+    pixels = [
+        r, b, r, b, r, b, r, b,
+        b, r, b, r, b, r, b, r,
+        r, b, r, b, r, b, r, b,
+        b, r, b, r, b, r, b, r,
+        r, b, r, b, r, b, r, b,
+        b, r, b, r, b, r, b, r,
+        r, b, r, b, r, b, r, b,
+        b, r, b, r, b, r, b, r,
+    ]
+
+    sense.set_pixels(pixels)
+    ```
+
+    This should give you a checkerboard of red and blue pixels.
+
+**Download a copy of [pixels.py](code/pixels.py)**
 
 ## Escreve uma função `Get_Blocks`
 
-1. [Monta o teu Sense HAT](/sensehat/sense-hat.md) no Raspberry Pi.
+Now you have your Sense HAT showing the colour of the block you're standing on, you can use the same logic to show a different colour for each block around you to make a mini map of the Minecraft world on the 8x8 display.
 
-2. Abre o `LXTerminal` (Menu->Acessórios->LXTerminal)
+In order to make an 8x8 map, you'll need to retrieve the block IDs for all blocks immediately surrounding your player - enough to fill the 8x8 display. The Minecraft API does have an `mc.getBlocks()` function, but unfortunately it doesn't actually work, so you'll have to write your own function.
 
- ![](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/images/terminal-app-menu.png)
+1. Create a new Python file and save it as `minecraft-map.py`.
 
-3. Cria uma nova pasta com o comando seguinte:
+1. Start by writing the following starter code:
 
- ```bash
- mkdir minecraft-map
- ```
- `mkdir` significa criar diretoria (ou pasta).
+    ```python
+    from sense_hat import SenseHat
+    from mcpi.minecraft import Minecraft
+    from time import sleep
 
-4. Abre o `Python 3` (Menu->Desenvolvimento->Python 3). 
- 
- ![](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/images/python3-app-menu.png)
+    sense = SenseHat()
+    mc = Minecraft.create()
 
-5. F
+    def get_blocks():
+        blocks = []
 
-6. 
+        return blocks
+    ```
 
-7. 
+    Here you've imported the libraries you'll need, created a connection to the Sense HAT and to the Minecraft world, and created a function called `get_blocks` which returns an empty list.
 
-8. 
+1. Now you'll need to implement your `get_blocks` function. It would be nice to have a generic `get_blocks` function for any given range of `x`, `y` and `z` returning a cuboid of block IDs but for our purposes this is unnecessary as all we need is an 8x8 grid on the same y-axis.
 
-9. 
+    Starting with a simple version, we want to look up the block the player is standing on, and the 3 blocks to the right of the player to return a list of four block IDs:
 
-10. 
+    ![First get_blocks loop](images/first-get-blocks-loop.png)
 
-11. 
+    Enter the following code into your function:
+
+    ```python
+    def get_blocks():
+        blocks = []
+        x, y, z = mc.player.getTilePos()
+        y -= 1
+        for dx in range(x, x+4):
+            block = mc.getBlock(dx, y, z)
+            blocks.append(block)
+        return blocks
+    ```
+
+    **What does it do?**
+
+    - `blocks = []`: creates a new empty list.
+    - `x, y, z = mc.player.getTilePos()`: get the player's position.
+    - `y -= 1`: subtract one from the `y` coordinate to look at the level below the player.
+    - `for dx in range(x, x+4):`: use `x` values from the player to 3 blocks away from the player.
+    - `block = mc.getBlock(dx, y, z)`: look up the block at this location.
+    - `blocks.append(block)`: add this block to the list.
+    - `return blocks`: by the time the program gets to this line, this contains 4 blocks as it's been through the loop 4 times.
+
+1. Add a line to the end of your code to print out the result of the `get_blocks` function:
+
+    ```python
+    print(get_blocks())
+    ```
+
+1. Run the code and you should see a list of four numbers (block IDs), which will be the block you are standing on and the three blocks to the side of you (the direction depends on which way you're facing).
+
+1. Now you'll want to make the function do the same for a 2-dimensional space. This version loops over `x` and `z` 4 times and returns 16 values:
+
+    ```python
+    def get_blocks():
+        blocks = []
+        x, y, z = mc.player.getTilePos()
+        y -= 1
+        for dz in range(z, z+4):
+            for dx in range(x, x+4):
+                block = mc.getBlock(dx, y, dz)
+                blocks.append(block)
+        return blocks
+    ```
+
+    **What does it do?**
+
+    - `blocks = []`: creates a new empty list.
+    - `x, y, z = mc.player.getTilePos()`: get the player's position.
+    - `y -= 1`: subtract one from the `y` coordinate to look at the level below the player.
+    - `for dz in range(z, z+4):`: use `z` values from the player to 3 blocks away from the player (4 rows in total).
+    - `for dx in range(x, x+4):`: use `x` values from the player to 3 blocks away from the player (4 columns in total).
+    - `block = mc.getBlock(dx, y, dz)`: look up the block at this location.
+    - `blocks.append(block)`: add this block to the list.
+    - `return blocks`: by the time the program gets to this line, this contains 16 blocks as it's been through each loop 4 times.
+
+1. Run the code and you should see a list of 16 block IDs, starting with the block you're standing on and the 7 to the side of you, followed by each row of 8 blocks away from you.
+
+1. Now you'll want to make it loop over 8 rows and 8 columns, and make sure it looks to the left and right, and both behind and ahead of you. This version loops over `x` and `z` 8 times and returns 64 values:
+
+    ```python
+    def get_blocks():
+        blocks = []
+        x, y, z = mc.player.getTilePos()
+        y -= 1
+        for dz in range(z-3, z+5):
+            for dx in range(x-3, x+5):
+                block = mc.getBlock(dx, y, dz)
+                blocks.append(block)
+        return blocks
+    ```
+
+    **What does it do?**
+
+    - `for dz in range(z-3, z+5):`: use `z` values from 3 behind the player up to 5 ahead (8 rows in total).
+    - `for dx in range(x-3, x+5):`: use `x` values from 3 left of the player over to 5 to the right (8 columns in total).
+    - `return blocks` - by the time the program gets to this line, this contains 64 blocks as it's been through each loop 8 times.
+
+1. Run the code and you should see a list of 64 block IDs. This time they should be the 8x8 grid of blocks surrounding your player, with you in the middle (there's no centre point of an 8x8 grid so you're just off-centre):
+
+    ![Third get_blocks loop](images/third-get-blocks-loop.png)
+
+1. Next, add a `while` loop to print the result of `get_blocks` every second:
+
+    ```python
+    while True:
+        print(get_blocks())
+        sleep(1)
+    ```
+
+1. Run the code and see it update as you walk around.
+
+    You will probably find that it's 
 
 ## Reduz a lentidão com caching
 
-1. [Monta o teu Sense HAT](/sensehat/sense-hat.md) no Raspberry Pi.
+In order to reduce the lag, you'll need to use a technique called caching. This means you record a value the first time you look it up, and refer to the saved value when you need it the next time, rather than look it up again. To do this, you're going to use a dictionary to store the known blocks. That way, you can look up a set of coordinates in the `known_blocks` dictionary, and only use `mc.getBlock()` if you need to. This will save lots of time and make your lookup run much faster.
 
-2. Abre o `LXTerminal` (Menu->Acessórios->LXTerminal)
+1. First, create an empty dictionary called `known_blocks` before your `get_blocks` function:
 
- ![](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/images/terminal-app-menu.png)
+    ```python
+    known_blocks = {}
+    ```
 
-3. Cria uma nova pasta com o comando seguinte:
+1. You'll need to access the `known_blocks` dictionary from within your `get_blocks` function. Python will let you read a variable you declared outside the function, but not write to it. In order to write to it, you'll need to make it a **global** within the function like so:
 
- ```bash
- mkdir minecraft-map
- ```
- `mkdir` significa criar diretoria (ou pasta).
+    ```python
+    def get_blocks():
+        global known_blocks
+    ```
+    Global means you're changing the scope of the variable from being read-only to read/write.
 
-4. Abre o `Python 3` (Menu->Desenvolvimento->Python 3). 
- 
- ![](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/images/python3-app-menu.png)
+1. Inside the function, modify the loop to look like this:
 
-## Criar o Mapa
+    ```python
+    for dz in range(z-3, z+5):
+        for dx in range(x-3, x+5):
+            b = (dx, y, dz)
+            if b in known_blocks:
+                block = known_blocks[b]
+            else:
+                block = mc.getBlock(dx, y, dz)
+                known_blocks[b] = block
+            blocks.append(block)
+    ```
 
-1. [Monta o teu Sense HAT](/sensehat/sense-hat.md) no Raspberry Pi.
+    **What does it do?**
 
-2. Abre o `LXTerminal` (Menu->Acessórios->LXTerminal)
+    - `b = (dx, y, dz)`: create a 3-tuple of the current coordinates.
+    - `if b in known_blocks`: check if the block has already been looked up.
+    - `block = known_blocks[b]`: look up the block by its coordinates.
+    - `known_blocks[b] = block`: once a block is looked up for the first time, add it to the `known_blocks` dictionary.
 
-![](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/images/terminal-app-menu.png)
+1. Run the code and walk around. You should see it's a lot quicker at printing the blocks list out. Try reducing the `sleep` down to `0.1` and see if it can still cope.
 
-3. Cria uma nova pasta com o comando seguinte:
+## Cria o mapa
 
-```bash
-mkdir minecraft-map
-```
-`mkdir` significa criar diretoria (ou pasta).
+Now all that's left to do is create the map. You've already learned how to look up a colour from a block ID and set colours to display on the Sense HAT so this should be easy!
 
-4. Abre o `Python 3` (Menu->Desenvolvimento->Python 3).
-![](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/images/python3-app-menu.png)
+1. Add in some block variables:
 
-5. F
+    ```python
+    # blocks
+    air = 0
+    grass = 2
+    water = 9
+    sand = 12
+    ```
 
-6.
+1. Add some colours:
 
-7.
+    ```python
+    # colours
+    white = (255, 255, 255)
+    green = (0, 255, 0)
+    blue = (0, 0, 255)
+    yellow = (255, 255, 0)
+    black = (0, 0, 0)
+    ```
 
-8.
+1. Create a dictionary mapping block IDs to colours:
 
-9.
+    ```python
+    # block: colour
+    colours = {
+        air: white,
+        grass: green,
+        water: blue,
+        sand: yellow,
+    }
+    ```
 
-10.
+1. Modify your `while` loop like so:
 
+    ```python
+    while True:
+        blocks = get_blocks()
+        pixels = map_blocks_to_colours(blocks)
+        print(pixels)
+    ```
+
+    Here we get the blocks from the `get_blocks` function which looks them up in the cached `known_blocks` dictionary or uses `mc.getBlock` to find them out. Then we try to convert these block IDs into colours, but that's currently a missing piece!
+
+1. Now you'll need a `map_blocks_to_colours` function which takes a list of block IDs and returns a list of corresponding colours. Add this after your `get_blocks` function:
+
+    ```python
+    def map_blocks_to_colours(blocks):
+        return [lookup_colour(block) for block in blocks]
+    ```
+
+    **How does it work?**
+
+    This function is a one-liner, but it's quite complex. It uses a concept called list comprehension, which is a way of building up a list in a loop in a concise way.
+
+    The whole thing is wrapped in square brackets, representing a list, and the definition is to call the `lookup_colour` function for each block in `blocks`. The list builds up as it loops over the list of blocks passed in, and is returned as a list of 64 colours.
+
+    However, we don't have a `lookup_colour` function yet either!
+
+1. Next you'll need to create a new `lookup_colour` function that takes a block and returns a colour. You could just use `colours[block]` but that will fail if you try to look up a colour which you haven't yet set in your directory.
+
+    Here's a function that will return white if the block does not have a colour set:
+
+    ```python
+    def lookup_colour(block):
+        if block in colours:
+            return colours[block]
+        else:
+            return white
+    ```
+
+1. Now you have a 64 item `pixels` list, print it out to see what it looks like. It should contain 64 3-tuples representing different colour values.
+
+1. You'll also need to define the variable `player_pos`. It'll need to be the number between `0` and `63` - the pixel which is the defined centre point of the grid. Since we used the range `x-3` to `x+5` and `z-3` to `z+5` the centre point will be the `(3, 3)` coordinate on the LED matrix, which is pixel number `27` as shown:
+
+    ![Sense HAT grid centre point](images/sense-hat-grid-centre-point.png)
+
+    Add the line `player_pos = 27` before your `while` loop.
+
+1. Now add a line to your `while` loop to modify the `pixels` list to set a black pixel where your player is standing:
+
+    ```python
+    pixels[player_pos] = black
+    ```
+
+1. Everything's set up now and the last thing to do is send the list of pixels to the Sense HAT. Swap out the `print` line for a `set_pixels` one:
+
+    ```python
+    sense.set_pixels(pixels)
+    ```
+
+    Your `while` should now look like this:
+
+    ```python
+    while True:
+        blocks = get_blocks()
+        pixels = map_blocks_to_colours(blocks)
+        pixels[player_pos] = black
+        sense.set_pixels(pixels)
+    ```
+
+    This should now show a map of a small part of the Minecraft world around you. Walk around and watch it update!
+
+    ![Sense HAT Minecraft Map](images/sense-hat-minecraft-map.jpg)
+
+**Download a copy of [minecraft_map.py](code/minecraft_map.py)**
+
+ ![](https://www.raspberrypi.org/learning/sense-hat-minecraft-
  ![Mapa Sense HAT do mundo Minecraft](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/images/sense-hat-minecraft-map.jpg)
  Descarrega uma cópia do [minecraft_map.py](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/code/minecraft_map.py)
 ## E agora?
