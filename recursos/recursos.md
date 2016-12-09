@@ -1,25 +1,29 @@
-### Consulta  
+## Recursos
 
-|Nome  |Link  |
-|---|---|
-|A Visual Introduction to Python |[Ver aqui](https://hourofpython.trinket.io/a-visual-introduction-to-python#/welcome/an-hour-of-code) |
-|Code Academy Python Glossary  |[Ver aqui](https://www.codecademy.com/articles/glossary-python)  |  
-|Code Academy SQL  |[Ver aqui](https://www.codecademy.com/learn/learn-sql)  |  
-|Python 2 Documentation  |[Ver aqui](https://docs.python.org/2/)  |  
-|Python 3 Documentation  |[Ver aqui](https://docs.python.org/3/)  |  
-|Python CSV  |[Ver aqui](https://pythonprogramming.net/reading-csv-files-python-3/)  |  
-|Python Threads  |[Ver aqui](https://pymotw.com/2/threading/)  |  
-  
+Aqui encontras uma coletânea dos melhores recursos para os teus projetos, grande parte deles encontram-se em Inglês.
+
 ### Tutoriais  
   
 |Nome  |Link  |
 |---|---|  
+|A Visual Introduction to Python |[Ver aqui](https://hourofpython.trinket.io/a-visual-introduction-to-python#/welcome/an-hour-of-code) |
 |Code Academy Python |[Ver aqui](https://www.codecademy.com/learn/python)  |  
 |Google's Python Class  |[Ver aqui](https://developers.google.com/edu/python/)  |  
 |TutorialsPoint Python  |[Ver aqui](http://www.tutorialspoint.com/python/)  |  
 |Mozilla's Codemoji - Cifras  |[Ver aqui](https://codemoji.org/#/welcome)  |  
 |Wolfram Mathematica  |[Ver mais](https://www.raspberrypi.org/learning/getting-started-with-mathematica/)  |  
-  
+
+### Consulta  
+
+|Nome  |Link  |
+|---|---|
+|Code Academy Python Glossary  |[Ver aqui](https://www.codecademy.com/articles/glossary-python)  |  
+|Python CSV  |[Ver aqui](https://pythonprogramming.net/reading-csv-files-python-3/)  |  
+|Code Academy SQL  |[Ver aqui](https://www.codecademy.com/learn/learn-sql)  |  
+|Python Threads  |[Ver aqui](https://pymotw.com/2/threading/)  |  
+|Python 3 Documentation  |[Ver aqui](https://docs.python.org/3/)  |  
+|Python 2 Documentation  |[Ver aqui](https://docs.python.org/2/)  |  
+
 ### Projetos  
   
 |Nome  |Hardware Base  |Link  |Dificuldade |
