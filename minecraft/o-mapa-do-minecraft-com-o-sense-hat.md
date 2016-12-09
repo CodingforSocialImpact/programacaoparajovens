@@ -38,7 +38,7 @@ O Sense HAT tem uma matriz de 8x8 LEDs, ou seja, 64 LEDs que podem assumir todas
 
 3. Cria uma nova pasta com o comando seguinte:
 
-```shell
+```bash
 mkdir minecraft-map
 ```
 
