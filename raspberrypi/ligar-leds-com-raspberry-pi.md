@@ -78,15 +78,16 @@ gpio –g write 18 0
 
 Agora vamos usar o Scratch para programar o nosso LED.
 
-1. Com o teu circuito feito anteriormente no passo 9 completo, estás agora pronto para usar o Scratch. Inicia o `Scratch` (Menu->Programação->Scratch).
+1. Com o teu circuito feito anteriormente no passo 9 completo, estás agora pronto para usar o Scratch. Inicia o `Scratch` (Menu->Desenvolvimento->Scratch).
 
- ![](https://www.raspberrypi.org/learning/physical-computing-guide/images/scratch-icon.png)
+ ![Iniciar o Scratch](https://www.raspberrypi.org/learning/physical-computing-guide/images/scratch-icon.png)
 
-2. 
- ![](https://www.raspberrypi.org/learning/physical-computing-guide/images/Scratch-interface.png)
+ ![Scratch](https://www.raspberrypi.org/learning/physical-computing-guide/images/Scratch-interface.png)
+2. Clica em `Controle` no painel esquerdo e arrasta o `quando clicado` para a área de comandos.
 
- ![](https://www.raspberrypi.org/learning/physical-computing-guide/images/green_flag.png)
+ ![Bandeira Verde](https://www.raspberrypi.org/learning/physical-computing-guide/images/broadcast.png)
 
+3.
  ![](https://www.raspberrypi.org/learning/physical-computing-guide/images/scratch_config.png)
 
  ![](https://www.raspberrypi.org/learning/physical-computing-guide/images/green_flag_icon.png)
