@@ -1,4 +1,4 @@
-# ![](/assets/images/coding-bg@2x.png)
+# ![](/assets/images/csi-banner.png)
 
 # Programação para Jovens
 
