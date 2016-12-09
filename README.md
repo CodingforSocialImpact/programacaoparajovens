@@ -28,7 +28,7 @@ Podes sugerir alterações, para isso:
 2. Vai aparecer-te um `+`, clica nele, 
 3. Escreve o teu comentário e clica em `Post`.
 
-![](/assets/comentario.png)
+![](/assets/images/comentario.png)
 
 ---
 ![](/assets/images/apple-touch-icon-120x120.png)
