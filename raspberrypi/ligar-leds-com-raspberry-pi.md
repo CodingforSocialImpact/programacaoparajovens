@@ -76,17 +76,22 @@ gpio –g write 18 0
 
 ### Programar LEDs com Scratch
 
-![](https://www.raspberrypi.org/learning/physical-computing-guide/images/scratch-icon.png)
+Agora vamos usar o Scratch para programar o nosso LED.
 
-![](https://www.raspberrypi.org/learning/physical-computing-guide/images/Scratch-interface.png)
+1. Com o teu circuito feito anteriormente no passo 9 completo, estás agora pronto para usar o Scratch. Inicia o `Scratch` (Menu->Programação->Scratch).
 
-![](https://www.raspberrypi.org/learning/physical-computing-guide/images/green_flag.png)
+ ![](https://www.raspberrypi.org/learning/physical-computing-guide/images/scratch-icon.png)
 
-![](https://www.raspberrypi.org/learning/physical-computing-guide/images/scratch_config.png)
+2. 
+ ![](https://www.raspberrypi.org/learning/physical-computing-guide/images/Scratch-interface.png)
 
-![](https://www.raspberrypi.org/learning/physical-computing-guide/images/green_flag_icon.png)
+ ![](https://www.raspberrypi.org/learning/physical-computing-guide/images/green_flag.png)
 
-![](https://www.raspberrypi.org/learning/physical-computing-guide/images/scratch_complete.png)
+ ![](https://www.raspberrypi.org/learning/physical-computing-guide/images/scratch_config.png)
+
+ ![](https://www.raspberrypi.org/learning/physical-computing-guide/images/green_flag_icon.png)
+
+ ![](https://www.raspberrypi.org/learning/physical-computing-guide/images/scratch_complete.png)
 
 ### Programar LEDs com Python
 
