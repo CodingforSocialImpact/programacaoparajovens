@@ -87,11 +87,25 @@ Agora vamos usar o Scratch para programar o nosso LED.
 
  ![Bandeira Verde](https://www.raspberrypi.org/learning/physical-computing-guide/images/green_flag.png)
 
-3. Arrasta um bloco de `anuncie` para a tua area de comandos e junta-o ao bloco `quando clicado`
+3. Arrasta um bloco `anuncie` para a tua area de comandos e junta-o ao bloco `quando clicado`, edita a caixa de texto dentro do `anuncie` (`novo`) e escreve `gpioserveron` (ligar servidor GPIO).
+
+4. Arrasta outro bloco `anuncie` e escreve `config18output`, isto configura o Pino 18 como saída de informação.
 
  ![](https://www.raspberrypi.org/learning/physical-computing-guide/images/scratch_config.png)
 
+5. Arrasta outro bloco `anuncie` e escreve `gpio18on` (ligar GPIO 18).
+
+6. Arrasta um bloco `espere 1 segundos` e liga-o aos blocos anteriores.
+
+7. Arrasta outro bloco `anuncie` e escreve `config18off` (desligar GPIO 18).
+
+8. Guarda o teu trabalho como `Teste LED` (File->Salvar Como).
+
+9. Clica na `bandeira verde` no canto superior direito.
+
  ![](https://www.raspberrypi.org/learning/physical-computing-guide/images/green_flag_icon.png)
+
+Deverás ver o LED a acender e a apagar, de 1 em 1 segundo!
 
  ![](https://www.raspberrypi.org/learning/physical-computing-guide/images/scratch_complete.png)
 
