@@ -218,12 +218,11 @@ Agora que já exploraste o mundo do Minecraft e viste os diferentes tipos de blo
 
 ## Definir LEDs individuais no Sense HAT
 
-Até ag
-Until now, all you've done is set the whole Sense HAT LED display to the same colour. It's possible to set each pixel individually using the Sense Hat module's `set_pixel` method.
+Até agora, usaste o mostrador inteiro do Sense HAT para mostrar apenas uma cor. É possível alterar cada pixel individualmente, com o método do módulo do Sense HAT, `set_pixel`.
 
-1. Create a new Python file and save it as `pixels.py`.
+1. Cria um ficheiro Python novo e guarda-o como `pixels.py`.
 
-1. Write the following code:
+1. Escreve o código seguinte:
 
     ```python
     from sense_hat import SenseHat
@@ -235,26 +234,26 @@ Until now, all you've done is set the whole Sense HAT LED display to the same co
     sense.set_pixel(0, 0, 255, 255, 255)
     ```
 
-1. Save and run the code. It should clear the display and set the top left pixel to white.
+1. Guarda `CTR + S` e corre o código `F5`. Deverá limpar o mostrador e mudar o pixel do topo esquerdo para branco.
 
-    **How does it work?**
+    **Como funciona?**
 
-    The `sense.set_pixel` method is used to set a particular pixel to a particular colour. The pixel is given as `x` and `y` and the colour is given as `R`, `G` and `B`. There are two ways of using the method:
+    O método `sense.set_pixel` é usado para alterar um pixel específico para uma cor particular. O pixel é definido como x` e `y` e a cor é dada como `R`, `G` e `B`. Existem 2 maneira de usar este método:
 
-    - pass in the `R`, `G` and `B` values separately:
+    - passar os valores `R`, `G` and `B` separadamente:
 
     ```python
     sense.set_pixel(x, y, r, g, b)
     ```
 
-    - use a 3-tuple for the colour and pass it in as a variable:
+    - passar os valores numa variável, definindo primeiro os valores:
 
     ```python
     white = (255, 255, 255)
     sense.set_pixel(x, y, white)
     ```
 
-1. Try a loop:
+1. Experimenta o seguinte ciclo:
 
     ```python
     sense.clear()
@@ -264,13 +263,13 @@ Until now, all you've done is set the whole Sense HAT LED display to the same co
             sleep(0.1)
     ```
 
-    **Things to try:**
+    **Coisas a experimentar:**
 
-    - What happens when you reverse the order of the loops? Try `for x in range(8)` then `for y in range(8)`.
-    - What happens if you add a `sense.clear()` before `sense.set_pixel()`?
-    - What happens if you try `range(8, -1, -1)`?
+    - O que será que acontece quando alteramos a ordem dos ciclos? Experimenta `for x in range(8)` e depois `for y in range(8)`.
+    - O que será que acontece quando adicionamos `sense.clear()` antes de `sense.set_pixel()`?
+    - O que será que acontece quando experimentamos `range(8, -1, -1)`?
 
-1. Try this example using rows of colours:
+1. Experimenta este exemplo que usa linhas de cores:
 
     ```python
     white = (255, 255, 255)
@@ -289,7 +288,7 @@ Until now, all you've done is set the whole Sense HAT LED display to the same co
             sleep(0.1)
     ```
 
-1. You can also use the `set_pixels()` method which takes in a list of 64 colour tuples. Try the following code as an example:
+1. POdes sempre usar o método `set_pixels()` que recebe uma lista de 64 cores. Experimenta o seguinte exemplo:
 
     ```python
     r = red
@@ -309,9 +308,9 @@ Until now, all you've done is set the whole Sense HAT LED display to the same co
     sense.set_pixels(pixels)
     ```
 
-    This should give you a checkerboard of red and blue pixels.
+    Isto deverá devolver um tabuleiro de xadrez azul e vermelho.
 
-**Download a copy of [pixels.py](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/code/pixels.py)**
+**Descarrega uma cópia do [pixels.py](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/code/pixels.py)**
 
 ## Escreve uma função `Get_Blocks`
 
