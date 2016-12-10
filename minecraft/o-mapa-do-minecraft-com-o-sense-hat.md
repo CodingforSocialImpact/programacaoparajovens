@@ -167,14 +167,9 @@ Agora que já exploraste o mundo do Minecraft e viste os diferentes tipos de blo
 
 1. Agora só falta procurar o bloco que estás a pisar, ver que cor é que corresponde e usar o `sense.clear` para mudar a cor do Sense HAT!
 
-    Para procurar um valor no dicionário, passa-se a chave. Se o dicionário 
+    Para procurar um valor no dicionário, passa-se a chave. Se o dicionário fosse uma lista telefónica passavas-lhe um nome e recebia o número dessa pessoa. Portanto, para ler o tipo `grass` usarias `colours[2]` ou `colours[grass]` e recebias o valor para `green` que é `(0, 255, 0)`.
 
-
-
-
-To look up a value in a dictionary, you pass in the key. If the dictionary was an address book, you'd pass in the name and be given that person's phone number. So to look up the block type `grass` you'd use `colours[2]` or `colours[grass]` and you'd get back the value for green which is `(0, 255, 0)`.
-
-    Modify your `while` loop to look like this:
+    Modifica o teu ciclo `while` do seguinte modo:
 
     ```python
     while True:
@@ -184,11 +179,11 @@ To look up a value in a dictionary, you pass in the key. If the dictionary was a
         print(colour)
         sleep(0.1)
     ```
-    Here we're looking up the ID of the block the player is standing on, as before, and then looking that up in the `colours` dictionary, then printing out the colour code tuple.
+    Aqui procuramos o ID do bloco que o jogador está a pisar, e como anteriormente, e depois procuras no dicionário `colours`, depois imprimes o túpolo do código de cor.
 
-1. Save and run the code, and walk around the Minecraft world.
+1. Guarda `CTR + S` e corre o código `F5` e caminha no Minecraft.
 
-    You should see the colour code of the block you're standing on. Walk around to see different colour codes. When you walk on grass you should see `(0, 255, 0)`, when you're on sand you should see `(255, 255, 0)`, and on water, `(0, 0, 255)`.
+    Deverás verYou should see the colour code of the block you're standing on. Walk around to see different colour codes. When you walk on grass you should see `(0, 255, 0)`, when you're on sand you should see `(255, 255, 0)`, and on water, `(0, 0, 255)`.
 
 1. If you walk over a block that isn't in the dictionary, you'll get an error message. If you haven't found another block type yet, just jump in the air using the space bar, and you'll get this error:
 
