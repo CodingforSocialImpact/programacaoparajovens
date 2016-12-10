@@ -379,9 +379,9 @@ De modo a criares um mapa de 8x8, vais precisar de saber os IDs dos bloco imedia
         return blocks
     ```
 
-1. Run the code and you should see a list of 16 block IDs, starting with the block you're standing on and the 7 to the side of you, followed by each row of 8 blocks away from you.
+1. Corre o código e deverás ver a lista de 16 IDs de blocos, a começar no bloco que estás a pisar e 7 ao teu lado, seguidos de linhas com 8 blocos afastados de ti.
 
-1. Now you'll want to make it loop over 8 rows and 8 columns, and make sure it looks to the left and right, and both behind and ahead of you. This version loops over `x` and `z` 8 times and returns 64 values:
+1. Agora Now you'll want to make it loop over 8 rows and 8 columns, and make sure it looks to the left and right, and both behind and ahead of you. This version loops over `x` and `z` 8 times and returns 64 values:
 
     ```python
     def get_blocks():
