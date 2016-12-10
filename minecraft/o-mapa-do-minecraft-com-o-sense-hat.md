@@ -428,9 +428,9 @@ In order to reduce the lag, you'll need to use a technique called caching. This 
     def get_blocks():
         global known_blocks
     ```
-    Global means you're changing the scope of the variable from being read-only to read/write.
+    Global significa que estás a alterar a variável de leitura apenas para escrita/leitura.
 
-1. Inside the function, modify the loop to look like this:
+1. Dentro da função, altera o ciclo para:
 
     ```python
     for dz in range(z-3, z+5):
@@ -444,14 +444,7 @@ In order to reduce the lag, you'll need to use a technique called caching. This 
             blocks.append(block)
     ```
 
-    **What does it do?**
-
-    - `b = (dx, y, dz)`: create a 3-tuple of the current coordinates.
-    - `if b in known_blocks`: check if the block has already been looked up.
-    - `block = known_blocks[b]`: look up the block by its coordinates.
-    - `known_blocks[b] = block`: once a block is looked up for the first time, add it to the `known_blocks` dictionary.
-
-1. Run the code and walk around. You should see it's a lot quicker at printing the blocks list out. Try reducing the `sleep` down to `0.1` and see if it can still cope.
+1. Corre o código e e caminha. Deverás perceber que ºe bastnate mais rápido a imprimir a lista. Tenta reduzir o `sleep` para `0.1` e vê se consegue ser jogável ainda.
 
 ## Cria o mapa
 
@@ -571,4 +564,3 @@ Tenta adicionar mais funcionalidades ao Sense HAT para interagires com o Minecra
 ---
 Referências: 
 * [Sense HAT Minecraft Map](https://www.raspberrypi.org/learning/sense-hat-minecraft-map)
-
