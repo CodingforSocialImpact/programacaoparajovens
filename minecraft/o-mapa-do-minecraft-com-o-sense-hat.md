@@ -381,7 +381,7 @@ De modo a criares um mapa de 8x8, vais precisar de saber os IDs dos bloco imedia
 
 1. Corre o código e deverás ver a lista de 16 IDs de blocos, a começar no bloco que estás a pisar e 7 ao teu lado, seguidos de linhas com 8 blocos afastados de ti.
 
-1. Agora Now you'll want to make it loop over 8 rows and 8 columns, and make sure it looks to the left and right, and both behind and ahead of you. This version loops over `x` and `z` 8 times and returns 64 values:
+1. Agora vais querer que corra um ciclo por 8 linhas e 8 colunas, garante que eset olha para a diretia, esquerda, frente e para trás. Esta versão corre o ciclo por `x` e `z` 8 vezes e devolve 64 valores:
 
     ```python
     def get_blocks():
