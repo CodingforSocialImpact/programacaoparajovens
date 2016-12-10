@@ -7,7 +7,7 @@
  * [Halterofilista Olímpico com Scratch](scratch/halterofilista-olimpico-com-scratch.md)
 * [Sense HAT](sensehat/sense-hat.md)
  * [Começar com o Sense HAT](sensehat/começar-com-o-sense-hat.md)
- * [Brilho Aleatório com Sense HAT](sensehat/brilho-aleatorio-com-sense-hat.md)
+
 * [Minecraft](minecraft/minecraft.md)
  * [Começar com o Minecraft](minecraft/comecar-com-o-minecraft.md)
  * [Cabine de Fotografia no Minecraft](minecraft/cabine-de-fotografia-no-minecraft.md)
@@ -16,6 +16,7 @@
 
 
 <!-- Links -->
+[Brilho Aleatório com Sense HAT]:(sensehat/brilho-aleatorio-com-sense-hat.md)
 [Animal de pixeis interativo]:(sensehat/animal-de-pixeis-interativo.md)
 [Flappy Astronauta]:(sensehat/flappy-astronauta.md)
 [Avançado]:(avançado/avançado.md)
