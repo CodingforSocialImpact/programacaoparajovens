@@ -71,21 +71,21 @@ Os teus LEDs do Sense HAT deverão estar todos vermelhos!
 
 ## Explorar o mundo do Minecraft
 
-Now you've had a go at setting the colours of the Sense HAT LED matrix, let's open up Minecraft and have a look around to see what block types you can identify.
+Agora que já experimentaste as cores do Sense HAT, vamos abrir o Minecraft e explorar que tipos de blocos podes encontrar.
 
-1. Open Minecraft from the application menu, under **Games**:
+1. Abre o Minecraft `Menu`->`Jogos`:
 
     ![Open Minecraft](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/images/minecraft-app-menu.png)
 
-1. Click **Start Game** and then either create a new world or enter an existing world.
+1. Clica **Start Game** e cria um novo mundo, ou entra num já criado.
 
-1. Press the `Tab` key to regain access to the mouse cursor and then move the Minecraft window to one side of your screen.
+1. Carrega em `Tab` para poderes mover o cursor do rato fora do Minecraft.
 
-1. Return to the Python windows. Open another new window from the Python shell and save it as `minecraft-colours.py` in the same project folder.
+1. Volta à tua janela do `Python`. Abre um novo ficheiro e guarda-o com o nome `minecraft-colours.py` dentro da mesma pasta.
 
-1. Move this window so that it is on the other side of the screen, and you can see the Python window and the Minecraft window side by side.
+1. Coloca a janela do `Python` e do `Minecraft` lado-a-lado.
 
-1. Enter the following code to get started:
+1. Introduz o seguinte código:
 
     ```python
     from sense_hat import SenseHat
@@ -95,15 +95,14 @@ Now you've had a go at setting the colours of the Sense HAT LED matrix, let's op
     sense = SenseHat()
     mc = Minecraft.create()
 
-    mc.postToChat("Hello Minecraft!")
+    mc.postToChat("Olá Minecraft!")
     sense.clear(0, 255, 0)
     ```
 
-1. Save and run your code!
+1. Guarda `CTR + S` e corre o código `F5`!
+ Deverás ver o texto `Olá Minecraft!` na janela do Minecraft o Sense HAT deverá ficar verde!
 
-    You should see the text "Hello Minecraft" appear in the Minecraft window and the Sense HAT should turn green!
-
-1. Now you've created a connection to both the Sense HAT and the Minecraft world, let's look at how you can determine what type of block you're standing on. Remove the `postToChat` and `sense.clear` lines and add the following code:
+1. Agora que criaste uma ligação entre o Sense HAT e o mundo do Minecraft, vamos analisar como podemos determinar que tipo de bloco é que estamos a pisar. Reomve as linhas `postToChat` (postar para o chat) e `sense.clear` (limpar o Sense HAT) e adiciona o seguinte código:
 
     ```python
     while True:
@@ -113,35 +112,26 @@ Now you've had a go at setting the colours of the Sense HAT LED matrix, let's op
         sleep(0.1)
     ```
 
-1. Save and run the code.
+1. Guarda `CTR + S` e corre o código `F5`!
+ Deverás ver números a aparecer na `linha de comandos` do Python. Estes números representam os IDs dos blocos que o teu jogador está a pisar. Caminha pelo mapa com a tua personagem, em diferentos blocos e deverás ver o número alterar-se.
 
-    You should now see numbers being constantly printed to the Python shell. These numbers represent the IDs of the block your player is standing on. Walk around over different terrain and you'll see the number change. Note that you use the WASD keys to walk around, and the space bar to jump or fly
-
-    **How does it work?**
-
-    - `while True`: this is an infinite loop.
-    - `x, y, z = mc.player.getTilePos()`: this gets the coordinates of where your player is standing and sets them to variables `x`, `y` and `z`.
-    - `block = mc.getBlock(x, y-1, z)`: this looks up the ID of the block directly beneath the player (`y-1` means one below the player's `y` coordinate, which is the vertical axis).
-    - `print(block)`: this shows us which block ID was returned by `getBlock`.
-    - `sleep(0.1)`: this pauses for a tenth of a second each time the loop runs, so it's not printing out too fast.
-
-1. You need to know the block types that are represented by the IDs you're seeing. Some common ones are:
+1. Precisas de saber o que representam os diferentes tipos de números (IDs), ficam aqui alguns mais comuns:
 
     ```
-    Air:   0
-    Stone: 1
-    Grass: 2
-    Dirt:  3
-    Water: 8
-    Sand: 12
-    Ice:  79
+    Ar:   0
+    Pedra: 1
+    Erva: 2
+    Terra:  3
+    Água: 8
+    Areia: 12
+    Gelo:  79
     ```
 
-    See which block types you can identify while walking around the Minecraft world.
-
+    Vê que tipos de blocos consegues identificar ao caminhar no Minecraft.
 
 ## Caminhada colorida com o Minecraft e o Sense HAT
 
+Agora que já exploraste o mundo do Minecraft e viste os diferentes tipos de blocos, vais aprender a mostrar no Sense HAT cores diferentes dependendo do tipo de 
 Now you've explored the Minecraft world and seen the different block IDs that are printed out as you walk around, you're going to learn to make the Sense HAT show a different colour depending on what type of block you're standing on in the Minecraft world!
 
 1. You're going need a way to create a mapping from a block ID to a colour; for example, grass should map to green, so block ID `2` should map to the colour code `(0, 255, 0)`.
