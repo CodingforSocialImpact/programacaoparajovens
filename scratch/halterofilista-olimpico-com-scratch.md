@@ -23,54 +23,52 @@ Duração da atividade: `90 minutos.`
 |Breadboard (opcional) |1 |2,5€ |
 |Fios de ligação (opcional) |4 |0.5€ |
 
-## Getting the game assets
+## Obter os atributs do jogo
 
-For this project, you're going to need a sprite and a background. You can download a zip file containing all the game assets by clicking [here](https://www.raspberrypi.org/learning/scratch-olympics-weightlifter/images/scratch_olympics_weightlifter.zip) and choosing to download the file. 
+Para este projeto, vais precisar de uma `sprite` e de um `background`. Podes descarregar um ficheiro com todos os atributos do jogo [aqui](https://www.raspberrypi.org/learning/scratch-olympics-weightlifter/images/scratch_olympics_weightlifter.zip).
 
-Once the file has been downloaded, you can unzip the archive by right-clicking on it and choosing `unzip`.
+Descomprime o ficheiro.
 
-You should see two directories: one containing the weightlifter's costumes and the other containing the background.
+Deverás ver 2 pastas: uma que contem a roupa da personagem e outra que contém o fundo.
 
-## Importing the assets into Scratch
+## Importar para o Scratch
 
-Open Scratch by clicking `Menu` > `Programming` > `Scratch`.
+Abre o Scratch (`Menu` > `Desenvolvimento` > `Scratch`).
 
-Now click on the **Stage** icon and then drag and drop the Olympics background into the **Backgrounds** tab. You can delete the original background.
+Agora clica em **Palco** e arrasta o fundo `Olympics background` para **Fundos de tela**. Podes apagar o fundo original.
 
-Next, click on **Sprite1** and then, one by one, drag and drop the Weightlifter costumes into the **Costumes** tab. You can delete the original costumes.
+De seguida, clica em **Sprite1** e um a um, arrasta os fatos do levantador de pesos para **Trajes**. Podes apagar os fatos que já estavam lá.
 
 ![screencap](https://www.raspberrypi.org/learning/scratch-olympics-weightlifter/images/screencap.gif)
 
-## Testing the animation
+## Testar a animação
 
-You can check whether the animation will work using the simple script shown below:
+Clica na bandeira verde para testar a tua animação:
 
 ![capture1](https://www.raspberrypi.org/learning/scratch-olympics-weightlifter/images/capture1.png)
 
-Click on the green flag and watch the weightlifter do his thing!
+## Capturar a velocidade com carregas no teclado
 
-## Capturing the speed of key presses
+O progresso da personagem vai ser controlado pela velocidade a que os jogadores carregam na tecla `z` e `x`, portanto precisas de criar alguns comandos para capturar esta informação.
 
-The progress the weightlifter makes is going to be controlled by the speed at which the player can hit the `z` and `x` keys, so you need to create some scripts that will capture this data.
+Vais precisar de 2 **variáveis** neste jogo. A primeira chamada `progress` vai ser usada para gravar o quão longe a personagem conseguiu ir. A segunda chamada `last_key`, vai ser usada para guardar a última tecla pressionada no jogo.
 
-You're going to need two **variables** in this game. The first, called `progress`, will be used to record how far into the lift the weightlifter has managed to get. The second, called `last_key`, will be used to store the last key press the player made.
-
-1. Create these two variables by clicking in **Variables** and then clicking on **Make a variable**.
-1. Then you can start your script by setting `progress` to be `1` and `last_key` to be `x` when the game starts:
+1. Cria as 2 variáveis clicando em **Variáveis** e depois **Nova variável**.
+1. Depois, começas os teus comandos por definir `progress` como `1` e `last_key` como `x` quando o jogo começar:
 
     ![capture](https://www.raspberrypi.org/learning/scratch-olympics-weightlifter/images/capture2.png)
 
-1. The player must switch between hitting the `x` key and the `z` key for the `progress` to increase, so when the `x` key is pressed, your script needs to check that the last key press was `z`. If it was, then `progress` can be increased and the `last_key` can be switched to `x`. This is called **conditional selection**. The action only occurs `if` a variable is at the correct value:
+1. O jogador tem que alternar entre `x` e `z` para que `progress` aumente, portanto quando o `x` é pressionado, o teu programa precisa de verificar se a última tecla pressionada foi o `z`. Se foi, então `progress` pode ser aumentado e `last_key` pode ser alterada para `x`. A isto chama-se **seleção condicional**.
 
     ![capture](https://www.raspberrypi.org/learning/scratch-olympics-weightlifter/images/capture3.png)
 	
-1. Of course, you want the same sort of thing to happen when you press the `z` key. You can duplicate the script by right-clicking on it and selecting **duplicate** from the context menu, then changing the duplicated script so it looks like the one below:
+1. Claro que queres que o mesmo aconteça quando carregas em `z`. Podes duplicar os comandos com o `clique direito` do rato, alterando depois do seguinte modo:
 
     ![capture](https://www.raspberrypi.org/learning/scratch-olympics-weightlifter/images/capture4.png)
 
-1. Test that your game works by clicking on the green flag and then repeatedly hitting the `x` and `z` keys on the keyboard. You should see the variable `progress` increasing. The faster you hit the keys, the faster `progress` will increase.
+1. Experimenta se o teu jogo funciona ao clicares na bandeira verde e ao carregares repetidamente no `x` e `z` no teclado. Deverás ver a variável `progress` aumentar.
 
-## Making the character lift
+## Fazer com que a personagem levante
 
 1. There are a total of 29 costumes in the game. The sprite's costume can be continually set so that it's the same as the `progress` variable. That way, as `progress` increases, the costume will change. When `progress` reaches `29`, the game can end.
 
