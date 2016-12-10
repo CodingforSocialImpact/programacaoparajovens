@@ -316,11 +316,11 @@ Até agora, usaste o mostrador inteiro do Sense HAT para mostrar apenas uma cor.
 
 Agora tens o teu Sense HAT a mostrar a cor do bloco que estás a pisar, podes usar a mesma lógica para mostar uma cor diferente para cada bloco à tua volta para criares um mini mapa do Minecraft em 8x8.
 
-In order to make an 8x8 map, you'll need to retrieve the block IDs for all blocks immediately surrounding your player - enough to fill the 8x8 display. The Minecraft API does have an `mc.getBlocks()` function, but unfortunately it doesn't actually work, so you'll have to write your own function.
+De modo a criares um mapa de 8x8, vais precisar de saber os IDs dos bloco imediatamente à tua volta. A API do Minecraft API tem um função `mc.getBlocks()`, mas infelizmente não funciona, portanto vamos escrever a nossa própria função.
 
-1. Create a new Python file and save it as `minecraft-map.py`.
+1. Cria um ficheiro Python file e guarda-o como `minecraft-map.py`.
 
-1. Start by writing the following starter code:
+1. Escreve o código seguinte:
 
     ```python
     from sense_hat import SenseHat
@@ -336,11 +336,12 @@ In order to make an 8x8 map, you'll need to retrieve the block IDs for all block
         return blocks
     ```
 
-    Here you've imported the libraries you'll need, created a connection to the Sense HAT and to the Minecraft world, and created a function called `get_blocks` which returns an empty list.
+    A função `get_blocks` que criamos devolve uma lista vazia de momento.
 
-1. Now you'll need to implement your `get_blocks` function. It would be nice to have a generic `get_blocks` function for any given range of `x`, `y` and `z` returning a cuboid of block IDs but for our purposes this is unnecessary as all we need is an 8x8 grid on the same y-axis.
+1. Agora vamos ter que implementar a nossa função `get_blocks`. Seria positivo termos uma função genérica `get_blocks` que devolvesse para qualquer extensão de `x`, `y` e `z` e devolvesse um cubo com IDs de blocos, mas tal não vai ser preciso pois só precisamos de 8x8 no mesmo eixo `y`.
 
-    Starting with a simple version, we want to look up the block the player is standing on, and the 3 blocks to the right of the player to return a list of four block IDs:
+    Vamos começar com uma versão simples
+Starting with a simple version, we want to look up the block the player is standing on, and the 3 blocks to the right of the player to return a list of four block IDs:
 
     ![First get_blocks loop](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/images/first-get-blocks-loop.png)
 
