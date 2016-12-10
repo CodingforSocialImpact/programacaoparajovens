@@ -491,7 +491,7 @@ Agora tudo o que tens que fazer é criar o mapa.
         print(pixels)
     ```
 
-    Here we get the blocks from the `get_blocks` function which looks them up in the cached `known_blocks` dictionary or uses `mc.getBlock` to find them out. Then we try to convert these block IDs into colours, but that's currently a missing piece!
+    Aqui obtemos os blocos na função `get_blocks` que pesquisa-os no dicionário `known_blocks` em cache ou usa o `mc.getBlock` para os descobrir. Depois tentamos converter estes IDs de blocos para cores, mas essa peça está em falta!
 
 1. Now you'll need a `map_blocks_to_colours` function which takes a list of block IDs and returns a list of corresponding colours. Add this after your `get_blocks` function:
 
