@@ -365,7 +365,7 @@ De modo a criares um mapa de 8x8, vais precisar de saber os IDs dos bloco imedia
 
 1. Corre o código e deverás ver a lista com 4 números (IDs de blocos), que serão o bloco que estás a pisar e os 3 blocos à tua direita.
 
-1. Agora vais alterar a tua função para fazer o mesmo, mas para 2 dimensões. Esta versaoThis version loops over `x` and `z` 4 times and returns 16 values:
+1. Agora vais alterar a tua função para fazer o mesmo, mas para 2 dimensões. Esta versao corre o ciclo em `x` e `z` 4 vez e devolve 16 valores:
 
     ```python
     def get_blocks():
