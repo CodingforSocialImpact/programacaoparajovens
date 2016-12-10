@@ -288,7 +288,7 @@ Até agora, usaste o mostrador inteiro do Sense HAT para mostrar apenas uma cor.
             sleep(0.1)
     ```
 
-1. POdes sempre usar o método `set_pixels()` que recebe uma lista de 64 cores. Experimenta o seguinte exemplo:
+1. Podes sempre usar o método `set_pixels()` que recebe uma lista de 64 cores. Experimenta o seguinte exemplo:
 
     ```python
     r = red
