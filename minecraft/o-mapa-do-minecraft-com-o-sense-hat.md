@@ -413,16 +413,15 @@ De modo a criares um mapa de 8x8, vais precisar de saber os IDs dos bloco imedia
 
 ## Reduz a lentidão com caching
 
+De modo a reduzires a lentidão, vais usar uma tecnica chamada de caching. Isto significa que vais guardar o valor na primeira vez que o pesquisares, e usar esse valor guardado de cada vez que precisares dele, em vez de o pesquisares de novo. Para alcançares este efeito vais usar u dicionário para guardar os blocos conhecidos, assim poderás consultar o dicinário `known_blocks` e usar apenas o `mc.getBlock()` se precisares mesmo. Esta técnica vai permitir-te poupar tempo e fazer com que o teu ciclo corra mais rápido.
 
-In order to reduce the lag, you'll need to use a technique called caching. This means you record a value the first time you look it up, and refer to the saved value when you need it the next time, rather than look it up again. To do this, you're going to use a dictionary to store the known blocks. That way, you can look up a set of coordinates in the `known_blocks` dictionary, and only use `mc.getBlock()` if you need to. This will save lots of time and make your lookup run much faster.
-
-1. First, create an empty dictionary called `known_blocks` before your `get_blocks` function:
+1. Primeiro, cria um dicionário vazio chamado `known_blocks` antes da função `get_blocks`:
 
     ```python
     known_blocks = {}
     ```
 
-1. You'll need to access the `known_blocks` dictionary from within your `get_blocks` function. Python will let you read a variable you declared outside the function, but not write to it. In order to write to it, you'll need to make it a **global** within the function like so:
+1. Vais precisar de aceder ao dicionário `known_blocks` na tua função `get_blocks`. O Python vai deixar-te ler a variável declarada fora da função, mas não te vai permitir escrever. De modo a poderes escrever, precisas de a tornar numa **global** dentro da função:
 
     ```python
     def get_blocks():
