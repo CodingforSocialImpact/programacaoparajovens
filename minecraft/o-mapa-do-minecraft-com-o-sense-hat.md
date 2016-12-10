@@ -340,43 +340,32 @@ De modo a criares um mapa de 8x8, vais precisar de saber os IDs dos bloco imedia
 
 1. Agora vamos ter que implementar a nossa função `get_blocks`. Seria positivo termos uma função genérica `get_blocks` que devolvesse para qualquer extensão de `x`, `y` e `z` e devolvesse um cubo com IDs de blocos, mas tal não vai ser preciso pois só precisamos de 8x8 no mesmo eixo `y`.
 
-    Vamos começar com uma versão simples
-Starting with a simple version, we want to look up the block the player is standing on, and the 3 blocks to the right of the player to return a list of four block IDs:
+    Vamos começar com uma versão simples, queremos saber que bloco estamos a pisar e os 3 blocos imediatamente à direita do jogador, o que nos devolverá uma lista de 4 IDs de blocos:
 
     ![First get_blocks loop](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/images/first-get-blocks-loop.png)
 
-    Enter the following code into your function:
+    Adiciona o código seguinte à tua função:
 
     ```python
     def get_blocks():
-        blocks = []
-        x, y, z = mc.player.getTilePos()
-        y -= 1
-        for dx in range(x, x+4):
-            block = mc.getBlock(dx, y, z)
-            blocks.append(block)
-        return blocks
+        blocks = [] # Cria uma lista vazia
+        x, y, z = mc.player.getTilePos() # Obtem a posição do jogador
+        y -= 1 # Subtrai 1 à coordenada y do jogador para ver o nível a baixo deste
+        for dx in range(x, x+4): # Usa x valores do jogador até 3 blocos dele
+            block = mc.getBlock(dx, y, z) # Procura o bloco nestas coordenadas
+            blocks.append(block) # Adiciona este bloco à lista
+        return blocks # Aqui devolve 4 blocos porque o ciclo correu 4 vezes
     ```
 
-    **What does it do?**
-
-    - `blocks = []`: creates a new empty list.
-    - `x, y, z = mc.player.getTilePos()`: get the player's position.
-    - `y -= 1`: subtract one from the `y` coordinate to look at the level below the player.
-    - `for dx in range(x, x+4):`: use `x` values from the player to 3 blocks away from the player.
-    - `block = mc.getBlock(dx, y, z)`: look up the block at this location.
-    - `blocks.append(block)`: add this block to the list.
-    - `return blocks`: by the time the program gets to this line, this contains 4 blocks as it's been through the loop 4 times.
-
-1. Add a line to the end of your code to print out the result of the `get_blocks` function:
+1. Adiciona uma linah no final do código para imprimir o resultado da função `get_blocks`:
 
     ```python
     print(get_blocks())
     ```
 
-1. Run the code and you should see a list of four numbers (block IDs), which will be the block you are standing on and the three blocks to the side of you (the direction depends on which way you're facing).
+1. Corre o código e deverás ver a lista com 4 números (IDs de blocos), que serão o bloco que estás a pisar e os 3 blocos à tua direita.
 
-1. Now you'll want to make the function do the same for a 2-dimensional space. This version loops over `x` and `z` 4 times and returns 16 values:
+1. Agora vais alterar a tua função para fazer o mesmo, mas para 2 dimensões. Esta versaoThis version loops over `x` and `z` 4 times and returns 16 values:
 
     ```python
     def get_blocks():
@@ -389,17 +378,6 @@ Starting with a simple version, we want to look up the block the player is stand
                 blocks.append(block)
         return blocks
     ```
-
-    **What does it do?**
-
-    - `blocks = []`: creates a new empty list.
-    - `x, y, z = mc.player.getTilePos()`: get the player's position.
-    - `y -= 1`: subtract one from the `y` coordinate to look at the level below the player.
-    - `for dz in range(z, z+4):`: use `z` values from the player to 3 blocks away from the player (4 rows in total).
-    - `for dx in range(x, x+4):`: use `x` values from the player to 3 blocks away from the player (4 columns in total).
-    - `block = mc.getBlock(dx, y, dz)`: look up the block at this location.
-    - `blocks.append(block)`: add this block to the list.
-    - `return blocks`: by the time the program gets to this line, this contains 16 blocks as it's been through each loop 4 times.
 
 1. Run the code and you should see a list of 16 block IDs, starting with the block you're standing on and the 7 to the side of you, followed by each row of 8 blocks away from you.
 
