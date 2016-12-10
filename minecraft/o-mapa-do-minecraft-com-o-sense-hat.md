@@ -493,24 +493,24 @@ Agora tudo o que tens que fazer é criar o mapa.
 
     Aqui obtemos os blocos na função `get_blocks` que pesquisa-os no dicionário `known_blocks` em cache ou usa o `mc.getBlock` para os descobrir. Depois tentamos converter estes IDs de blocos para cores, mas essa peça está em falta!
 
-1. Now you'll need a `map_blocks_to_colours` function which takes a list of block IDs and returns a list of corresponding colours. Add this after your `get_blocks` function:
+1. Agora vais precisar da função `map_blocks_to_colours` que pega numa lista de IDs de blocos e devolve a lista de cores correspondente. Adiciona o seguinte depois da função `get_blocks`:
 
     ```python
     def map_blocks_to_colours(blocks):
         return [lookup_colour(block) for block in blocks]
     ```
 
-    **How does it work?**
+    **Como é que isto funciona?**
 
-    This function is a one-liner, but it's quite complex. It uses a concept called list comprehension, which is a way of building up a list in a loop in a concise way.
+    Esta função, apesar de ser de uma linha, é bastante complexa. Tira partido de um conceito chamado compreensão de listas, que é um modo de construir uma lista num ciclo de um modo conciso.
 
-    The whole thing is wrapped in square brackets, representing a list, and the definition is to call the `lookup_colour` function for each block in `blocks`. The list builds up as it loops over the list of blocks passed in, and is returned as a list of 64 colours.
+    Está tudo envolvido em parêntesis retos, que representam a lista, e a definição é chamar a função `lookup_colour` para cada bloco em `blocks`. A lista vai sendo construída enquanto vai percorrendo os ciclos da lista de blocos e é devolvido ima lista de 64 cores.
 
-    However, we don't have a `lookup_colour` function yet either!
+    No entanto ainda não temo a função `lookup_colour` (procurar cor)!
 
-1. Next you'll need to create a new `lookup_colour` function that takes a block and returns a colour. You could just use `colours[block]` but that will fail if you try to look up a colour which you haven't yet set in your directory.
+1. De seguida, vais criar uma nova função `lookup_colour` que pega num bloco e devolve uma cor. Podes usar simplesmente `colours[block]` mais irá falhar se tentar pesquisar uma cor que ainda não definiste.
 
-    Here's a function that will return white if the block does not have a colour set:
+    Aqui está a função que devolve `white` (branco) se ainda não tiveres definido a sua cor:
 
     ```python
     def lookup_colour(block):
@@ -520,21 +520,21 @@ Agora tudo o que tens que fazer é criar o mapa.
             return white
     ```
 
-1. Now you have a 64 item `pixels` list, print it out to see what it looks like. It should contain 64 3-tuples representing different colour values.
+1. Agora tens uam lista de 64 `pixels`, imprime-a para veres como ela é, deverá conter 64 grupos de 3 valores (cada grupo representa uma cor).
 
-1. You'll also need to define the variable `player_pos`. It'll need to be the number between `0` and `63` - the pixel which is the defined centre point of the grid. Since we used the range `x-3` to `x+5` and `z-3` to `z+5` the centre point will be the `(3, 3)` coordinate on the LED matrix, which is pixel number `27` as shown:
+1. Também vais precisar de definir a variável `player_pos` (posição do jogador). Vai precisar de ser um valor entre `0` e `63` - eset pixel representa a o centro da grelha, onde está o nosso jogador. Como usamos os intervalos entre `x-3` a `x+5`, e `z-3` a `z+5`, o centro será a coordenada `(3, 3)`, que corresponde ao pixel `27`:
 
     ![Sense HAT grid centre point](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/images/sense-hat-grid-centre-point.png)
 
-    Add the line `player_pos = 27` before your `while` loop.
+    Adiciona uma linha com `player_pos = 27` antes do ciclo `while`.
 
-1. Now add a line to your `while` loop to modify the `pixels` list to set a black pixel where your player is standing:
+1. Agora adiciona uma linha ao teu ciclo `while` para modificar a lista de `pixels` de modo a por preto na posição do teu jogador:
 
     ```python
     pixels[player_pos] = black
     ```
 
-1. Everything's set up now and the last thing to do is send the list of pixels to the Sense HAT. Swap out the `print` line for a `set_pixels` one:
+1. Está tudo definido agora a última coisa a fazer é enviar a lista de pixeis para o Sense HAT. Troca a linhan`print` por `set_pixels`:
 
     ```python
     sense.set_pixels(pixels)
