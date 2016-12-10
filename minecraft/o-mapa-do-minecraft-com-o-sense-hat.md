@@ -314,7 +314,7 @@ Até agora, usaste o mostrador inteiro do Sense HAT para mostrar apenas uma cor.
 
 ## Escreve uma função `Get_Blocks`
 
-Now you have your Sense HAT showing the colour of the block you're standing on, you can use the same logic to show a different colour for each block around you to make a mini map of the Minecraft world on the 8x8 display.
+Agora tens o teu Sense HAT a mostrar a cor do bloco que estás a pisar, podes usar a mesma lógica para mostar uma cor diferente para cada bloco à tua volta para criares um mini mapa do Minecraft em 8x8.
 
 In order to make an 8x8 map, you'll need to retrieve the block IDs for all blocks immediately surrounding your player - enough to fill the 8x8 display. The Minecraft API does have an `mc.getBlocks()` function, but unfortunately it doesn't actually work, so you'll have to write your own function.
 
