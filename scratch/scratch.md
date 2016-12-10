@@ -1,6 +1,7 @@
 # O que é o Scratch
 
 O Scratch é um ambiente de programação visual com bastante popularidade desenhado para ensinar conceitos de programação a estudantes, fazendo uso de uma metáfora de blocos onde o "código" é criado ligando blocos entre si.
+
 Com esta ferramenta possibilita-se aos estudantes que criem as suas próprias histórias e que as partilhem com colegas na comunidade online do Scratch.
 Trata-se de um projeto do Lifelong Kindergarten Group do MIT Media Lab e é uma ferramenta completamente gratuita.
 O Scratch foi concebido com jovens dos oito anos de idade aos dezasseis, apesar de não excluir pessoas com outras idades.
