@@ -118,60 +118,61 @@ Agora que já experimentaste as cores do Sense HAT, vamos abrir o Minecraft e ex
 1. Precisas de saber o que representam os diferentes tipos de números (IDs), ficam aqui alguns mais comuns:
 
     ```
-    Ar:   0
+    Ar: 0
     Pedra: 1
     Erva: 2
-    Terra:  3
+    Terra: 3
     Água: 8
     Areia: 12
-    Gelo:  79
+    Gelo: 79
     ```
 
     Vê que tipos de blocos consegues identificar ao caminhar no Minecraft.
 
 ## Caminhada colorida com o Minecraft e o Sense HAT
 
-Agora que já exploraste o mundo do Minecraft e viste os diferentes tipos de blocos, vais aprender a mostrar no Sense HAT cores diferentes dependendo do tipo de 
-Now you've explored the Minecraft world and seen the different block IDs that are printed out as you walk around, you're going to learn to make the Sense HAT show a different colour depending on what type of block you're standing on in the Minecraft world!
+Agora que já exploraste o mundo do Minecraft e viste os diferentes tipos de blocos, vais aprender a mostrar no Sense HAT cores diferentes dependendo do tipo de bloco que estás a pisar.
 
-1. You're going need a way to create a mapping from a block ID to a colour; for example, grass should map to green, so block ID `2` should map to the colour code `(0, 255, 0)`.
+1. Vais precisar de criar um modo de mapear o ID do bloco a uma cor; Por exemplo erva (grass) deverá ser verde, portanto o bloco com o ID `2` deverá corresponder ao código de cor `(0, 255, 0)`.
 
-    Start by adding some variables to identify block IDs. Add the following code above your `while` loop like so:
+    Começa por adicionar algumas variáveis para identificar os IDs dos blocos. Acrescenta o seguinte código em cima do teu ciclo `while`:
 
     ```python
-    # blocks
+    # blocos
     grass = 2
     water = 9
     sand = 12
     ```
 
-    The first line is a comment helping explain what that bit of code is for. These variables are all integers (whole numbers) because that's what block IDs are represented by.
-
-1. Below that, add the colours that represent these block types:
+1. Em baixo do que escreveste, adiciona as cores que representam esses blocos:
 
     ```python
-    # colours
+    # cores
     green = (0, 255, 0)
     blue = (0, 0, 255)
     yellow = (255, 255, 0)
     ```
-    These variables are tuples. A tuple is a data type (like an integer, string, or list) used to store a number of items in a particular order. These could be the `x`, `y` and `z` coordinates or, as in this case, the `R`, `G` and `B` values of a colour. These are 3-tuples because they each contain 3 values.
 
-1. Next, below the colours, create a dictionary mapping each of the block types to a particular colour:
+1. De seguida, em baixo das cores,cria um dicionário que mapeia cada tipo de bloco a uma cor:
 
     ```python
-    # block: colour
+    # Bloco: cor
     colours = {
         grass: green,
         water: blue,
         sand: yellow,
     }
     ```
-    A dictionary is a data type used for storing relations between two objects, like an address book mapping a name to a telephone number. The items in the dictionary are referred to as key-value pairs, so in an address book the name is the "key" and the phone number is the "value". In our case the block type is the "key" and the colour is the "value".
+    Um dicionário é um tipo de dados usado apra guardar relações com 2 objetos, por exemplo um nome a um número de telefone. Os elementos no dicionário chamam-se pares key-value (valores-chave), portanto numa lista telefónica o nome é uma chave e o número de telefone é o valor.
 
-1. Now all that's left to do is to look up the block you're standing on, see which colour it should be, and use `sense.clear` to change the colour of the Sense HAT display accordingly!
+1. Agora só falta procurar o bloco que estás a pisar, ver que cor é que corresponde e usar o `sense.clear` para mudar a cor do Sense HAT!
 
-    To look up a value in a dictionary, you pass in the key. If the dictionary was an address book, you'd pass in the name and be given that person's phone number. So to look up the block type `grass` you'd use `colours[2]` or `colours[grass]` and you'd get back the value for green which is `(0, 255, 0)`.
+    Para procurar um valor no dicionário, passa-se a chave. Se o dicionário 
+
+
+
+
+To look up a value in a dictionary, you pass in the key. If the dictionary was an address book, you'd pass in the name and be given that person's phone number. So to look up the block type `grass` you'd use `colours[2]` or `colours[grass]` and you'd get back the value for green which is `(0, 255, 0)`.
 
     Modify your `while` loop to look like this:
 
