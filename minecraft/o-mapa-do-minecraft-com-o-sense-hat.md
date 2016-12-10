@@ -395,11 +395,11 @@ De modo a criares um mapa de 8x8, vais precisar de saber os IDs dos bloco imedia
         return blocks
     ```
 
-1. Run the code and you should see a list of 64 block IDs. This time they should be the 8x8 grid of blocks surrounding your player, with you in the middle (there's no centre point of an 8x8 grid so you're just off-centre):
+1. Corre o código e deverás ver a lista de 64 IDs de blocos que cercam o teu jogador, contigo no meio (numa grelha de 8x8 não há meio, portanto deslocamos um pouco).
 
     ![Third get_blocks loop](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/images/third-get-blocks-loop.png)
 
-1. Next, add a `while` loop to print the result of `get_blocks` every second:
+1. De seguida, adiciona um ciclo `while` para imprimir o resultado do `get_blocks` a cada segundo:
 
     ```python
     while True:
@@ -407,11 +407,12 @@ De modo a criares um mapa de 8x8, vais precisar de saber os IDs dos bloco imedia
         sleep(1)
     ```
 
-1. Run the code and see it update as you walk around.
+1. Corre o código e vê se ele atualiza quando te moves.
 
-    You will probably find that it's 
+    Provavelmente vais achar um pouco lento, porque estamos a pesquisar 64 blocos por cada segundo!
 
 ## Reduz a lentidão com caching
+
 
 In order to reduce the lag, you'll need to use a technique called caching. This means you record a value the first time you look it up, and refer to the saved value when you need it the next time, rather than look it up again. To do this, you're going to use a dictionary to store the known blocks. That way, you can look up a set of coordinates in the `known_blocks` dictionary, and only use `mc.getBlock()` if you need to. This will save lots of time and make your lookup run much faster.
 
