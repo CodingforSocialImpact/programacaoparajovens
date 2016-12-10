@@ -395,12 +395,6 @@ De modo a criares um mapa de 8x8, vais precisar de saber os IDs dos bloco imedia
         return blocks
     ```
 
-    **What does it do?**
-
-    - `for dz in range(z-3, z+5):`: use `z` values from 3 behind the player up to 5 ahead (8 rows in total).
-    - `for dx in range(x-3, x+5):`: use `x` values from 3 left of the player over to 5 to the right (8 columns in total).
-    - `return blocks` - by the time the program gets to this line, this contains 64 blocks as it's been through each loop 8 times.
-
 1. Run the code and you should see a list of 64 block IDs. This time they should be the 8x8 grid of blocks surrounding your player, with you in the middle (there's no centre point of an 8x8 grid so you're just off-centre):
 
     ![Third get_blocks loop](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/images/third-get-blocks-loop.png)
@@ -460,22 +454,22 @@ In order to reduce the lag, you'll need to use a technique called caching. This 
 
 ## Cria o mapa
 
-Now all that's left to do is create the map. You've already learned how to look up a colour from a block ID and set colours to display on the Sense HAT so this should be easy!
+Agora tudo o que tens que fazer é criar o mapa.
 
-1. Add in some block variables:
+1. Adiciona algumas variáveis de blocos:
 
     ```python
-    # blocks
+    # blocos
     air = 0
     grass = 2
     water = 9
     sand = 12
     ```
 
-1. Add some colours:
+1. Adiciona algumas cores:
 
     ```python
-    # colours
+    # cores
     white = (255, 255, 255)
     green = (0, 255, 0)
     blue = (0, 0, 255)
@@ -483,10 +477,10 @@ Now all that's left to do is create the map. You've already learned how to look 
     black = (0, 0, 0)
     ```
 
-1. Create a dictionary mapping block IDs to colours:
+1. Cria um dicionário para mapear IDs de blocos com as cores:
 
     ```python
-    # block: colour
+    # bloco: cor
     colours = {
         air: white,
         grass: green,
@@ -495,7 +489,7 @@ Now all that's left to do is create the map. You've already learned how to look 
     }
     ```
 
-1. Modify your `while` loop like so:
+1. Modifica o teu ciclo `while`:
 
     ```python
     while True:
