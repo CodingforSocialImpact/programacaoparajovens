@@ -553,7 +553,7 @@ Now all that's left to do is create the map. You've already learned how to look 
     sense.set_pixels(pixels)
     ```
 
-    Your `while` should now look like this:
+    O teu ciclo `while` deverá parecer-se com o seguinte:
 
     ```python
     while True:
@@ -563,15 +563,12 @@ Now all that's left to do is create the map. You've already learned how to look 
         sense.set_pixels(pixels)
     ```
 
-    This should now show a map of a small part of the Minecraft world around you. Walk around and watch it update!
+    Isto deverá mostar agora um mapa de uma pequena parte do mundo do Minecraft à tua volta. Caminha e vê-o atualizar!
 
-    ![Sense HAT Minecraft Map](images/sense-hat-minecraft-map.jpg)
-
-**Download a copy of [minecraft_map.py](code/minecraft_map.py)**
-
- ![](https://www.raspberrypi.org/learning/sense-hat-minecraft-
  ![Mapa Sense HAT do mundo Minecraft](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/images/sense-hat-minecraft-map.jpg)
- Descarrega uma cópia do [minecraft_map.py](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/code/minecraft_map.py)
+
+ **Descarrega uma cópia do [minecraft_map.py](code/minecraft_map.py)**
+
 ## E agora?
 
 Tenta adicionar mais funcionalidades ao Sense HAT para interagires com o Minecraft!
