@@ -163,7 +163,7 @@ Agora que já exploraste o mundo do Minecraft e viste os diferentes tipos de blo
         sand: yellow,
     }
     ```
-    Um dicionário é um tipo de dados usado apra guardar relações com 2 objetos, por exemplo um nome a um número de telefone. Os elementos no dicionário chamam-se pares key-value (valores-chave), portanto numa lista telefónica o nome é uma chave e o número de telefone é o valor.
+    Um dicionário é um tipo de dados usado para guardar relações com vários objetos, por exemplo um nome a um número de telefone. Os elementos no dicionário chamam-se pares key-value (valores-chave), portanto numa lista telefónica o nome é uma chave e o número de telefone é o valor.
 
 1. Agora só falta procurar o bloco que estás a pisar, ver que cor é que corresponde e usar o `sense.clear` para mudar a cor do Sense HAT!
 
@@ -179,46 +179,46 @@ Agora que já exploraste o mundo do Minecraft e viste os diferentes tipos de blo
         print(colour)
         sleep(0.1)
     ```
-    Aqui procuramos o ID do bloco que o jogador está a pisar, e como anteriormente, e depois procuras no dicionário `colours`, depois imprimes o túpolo do código de cor.
+    Aqui procuramos o ID do bloco que o jogador está a pisar, e como anteriormente, e depois procuras no dicionário `colours`, depois imprimes o par do código da cor.
 
 1. Guarda `CTR + S` e corre o código `F5` e caminha no Minecraft.
 
-    Deverás verYou should see the colour code of the block you're standing on. Walk around to see different colour codes. When you walk on grass you should see `(0, 255, 0)`, when you're on sand you should see `(255, 255, 0)`, and on water, `(0, 0, 255)`.
+    Deverás ver o código da cor do bloco que estás a pisar. Caminha para veres os diferentes códigos.
 
-1. If you walk over a block that isn't in the dictionary, you'll get an error message. If you haven't found another block type yet, just jump in the air using the space bar, and you'll get this error:
+1. Se caminhares num bloco que não se encontar no dicionário, vais ter uma mensagem de erro. Se ainda não te aconteceu isto salta no ar com a tecla de `ESPAÇO` e devrás ver:
 
     ![Dictionary KeyError](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/images/dictionary-keyerror.png)
 
-    This error is a `KeyError`, which is a Python exception meaning you tried to look up the value of a key which isn't in the dictionary, like trying to get the telephone number of a name you haven't got recorded.
+    Este erro é um `KeyError`, que é uma exceção do Python, o que significa que tentaste procurar um valor que não existe no dicionário, como, por exemplo, procurar um contato que não existe na tua lista telefónica.
 
-1. First of all, let's deal with the `KeyError`. Modify your colour lookup like so:
+1. Primeiro vamos lidar com o `KeyError`. Modifica a tua pesquisa de cores do seguinte modo:
 
     ```python
     if block in colours:
         colour = colours[block]
         print(colour)
     else:
-        print("Don't know block ID %s" % block)
+        print("Não conheço o bloco com o ID %s" % block)
     sleep(0.1)
     ```
 
-    Now it will check to see if the key is in the dictionary before looking up its value. If it's not, it will tell you which block ID it was.
+    Agora vamos verificar se a chave já se enconta no dicionário antes de procurar o seu valor. Se não existir, vai dizer-te o ID do bloco.
 
-1. Finally, now you have a colour value representing the block type your player is standing on, you can tell the Sense HAT to show that colour on the LED display, simply by changing the `print(colour)` line to:
+1. Agora que já tens um valor de uma cor a representar o bloco que o jogador está a pisar, podes dizer ao Sense HAT para mostrar essa cor, alterando simplesmente a linha `print(colour)` para:
 
     ```python
     sense.clear(colour)
     ```
 
-1. Save and run the code, and walk around the Minecraft world and your Sense HAT should show green, blue or yellow when you walk on grass, water and sand.
+1. Guarda `CTR + S` e corre o código `F5` e caminha no Minecraft e o teu Sense HAT deverá alterar a cor de acordo com o que pisares.
 
-1. Now add more blocks and colours to your dictionary!
+1. Agora adiociona mais blocos e cores ao teu dicionário!
 
-**Download a copy of [minecraft_colour.py](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/code/minecraft_colour.py)**
-
+**Descarrega uma cópia do [minecraft_colour.py](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/code/minecraft_colour.py)**
 
 ## Definir LEDs individuais no Sense HAT
 
+Até ag
 Until now, all you've done is set the whole Sense HAT LED display to the same colour. It's possible to set each pixel individually using the Sense Hat module's `set_pixel` method.
 
 1. Create a new Python file and save it as `pixels.py`.
