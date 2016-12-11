@@ -70,7 +70,7 @@ Vais precisar de 2 **variáveis** neste jogo. A primeira chamada `progress` vai 
 
 ## Fazer com que a personagem levante
 
-1. There are a total of 29 costumes in the game. The sprite's costume can be continually set so that it's the same as the `progress` variable. That way, as `progress` increases, the costume will change. When `progress` reaches `29`, the game can end.
+1. Existem 29 fatos para a tua personagem no jogo. A sprite do fato pode ser feita de um modo contínuoThe sprite's costume can be continually set so that it's the same as the `progress` variable. That way, as `progress` increases, the costume will change. When `progress` reaches `29`, the game can end.
 
 1. You will need a `forever` loop for the main logic of the game. Find a `forever` loop in the **Control** section and add it to the bottom of your main script:
 
