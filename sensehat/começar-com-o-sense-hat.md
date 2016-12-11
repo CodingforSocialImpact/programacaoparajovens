@@ -582,9 +582,9 @@ Este jogo vai mostrar uma seta na matriz de LEDs e selecionar uma orientação a
 
 Esta ideia combina:
 
-  - Mostrar imagens e mensagens
-  - Definir e detetar orientação
-  - Uso de variáveis, aleatórios, iteração e seleção
+  * Mostrar imagens e mensagens
+  * Definir e detetar orientação
+  * Uso de variáveis, aleatórios, iteração e seleção
 
 Fica aqui o jogo:
 
