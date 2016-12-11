@@ -578,35 +578,13 @@ yaw = orientation['yaw']
 
 Podemos agora combinar todas estas ideias num só projeto, como por exemplo num jogo para testar os reflexos!
 
-The game will display an arrow on the LED matrix and select a random orientation for it. The player must rotate the board to match the arrow. If they match it in time the arrow turns green and their score increases; if not their arrow turns red and the game ends, telling them their score. The game keeps showing arrows in new orientations until the player loses, and each turn gets faster.
+Este jogo vai mostrar uma seta na matriz de LEDs e selecionar uma orientação aleatória. O jogador tem que rodar o Sense HAT para que corresponda à seta. Se corresponder a seta fica verde e a pontuação aumenta; Se não, a seta fica vermelha e termina o jogo e diz a pontuação. O jogo continua a mostrar setas e orientações até o jogador perder e em cada turno fica mais rápido.
 
 Esta ideia combina:
 
   - Mostrar imagens e mensagens
   - Definir e detetar orientação
   - Uso de variáveis, aleatórios, iteração e seleção
-
-As this is more complicated than previous programs it's worth planning out the steps involved in **pseudocode**.
-
-  > import the required libraries (sense_hat, time, random)  
-  > create a sense object
-  >
-  > Set up the colours needed  
-  > Create 3 different arrows (white, green, red)  
-  > Set a variable **pause** to 3 (the initial time between turns)  
-  > Set variables **score** and **angle** to 0  
-  > Create a variable called **play** set to `True` (this will be used to stop the game later)  
-  >  
-  > Begin a loop which continues while `play == True`  
-  > Set a new random angle (use **random.choice()** method)  
-  > Show the white arrow and sleep for current pause length  
-  > Check whether orientation matches the arrow  
-  > ---if it does then add a point and turn the arrow green  
-  > ---otherwise set play to `False` and turn the arrow red  
-  > Shorten the pause duration slightly  
-  > Pause before the next arrow  
-  >  
-  > When loop is exited, display a message with the score  
 
 Fica aqui o jogo:
 
