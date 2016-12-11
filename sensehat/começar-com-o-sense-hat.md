@@ -45,10 +45,10 @@ sense.show_message("Olá Sense HAT!")
 1. Podemos adicionar alguns parâmetros extra no comando `sense.show_message` para alterarem o comportamento da mensagem:
 
     | Parâmetro | Efeito |
-    | --- | --- |
-    | **scroll_speed** | O *scroll_speed* afeta a velocidade a que o texto corre no mostrador. POr definição é 0.1. Quanto maio o número, mais lenta será a velocidade |
-    | **text_colour** | O *text_colour* altera a cor do texto com valores RGB|
-    | **back_colour** | O *back_colour* altera a cor do fundo com valores RGB|
+    |---|---|
+    | **scroll_speed** | O *scroll_speed* afeta a velocidade a que o texto corre no mostrador. Por definição é 0.1. Quanto maio o número, mais lenta será a velocidade |
+    | **text_colour** | O *text_colour* altera a cor do texto com valores RGB |
+    | **back_colour** | O *back_colour* altera a cor do fundo com valores RGB |
 
     Este programa mostra o texto `Astro Pi is awesome!!` mais lentamente, com o texto amarelo **[255,255,0]** e o fundo em azul **[0,0,255]**:
 
@@ -271,17 +271,17 @@ A matriz de imagens pode mostrar mais do que texto! Nós conseguimos controlar c
 
 - Podes alternar entre imagens apra criar animaçõe? Vê este vídeo: {% youtube %}https://www.youtube.com/watch?v=b84EywkQ3HI{% endyoutube %} video for some inspiration.
 
-## Setting orientation
+## Definir orientação
 
-So far, all our text and images have appeared the same way up, assuming that the HDMI port is at the bottom. However, this may not always be the case (especially in space) so you may want to change the orientation of the matrix. To do this, you can use the `sense.set_rotation()` method and inside the brackets enter one of four angles (0, 90, 180, 270).
+Podes alterar a orientação do display com o método `sense.set_rotation()` e dentro dos parêntesis introduz um dos ângulos (0, 90, 180, 270).
 
-To rotate your screen by 180 degrees you'd use this line:
+Por exemplo 180º:
 
 ```python
 sense.set_rotation(180)
 ```
 
-1. When used in the rainbow program it would look like this:
+1. Quando usado no programa do arco-íris:
 
     ```python
     from sense_hat import SenseHat
