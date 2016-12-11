@@ -464,24 +464,7 @@ Podemos ler esta informação com 3 métodos simples:
 
 O Sense HAT tem vários sensores que possibilitam a deteção de movimento como explicado [aqui](./sense-hat.md)
 
-The Sense HAT has a set of sensors that can detect movement. It has an IMU (inertial measurement unit) chip which includes:
-
-- A gyroscope (for detecting which way up the board is)
-- An accelerometer (for detecting movement)
-- A magnetometer (for detecting magnetic fields)
-
-Before you start experimenting with motion sensing, it's important to understand three key terms covered in the [guide](https://github.com/raspberrypilearning/astro-pi-guide/blob/master/sensors/movement.md) and in this [video](https://www.youtube.com/watch?v=pQ24NtnaLl8).
-
-The three axes uses to describe motion are:
-
-- Pitch (like a plane taking off)
-- Roll (the plane doing a victory roll)
-- Yaw (imagine steering the plane like a car)
-
-![Sense HAT Orientation](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/images/orientation.png)
-
-The IMU sensor is not yet supported on trinket.io, but will be coming soon!
-You can find out the orientation of the Sense HAT using the `sense.get_orientation()` method:
+Podes descobrir a orientação do Sense HAT com `sense.get_orientation()`:
 
 ```python
 orientation = sense.get_orientation()
@@ -490,30 +473,27 @@ roll = orientation['roll']
 yaw = orientation['yaw']
 ```
 
-This would get the three orientation values (measured in degrees) and store them as the three variables `pitch`, `roll` and `yaw`.
+1. Testa o seguinte programa:
 
-1. You can explore these values with a simple program:
+ ```python
+ from sense_hat import SenseHat
 
-```python
-from sense_hat import SenseHat
+ sense = SenseHat()
 
-sense = SenseHat()
-
-while True:
+ while True:
     orientation = sense.get_orientation()
     pitch = orientation['pitch']
     roll = orientation['roll']
     yaw = orientation['yaw']
     print("pitch={0}, roll={1}, yaw={}".format(pitch,yaw,roll))
-```
+ ```
 
-1. Click **File** -- **Save As**, give your program a name e.g. [`orientation.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/reaction_game.pycode/orientation.py), then press **F5** to run.
+1. Clica `File`->`Save As`, dá um nome ao teu programa [`orientation.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/reaction_game.pycode/orientation.py) e carrega `F5` para correr.
 
-    **Note: When using the movement sensors it is important to poll them often in a tight loop. If you poll them too slowly, for example with `time.sleep(0.5)` in your loop, you will see strange results. This is because the code behind needs lots of measurements in order to successfully combine the data coming from the gyroscope, accelerometer and magnetometer.**
 
-1. Another way to detect orientation is to use the `sense.get_accelerometer_raw()` method which tells you the amount of g-force acting on each axis. If any axis has ±1g then you know that axis is pointing downwards.
+1. Outro modo para detetar a orientação é usando o `sense.get_accelerometer_raw()` que te diz a quantidade de força G a atuar nos eixos. Se um eixo tem ±1g então saberás que está a apontar para baixo.
 
-    In this example, the amount of gravitational acceleration for each axis (x, y, and z) is extracted and is then rounded to the nearest whole number:
+   Por exemplo:
 
     ```python
     from sense_hat import SenseHat
@@ -533,11 +513,11 @@ while True:
         print("x={0}, y={1}, z={2}".format(x, y, z))
     ```
 
-1. Click **File** -- **Save As**, give your program a name e.g. [`acceleration.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/reaction_game.pycode/acceleration.py), then press **F5** to run.
+1. Clica `File`->`Save As`, dá um nome ao teu programa [`acceleration.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/reaction_game.pycode/acceleration.py) e carrega `F5` para correr.
 
-    As you turn the screen you should see the values for x and y change between -1 and 1. If you place the Pi flat or turn it upside down, the z axis will be 1 and then -1.
+    Se virares o RPi de pernas para o ar o z axis vai ser 1 e depois -1.
 
-1. If we know which way round the Raspberry Pi is, then we can use that information to set the orientation of the LED matrix. First you would display something on the matrix, then continually check which way round the board is, and use that to update the orientation of the display.
+1. Podemos usar esta informação para mandar na orientação do display do Sense HAT.
 
     ```python
     from sense_hat import SenseHat
@@ -564,11 +544,12 @@ while True:
             sense.set_rotation(0)
     ```
 
-1. Click **File** -- **Save As**, give your program a name e.g. [`rotating_letter.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/reaction_game.pycode/rotating_letter.py), then press **F5** to run.
+1. Clica `File`->`Save As`, dá um nome ao teu programa [`rotating_letter.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/reaction_game.pycode/rotating_letter.py) e carrega `F5` para correr.
 
-    In this program you are using an `if, elif, else` structure to check which way round the Raspberry Pi is. The `if` and `elif` test three of the orientations, and if the orientation doesn't match any of these then the program assumes it is the "right" way round. By using the `else` statement we also catch all those other situations, like when the board is at 45 degrees or sitting level.
+ Neste programa estamos a usar um `if elseif elseif else` para testar as 4 posições possíveis.
 
-1. If the board is only rotated, it will only experience 1g of acceleration in any direction; if we were to shake it, the sensor would experience more than 1g. We could then detect that rapid motion and respond. For this program we will introduce the `abs()` function which is not specific to the Sense HAT library and is part of standard Python. `abs()` gives us the size of a value and ignores whether the value is positive or negative. This is helpful as we don't care which direction the sensor is being shaken, just that it is shaken.
+
+1. Se o RPi está apenas rodado podemos experenciar 1g de aceleração em qualquer direção se o abanar-mos, o sensor mediria mais do que 1g. Neste programa vamos introduzir a função `abs()`, que no dá o tamanho do valor e ignora se é positivo ou negativo, é importante dado que não queremos saber em que direção é abanado, apenas se foi, ou não, abanado.
 
     ```python
     from sense_hat import SenseHat
@@ -591,27 +572,19 @@ while True:
             sense.clear()
     ```
 
-1. Click **File** -- **Save As**, give your program a name e.g. [`shake.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/reaction_game.pycode/shake.py), then press **F5** to run.
+1. Clica `File`->`Save As`, dá um nome ao teu programa [`shake.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/reaction_game.pycode/shake.py) e carrega `F5` para correr.
 
-    You might find this is quite sensitive, but you could change the value from 1 to a higher number.
+## Juntar tudo
 
-### Ideas
-
-  - You could write a program that displays an arrow (or other symbol) on screen; this symbol could be used to point to which way is down. This way the astronauts (in low gravity) always know where the Earth is.
-  - You could improve the dice program from earlier in this activity, so that shaking the Pi triggers the dice roll.
-  - You could use the accelerometer to sense small movements; this could form part of a game, alarm system or even an earthquake sensor.
-
-## Putting it all together
-
-Now that you've explored most of the features of the Sense HAT, you could combine them to create a project. Here's an example reaction testing game, which could be used by the astronauts to test their reflexes.
+Podemos agora combinar todas estas ideias num só projeto, como por exemplo num jogo para testar os reflexos!
 
 The game will display an arrow on the LED matrix and select a random orientation for it. The player must rotate the board to match the arrow. If they match it in time the arrow turns green and their score increases; if not their arrow turns red and the game ends, telling them their score. The game keeps showing arrows in new orientations until the player loses, and each turn gets faster.
 
-This idea combines:
+Esta ideia combina:
 
-  - Showing messages and images on the LED matrix
-  - Setting and detecting the orientation
-  - Use of variables, randomisation, iteration, and selection
+  - Mostrar imagens e mensagens
+  - Definir e detetar orientação
+  - Uso de variáveis, aleatórios, iteração e seleção
 
 As this is more complicated than previous programs it's worth planning out the steps involved in **pseudocode**.
 
@@ -635,7 +608,7 @@ As this is more complicated than previous programs it's worth planning out the s
   >  
   > When loop is exited, display a message with the score  
 
-If you turned this into Python it could look like this:
+Fica aqui o jogo:
 
 ```python
 from sense_hat import SenseHat
@@ -644,14 +617,13 @@ from random import choice
 
 sense = SenseHat()
 
-# set up the colours (white, green, red, empty)
-
+# Definir cores
 w = [150, 150, 150]
 g = [0, 255, 0]
 r = [255, 0, 0]
 e = [0, 0, 0]
 
-# create images for three different coloured arrows
+# Criar as imagens
 
 arrow = [
 e,e,e,w,w,e,e,e,
@@ -691,7 +663,7 @@ score = 0
 angle = 0
 play = True
 
-sense.show_message("Keep the arrow pointing up", scroll_speed=0.05, text_colour=[100,100,100])
+sense.show_message("Mantem a seta para cima", scroll_speed=0.05, text_colour=[100,100,100])
 
 while play:
     last_angle = angle
@@ -731,18 +703,11 @@ while play:
     pause = pause * 0.95
     sleep(0.5)
 
-msg = "Your score was %s" % score
+msg = "A tua pontuação foi %s" % score
 sense.show_message(msg, scroll_speed=0.05, text_colour=[100, 100, 100])
 ```
 
-Click **File** -- **Save As**, give your program a name e.g. [`reaction_game.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/reaction_game.py), then press **F5** to run.
-
-### Ideias
-
-There are lots of potential developments for this game:
-- Include shake actions as well as orientation.
-- Make use of the humidity sensor to detect breath; the player could be prompted to breathe on the board as an action.
-- Include more than 4 directions; players have to hold at 45 degrees.
+Clica `File`->`Save As`, dá um nome ao teu programa [`reaction_game.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/reaction_game.py) e carrega `F5`.
 
 ## E agora?
 
