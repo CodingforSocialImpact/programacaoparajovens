@@ -75,7 +75,7 @@ sense.show_message("Olá Sense HAT!")
 
     <div><iframe src="https://trinket.io/embed/python/f833a60218" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></div>
 
-1. Clica `File`->`Save As`, dá um nome ao teu programa [`loop_text.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/loop_text.py) e carrega `F5` para corre-lo.
+1. Clica `File`->`Save As`, dá um nome ao teu programa [`loop_text.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/loop_text.py) e carrega `F5` para correr.
 
 1. A matriz de LED pode também mostrar uma letra apenas com a função `sense.show_letter`
 
@@ -108,7 +108,7 @@ sense.show_message("Olá Sense HAT!")
     sense.clear()
     ```
 
-    Clica `File`->`Save As`, dá um nome ao teu programa [`omg.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/omg.py) e carrega `F5` para corre-lo.
+    Clica `File`->`Save As`, dá um nome ao teu programa [`omg.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/omg.py) e carrega `F5` para correr.
 
 
     <div><iframe src="https://trinket.io/embed/python/ccb58a3d9d" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></div>
@@ -140,7 +140,7 @@ sense.show_message("Olá Sense HAT!")
     sense.clear()
     ```
 
-1. Clica `File`->`Save As`, dá um nome ao teu programa [`random_omg.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/random_omg.py) e carrega `F5` para corre-lo.
+1. Clica `File`->`Save As`, dá um nome ao teu programa [`random_omg.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/random_omg.py) e carrega `F5` para correr.
 
     Em âmbos os programas o método `sense.clear()` foi usado para limpar a matriz.
     
@@ -189,7 +189,7 @@ A matriz de imagens pode mostrar mais do que texto! Nós conseguimos controlar c
     sense.set_pixel(5, 5, [255, 0, 0])
     ```
 
-1. Clica `File`->`Save As`, dá um nome ao teu programa [`simple_image.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/simple_image.py) e carrega `F5` para corre-lo.
+1. Clica `File`->`Save As`, dá um nome ao teu programa [`simple_image.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/simple_image.py) e carrega `F5` para correr.
 
 1. Definir pixeis individualmente pode funcionar bastante bem, mas torna-se complexo se quiseres definir mais pixeis. Existe outro método para definir pixeis chamado `sense.set_pixels`. Basta dar-lhe uma cor para cada pixel da matriz.
 
@@ -259,10 +259,7 @@ A matriz de imagens pode mostrar mais do que texto! Nós conseguimos controlar c
     sense.set_pixels(image)
     ```
     
-1. Clica `File`->`Save As`, dá um nome ao teu programa [`rainbow.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/rainbow.py) e carrega `F5` para corre-lo.
-
-    You should have a beautiful rainbow displayed on your LED matrix.
-    
+1. Clica `File`->`Save As`, dá um nome ao teu programa [`rainbow.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/rainbow.py) e carrega `F5` para correr.    
     
     <div><iframe src="https://trinket.io/embed/python/8f36929035" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></div>
 
@@ -312,9 +309,9 @@ sense.set_rotation(180)
     sense.set_rotation(180)
     ```
 
-1. Click **File** -- **Save As**, give your program a name e.g. [`rainbow_flip.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/rainbow_flip.py), then press **F5** to run.
+1. Clica `File`->`Save As`, dá um nome ao teu programa [`rainbow_flip.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/rainbow_flip.py)e carrega `F5` para correr.
 
-2. You could also create spinning text using a **for** loop:
+1. Podes criar um texto que roda com um ciclo `for`:
 
     ```python
     from sense_hat import SenseHat
@@ -330,12 +327,10 @@ sense.set_rotation(180)
         sleep(0.5)
     ```
 
-    This program displays the letter "J" and then sets the rotation to each value in the angles list with a 0.5 second pause.
 
-1. Click **File** -- **Save As**, give your program a name e.g. [`spinning_j.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/spinning_j.py), then press **F5** to run.
+1. Clica `File`->`Save As`, dá um nome ao teu programa [`spinning_j.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/spinning_j.py)e carrega `F5` para correr.
 
-    <div>
-<iframe src="https://trinket.io/embed/python/2f48e31b56" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></div>
+    <div><iframe src="https://trinket.io/embed/python/2f48e31b56" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></div>
 
 1. You can also flip the image on the screen, either horizontally or vertically, using these lines:
 
