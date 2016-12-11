@@ -332,19 +332,19 @@ sense.set_rotation(180)
 
     <div><iframe src="https://trinket.io/embed/python/2f48e31b56" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></div>
 
-1. You can also flip the image on the screen, either horizontally or vertically, using these lines:
+1. Podes ainda inverter a imgem verticalmente ou horizontalmente:
 
     ```python
     sense.flip_h()
     ```
 
-    or
+    ou
 
     ```python
     sense.flip_v()
     ```
 
-    With this example you could create a simple animation by flipping the image repeatedly:
+    Por exemplo:
 
     ```python
     from sense_hat import SenseHat
@@ -374,26 +374,25 @@ sense.set_rotation(180)
         sense.flip_h()
     ```
 
-1. Click **File** -- **Save As**, give your program a name e.g. [`eyes.py`](code/eyes.py), then press **F5** to run.
+1. 1. Clica `File`->`Save As`, dá um nome ao teu programa [`eyes.py`](code/eyes.py) e carrega `F5` para correr.
 
-<div>
-<iframe src="https://trinket.io/embed/python/27b25ac047" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></div>
+<div><iframe src="https://trinket.io/embed/python/27b25ac047" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></div>
 
 ## Sentir o ambiente
 
-The Sense HAT has a set of environmental sensors for detecting the conditions around it. It can detect:
+O Sense HAT possui sensores ambientais para detetar condições que o rodeiam. Consegue medir:
 
-- Pressure
-- Temperature
-- Humidity
+- Pressão
+- Temperatura
+- Humidade
 
-We can collect these readings using three simple methods:
+Podemos ler esta informação com 3 métodos simples:
 
-- `sense.get_temperature()` - This will return the temperature in Celsius.
-- `sense.get_pressure()` - This will return the pressure in millibars.
-- `sense.get_humidity()` - This will return the humidity as a percentage.
+- `sense.get_temperature()` - Temperatura em Celsius.
+- `sense.get_pressure()` - Pressão em milibars.
+- `sense.get_humidity()` - Humidade em percentagem.
 
-1. Using these, we could create a simple scrolling text display which could keep people informed about current conditions.
+1. Podemos criar um exemplo com esta informação:
 
     ```python
     from sense_hat import SenseHat
@@ -408,34 +407,31 @@ We can collect these readings using three simple methods:
         p = round(p, 1)
         h = round(h, 1)
 
-        msg = "Temperature = {0}, Pressure = {1}, Humidity = {2}".format(t,p,h)
+        msg = "Temperatura = {0}, Pressão = {1}, Humidade = {2}".format(t,p,h)
 
         sense.show_message(msg, scroll_speed=0.05)
     ```
 
-1. Click **File** -- **Save As**, give your program a name e.g. [`env.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/env.py), then press **F5** to run.
-    <div>
-    <iframe src="https://trinket.io/embed/python/a246815131" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-</div>
+1. Clica `File`->`Save As`, dá um nome ao teu programa [`env.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/env.py) e carrega `F5` para correr.
 
-1. You could now use some colour to let the astronauts know whether conditions are within sensible ranges.
+    <div><iframe src="https://trinket.io/embed/python/a246815131" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></div>
 
-    According to some [online documentation](http://wsn.spaceflight.esa.int/docs/Factsheets/30%20ECLSS%20LR.pdf), the International Space Station maintains these conditions at the following levels:
+1. Podes usar cores para saber se os valores:
 
-    - Temperature (18.3 - 26.7 Celsius)
-    - Pressure (979 - 1027 millibars)
-    - Humidity (around 60%)
+    - Temperatura (18.3 - 26.7 Celsius)
+    - Pressão (979 - 1027 milibars)
+    - Humidade (aprox. 60%)
 
-    You could use an `if` statement in your code to check these conditions, and set a background colour for the scroll:
+    Podes usar um`if` para verificar as condições:
 
     ```python
     if t > 18.3 and t < 26.7:
-        bg = [0, 100, 0] # green
+        bg = [0, 100, 0] # verde
     else:
-        bg = [100, 0, 0] # red
+        bg = [100, 0, 0] # vermelho
     ```
 
-    Your complete program would look like this:
+    O programa completo:
 
     ```python
     from sense_hat import SenseHat
