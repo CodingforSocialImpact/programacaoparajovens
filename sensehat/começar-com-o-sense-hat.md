@@ -460,7 +460,9 @@ Podemos ler esta informação com 3 métodos simples:
 
     <div><iframe src="https://trinket.io/embed/python/2f03745830" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></div>
 
-## Detecting movement
+## Detetar movimento
+
+O Sense HAT tem vários sensores que possibilitam a deteção de movimento como explicado [aqui](./sense-hat.md)
 
 The Sense HAT has a set of sensors that can detect movement. It has an IMU (inertial measurement unit) chip which includes:
 
