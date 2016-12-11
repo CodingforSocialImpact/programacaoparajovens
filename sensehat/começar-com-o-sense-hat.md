@@ -447,24 +447,18 @@ Podemos ler esta informação com 3 métodos simples:
         h = round(h, 1)
 
         if t > 18.3 and t < 26.7:
-            bg = [0, 100, 0]  # green
+            bg = [0, 100, 0]  # verde
         else:
-            bg = [100, 0, 0]  # red
+            bg = [100, 0, 0]  # vermelho
 
-        msg = "Temperature = {0}, Pressure = {1}, Humidity - {2}".format(t, p, h)
+        msg = "Temperatura = {0}, Pressão = {1}, Humidade - {2}".format(t, p, h)
 
         sense.show_message(msg, scroll_speed=0.05, back_colour=bg)
     ```
 
-1. Click **File** -- **Save As**, give your program a name e.g. [`scrolling_env.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/scrolling_env.py), then press **F5** to run.
+1. Clica `File`->`Save As`, dá um nome ao teu programa [`scrolling_env.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/scrolling_env.py) e carrega `F5` para correr.
 
-    <iframe src="https://trinket.io/embed/python/2f03745830" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-
-### Ideas
-
-- Currently, the scrolling program only warns about abnormal temperature. Can you add the same behaviour for pressure and humidity?
-- You could create a simple graphical thermometer which outputs different colours / patterns depending on the temperature.
-- If you haven't done so already, experiment with a bottle and the [pressure sensor](https://www.raspberrypi.org/learning/astro-pi-guide/sensors/pressure.md).
+    <div><iframe src="https://trinket.io/embed/python/2f03745830" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></div>
 
 ## Detecting movement
 
