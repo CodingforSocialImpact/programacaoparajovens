@@ -24,9 +24,9 @@ Duração da atividade: `90 minutos.`
 
 ## Mostrar texto
 
-Start by opening Python3 from the main menu.
+Abre o `Python 3` (Menu->Desenvolvimento->Python3) e cria um novo ficheiro (File->New File).
 
-When following the [guide](https://www.raspberrypi.org/learning/astro-pi-guide/) you will have written a sample program which scrolls text across the LED matrix. The program contains two crucial lines, which import the Sense HAT software and create a `sense` object which represents the Sense HAT.
+Testa o programa seguinte para colocares texto a corres no mostrador do Sense HAT.
 
 ```python
 from sense_hat import SenseHat
@@ -34,25 +34,23 @@ from sense_hat import SenseHat
 sense = SenseHat()
 ```
 
-The third line is the one that makes the Sense HAT do something:
+Adiciona a a linha seguinte para escrever o teu texto:
 
 ```python
-sense.show_message("Hello my name is Tim Peake")
+sense.show_message("Olá Sense HAT!")
 ```
 
 <div><iframe src="https://trinket.io/embed/python/308a373b5c" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></div>
 
-You have probably already discovered that you can easily change the message to your own text, but there are more things that we can do.
+1. Podemos adicionar alguns parâmetros extra no comando `sense.show_message` para alterarem o comportamento da mensagem:
 
-1. We can expand the `sense.show_message` command to include some extra **parameters** which will change the behaviour of the message.
-
-    | Parameter | Effect |
+    | Parâmetro | Efeito |
     | --- | --- |
-    | **scroll_speed** | The *scroll_speed* parameter affects how quickly the text moves on the screen. The default value is 0.1. The bigger the number, the **slower** the speed |
-    | **text_colour** | The *text_colour* parameter alters the colour of the text and is specified using 3 values for Red, Green, Blue. Each value can be between 0 - 255, so [255,0,255] would be Red + Blue = Purple |
-    | **back_colour** | The *back_colour* parameter alters the colour of the background and works in the same way as the *text_colour* |
+    | **scroll_speed** | O *scroll_speed* afeta a velocidade a que o texto corre no mostrador. POr definição é 0.1. Quanto maio o número, mais lenta será a velocidade |
+    | **text_colour** | O *text_colour* altera a cor do texto com valores RGB|
+    | **back_colour** | O *back_colour* altera a cor do fundo com valores RGB|
 
-    So this program would display the text `Astro Pi is awesome!!` more slowly, with the text in yellow **[255,255,0]** and the background in blue **[0,0,255]**:
+    Este programa mostra o texto `Astro Pi is awesome!!` mais lentamente, com o texto amarelo **[255,255,0]** e o fundo em azul **[0,0,255]**:
 
     ```python
     from sense_hat import SenseHat
@@ -64,7 +62,7 @@ You have probably already discovered that you can easily change the message to y
 
     <div><iframe src="https://trinket.io/embed/python/d62aa7f30a" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></div>
 
-    You could also make the message repeat using a while loop like this:
+    Podes fazer a mensagem repetir com um ciclo:
 
     ```python
     from sense_hat import SenseHat
@@ -77,17 +75,11 @@ You have probably already discovered that you can easily change the message to y
 
     <div><iframe src="https://trinket.io/embed/python/f833a60218" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></div>
 
-1. Click **File** -- **Save As**, give your program a name e.g. [`loop_text.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/loop_text.py), then press **F5** to run.
+1. Clica `File`->`Save As`, dá um nome ao teu programa [`loop_text.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/loop_text.py), e carrega `F5` para corre-lo.
 
-1. The LED matrix can also display a single character, rather than an entire message, using the `sense.show_letter` function which also has some optional **parameters**.
+1. A matriz de LED pode também mostrar uma letra apenas com a função `sense.show_letter`
 
-    | Parameter | Effect |
-    | --- | --- |
-    | **scroll_speed** | The *scroll_speed* parameter affects how quickly the text moves on the screen. The default value is 0.1. The bigger the number, the **slower** the speed |
-    | **text_colour** | The *text_colour* parameter alters the colour of the text and is specified as 3 values for Red, Green, Blue. Each value can be between 0 - 255, so [255,0,255] would be Red + Blue = Purple |
-    | **back_colour** | The *back_colour* parameter alters the colour of the background and is specified as 3 values for Red, Green, Blue. Each value can be between 0 - 255, so [255,0,255] would be Red + Blue = Purple |
-
-    So this program would display a single Red "J":
+    Experimenta:
 
     ```python
     from sense_hat import SenseHat
@@ -97,7 +89,7 @@ You have probably already discovered that you can easily change the message to y
     sense.show_letter("J",text_colour=[255, 0, 0])
     ```
 
-    And this program would add the **sleep function** to display letters separated by a brief pause:
+    Este programa mostra letras separadas por uma pausa, graças à função `sleep`:
 
     ```python
     from sense_hat import SenseHat
@@ -116,13 +108,13 @@ You have probably already discovered that you can easily change the message to y
     sense.clear()
     ```
 
-    Click **File** -- **Save As**, give your program a name eg [`omg.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/omg.py), then press **F5** to run.
+    Clica `File`->`Save As`, dá um nome ao teu programa [`omg.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/omg.py), e carrega `F5` para corre-lo.
 
 
     <div><iframe src="https://trinket.io/embed/python/ccb58a3d9d" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></div>
 
 
-    For added interest you could use a random number generator to choose a number between 0 and 255 for the colours:
+    Podes adicionar números aleatórios para escolher as cores, com números entre `0` e `255`:
 
     ```python
     from sense_hat import SenseHat
@@ -148,34 +140,26 @@ You have probably already discovered that you can easily change the message to y
     sense.clear()
     ```
 
-1. Click **File** -- **Save As**, give your program a name eg [`random_omg.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/random_omg.py), then press **F5** to run.
+1. Clica `File`->`Save As`, dá um nome ao teu programa [`random_omg.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/random_omg.py), e carrega `F5` para corre-lo.
 
-    In both these programs the `sense.clear()` method has been used at the end to clear the matrix.
+    Em âmbos os programas o método `sense.clear()` foi usado para limpar a matriz.
     
     <div><iframe src="https://trinket.io/embed/python/45b0f19b65" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></div>
 
+## Mostrar imagens
 
-### Ideas
+A matriz de imagens pode mostrar mais do que texto! Nós conseguimos controlar cada pixel individualmente para criar uma imagem. Há vários modos de conseguirmos isto.
 
- - Could you use the ideas used so far to tell a joke via the LED screen?
- - All the examples so far could be made shorter, while still achieving the same thing. Can you find ways to make these shorter and more efficient?
- - How would you choose a totally random colour, rather than just a random shade of a colour?
- - If your Sense HAT is connected to the internet you could use a Twitter library to make it display incoming tweets!
+1. A primeira abordagem é definir `pixeis` individualmente. Basta usar o método `sense.set_pixel()`.
 
-## Displaying images
-
-The LED matrix can display more than just text! We can control each LED individually to create an image. We can accomplish this in a couple of ways.
-
-1. The first approach is to set pixels (LEDs) individually; we can do this using the `sense.set_pixel()` method. First, we need to be clear about how we describe each pixel.
-
-    The Sense HAT uses a coordinate system like the one shown below; crucially the numbering begins at **0**, not 1. Also, the origin is in the **top left** rather than the bottom left as you may be used to.
+    O Sense HAT usa um sistema de coordenadas como o mostrado em baixo, começa em `0` e a origem é no topo esquerdo.
 
     ![Coordinates](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/images/coordinates.png)
 
-    - the blue pixel is at coordinates (0, 2)
-    - the red pixel is at coordinates (7, 4)
+    - O `pixel` azul está nas coordenadas (0, 2)
+    - O `pixel` vermelho está nas coordenadas (7, 4)
 
-    To replicate the above diagram you would enter a program like this:
+    Experimenta!
 
     ```python
     from sense_hat import SenseHat
@@ -188,7 +172,7 @@ The LED matrix can display more than just text! We can control each LED individu
 
     <div><iframe src="https://trinket.io/embed/python/9a4266d360" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></div>
 
-    Can you guess what the following code creates? Have a go at editing the code.
+    Consegues adivinhar o que o código seguinte faz? Edita-o e experimenta!
 
     ```python
     from sense_hat import SenseHat
@@ -205,19 +189,19 @@ The LED matrix can display more than just text! We can control each LED individu
     sense.set_pixel(5, 5, [255, 0, 0])
     ```
 
-1. Click **File** -- **Save As**, give your program a name e.g. [`simple_image.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/simple_image.py), then press **F5** to run.
+1. Clica `File`->`Save As`, dá um nome ao teu programa [`simple_image.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/simple_image.py), e carrega `F5` para corre-lo.
 
-1. Setting pixels individually can work brilliantly, but it gets rather complex when you want to set more pixels. There is another method which can set all the pixels in one go called `sense.set_pixels`. Its use is quite straightforward; we just give a list of colour values for each pixel in the matrix.
+1. Definir pixeis individualmente pode funcionar bastante bem, mas torna-se complexo se quiseres definir mais pixeis. Existe outro método para definir pixeis chamado `sense.set_pixels`. Basta dar-lhe uma cor para cada pixel da matriz.
 
-    We could enter something like...
+    Algo do género...
 
     ```python
     sense.set_pixels([[255, 0, 0], [255, 0, 0], [255, 0, 0], [255, 0, 0],......])
     ```
 
-    ...but this would take ages and be really complex.
+    ...mas isto iria demorar muito tempo.
 
-    Instead, you can use some variables to define your colour palette (in this example we're using the 7 colours of the rainbow):
+    Em vez disso podemos usar variáveis para definir as cores:
 
     ```python
     r = [255, 0, 0]
@@ -230,7 +214,7 @@ The LED matrix can display more than just text! We can control each LED individu
     e = [0, 0, 0]  # e stands for empty/black
     ```
 
-    We can then describe our matrix by creating a 2D list of colour names:
+    E podemos descrever a nossa matriz 2D com cores apenas:
 
     ```python
     image = [
@@ -245,7 +229,7 @@ The LED matrix can display more than just text! We can control each LED individu
     ]
     ```
 
-    We then give the `image` list to the `sense.set_pixels` method and draw the image. The finished program would look like this:
+    Depois, passamo a _imagem_ ao método `sense.set_pixels` e programa ficará alo do género:
 
     ```python
     from sense_hat import SenseHat
