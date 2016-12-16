@@ -263,7 +263,7 @@ A matriz de imagens pode mostrar mais do que texto! Nós conseguimos controlar c
 
 ### Ideias
 
-- Podes alternar entre imagens apra criar animaçõe? Vê este vídeo: {% youtube %}https://www.youtube.com/watch?v=b84EywkQ3HI{% endyoutube %} video for some inspiration.
+- Podes alternar entre imagens apra criar animaçõe? Vê este vídeo: {% youtube %}https://www.youtube.com/watch?v=b84EywkQ3HI{% endyoutube %}.
 
 ## Definir orientação
 
