@@ -110,13 +110,10 @@ sense.show_message("Olá Sense HAT!")
 
     Clica `File`->`Save As`, dá um nome ao teu programa [`omg.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/omg.py) e carrega `F5` para correr.
 
-
     <div><iframe src="https://trinket.io/embed/python/ccb58a3d9d" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></div>
 
-
     Podes adicionar números aleatórios para escolher as cores, com números entre `0` e `255`:
-
-    ```python
+```python
     from sense_hat import SenseHat
     from time import sleep
     from random import randint
