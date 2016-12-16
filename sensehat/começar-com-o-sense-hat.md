@@ -26,7 +26,7 @@ Duração da atividade: `90 minutos.`
 
 Abre o `Python 3` (Menu->Desenvolvimento->Python3) e cria um novo ficheiro (File->New File).
 
-Testa o programa seguinte para colocares texto a corres no mostrador do Sense HAT.
+Testa o programa seguinte para colocares texto a correr no mostrador do Sense HAT.
 
 ```python
 from sense_hat import SenseHat
@@ -208,7 +208,7 @@ A matriz de imagens pode mostrar mais do que texto! Nós conseguimos controlar c
     b = [0, 0, 255]
     i = [75, 0, 130]
     v = [159, 0, 255]
-    e = [0, 0, 0]  # e stands for empty/black
+    e = [0, 0, 0]  # vazio/preto
     ```
 
     E podemos descrever a nossa matriz 2D com cores apenas:
@@ -281,7 +281,8 @@ sense.set_rotation(180)
     from sense_hat import SenseHat
 
     sense = SenseHat()
-
+    
+    # Cores
     r = [255, 0, 0]
     o = [255, 127, 0]
     y = [255, 255, 0]
@@ -374,6 +375,52 @@ sense.set_rotation(180)
 1. 1. Clica `File`->`Save As`, dá um nome ao teu programa [`eyes.py`](code/eyes.py) e carrega `F5` para correr.
 
 <div><iframe src="https://trinket.io/embed/python/27b25ac047" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></div>
+
+### Desafio Mensagem de Natal
+
+Neste desafio vamos deixar uma mensagem de Natal na nossa árvore.
+
+<div><blockquote class="instagram-media" data-instgrm-version="7" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50.0% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div></div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/BNub8FfAvOW/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A photo posted by Raspberry Pi (@raspberrypifoundation)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2016-12-07T18:13:34+00:00">Dec 7, 2016 at 10:13am PST</time></p></div></blockquote>
+<script async defer src="//platform.instagram.com/en_US/embeds.js"></script></div>
+
+1. Abre o `Python 3` (Menu->Desenvolvimento->Python3) e cria um novo ficheiro (File->New File).
+
+1. Testa o programa seguinte para colocares texto a correr no mostrador do Sense HAT.
+
+ ```python
+ from sense_hat import SenseHat
+ from time import sleep
+
+ sense = SenseHat()
+
+ # A tua mensagem
+ sense.show_message("Feliz Natal!")
+ 
+ # Cores 
+ r = [255, 0, 0]
+ o = [255, 127, 0]
+ y = [255, 255, 0]
+ g = [0, 255, 0]
+ b = [0, 0, 255]
+ i = [75, 0, 130]
+ v = [159, 0, 255]
+ e = [0, 0, 0]
+
+ # Rodar o mostrador de acordo com a Rotação do Sense HAT
+ angles = [0, 90, 180, 270, 0, 90, 180, 270]
+ for r in angles:
+     sense.set_rotation(r)
+     sleep(0.5)
+     
+ sense.clear()    
+ ```
+
+
+
+
+
+
+
 
 ## Sentir o ambiente
 
