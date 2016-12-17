@@ -50,8 +50,8 @@ sense.show_message("Olá Sense HAT!")
  |text_colour | O text_colour altera a cor do texto com valores RGB |
  |back_colour | O back_colour altera a cor do fundo com valores RGB |
 
-    Este programa mostra o texto `Astro Pi is awesome!!` mais lentamente, com o texto amarelo **[255,255,0]** e o fundo em azul **[0,0,255]**:
-
+ Este programa mostra o texto `Astro Pi is awesome!!` mais lentamente, com o texto amarelo **[255,255,0]** e o fundo em azul **[0,0,255]**:
+    
     ```python
     from sense_hat import SenseHat
 
