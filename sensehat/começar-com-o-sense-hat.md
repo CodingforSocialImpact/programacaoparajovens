@@ -46,9 +46,9 @@ sense.show_message("Olá Sense HAT!")
     
     | Parâmetro | Efeito |
     |---|---|
-    | **scroll_speed** | O *scroll_speed* afeta a velocidade a que o texto corre no mostrador. Por definição é 0.1. Quanto maio o número, mais lenta será a velocidade |
-    | **text_colour** | O *text_colour* altera a cor do texto com valores RGB |
-    | **back_colour** | O *back_colour* altera a cor do fundo com valores RGB |
+    |scroll_speed | O scroll_speed afeta a velocidade a que o texto corre no mostrador. Por definição é 0.1. Quanto maio o número, mais lenta será a velocidade |
+    |text_colour | O text_colour altera a cor do texto com valores RGB |
+    | back_colour | O back_colour altera a cor do fundo com valores RGB |
     
     Este programa mostra o texto `Astro Pi is awesome!!` mais lentamente, com o texto amarelo **[255,255,0]** e o fundo em azul **[0,0,255]**:
 
