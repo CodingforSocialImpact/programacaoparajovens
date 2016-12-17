@@ -43,12 +43,11 @@ sense.show_message("Olá Sense HAT!")
 <div><iframe src="https://trinket.io/embed/python/308a373b5c" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></div>
 
 1. Podemos adicionar alguns parâmetros extra no comando `sense.show_message` para alterarem o comportamento da mensagem:
-    
-    | Parâmetro | Efeito |
-    |---|---|
-    |scroll_speed | O scroll_speed afeta a velocidade a que o texto corre no mostrador. Por definição é 0.1. Quanto maio o número, mais lenta será a velocidade |
-    |text_colour | O text_colour altera a cor do texto com valores RGB |
-    | back_colour | O back_colour altera a cor do fundo com valores RGB |
+
+ |Parâmetro |Efeito |
+|---|---|
+|scroll_speed | O scroll_speed afeta a velocidade a que o texto corre no mostrador. Por definição é 0.1. Quanto maio o número, mais lenta será a velocidade |
+|text_colour | O text_colour altera a cor do texto com valores RGB | |back_colour | O back_colour altera a cor do fundo com valores RGB |
     
     Este programa mostra o texto `Astro Pi is awesome!!` mais lentamente, com o texto amarelo **[255,255,0]** e o fundo em azul **[0,0,255]**:
 
