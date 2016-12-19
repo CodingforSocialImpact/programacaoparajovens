@@ -480,7 +480,7 @@ Podemos ler esta informação com 3 métodos simples:
 
 ## Detetar movimento
 
-O Sense HAT tem vários sensores que possibilitam a deteção de movimento como explicado [aqui](./sense-hat.md)
+O Sense HAT tem vários sensores que possibilitam a deteção de movimento como explicado [aqui](/sensehat/sense-hat.md).
 
 Podes descobrir a orientação do Sense HAT com `sense.get_orientation()`:
 
@@ -565,7 +565,6 @@ yaw = orientation['yaw']
 1. Clica `File`->`Save As`, dá um nome ao teu programa [`rotating_letter.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/reaction_game.pycode/rotating_letter.py) e carrega `F5` para correr.
 
  Neste programa estamos a usar um `if elseif elseif else` para testar as 4 posições possíveis.
-
 
 1. Se o RPi está apenas rodado podemos experenciar 1g de aceleração em qualquer direção se o abanar-mos, o sensor mediria mais do que 1g. Neste programa vamos introduzir a função `abs()`, que no dá o tamanho do valor e ignora se é positivo ou negativo, é importante dado que não queremos saber em que direção é abanado, apenas se foi, ou não, abanado.
 
