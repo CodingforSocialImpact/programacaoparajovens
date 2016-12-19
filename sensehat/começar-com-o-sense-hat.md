@@ -708,6 +708,8 @@ Clica `File`->`Save As`, dá um nome ao teu programa [`reaction_game.py`](https:
 
 Experimenta [ligar o Sense HAT ao Minecraft](/minecraft/o-mapa-do-minecraft-com-o-sense-hat.md)!
 
+Gostaste do Python e gostavas de saber mais? Consulta a [página de recursos](/recursos/recursos.md)!
+
 ---
 Referências: 
 * [Guetting Started with the Sense HAT](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/)
