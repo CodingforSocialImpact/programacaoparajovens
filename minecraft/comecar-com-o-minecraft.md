@@ -69,7 +69,7 @@ Podes escrever comandos diretamente na janela do Python ou criar um ficheiro par
 
 Se quiseres criar um ficheiro, vai a `File > New File` (Novo Ficheiro) e `File > Save` (Guardar). Guarda numa pasta à tua escolha.
 
-Começa por importar a libraria do Minecraft, o que irá criar uma ligação do Python ao jogo, podes testá-la com a mensagem Olá Mundo no ecrâ.
+Começa por importar a libraria do Minecraft, o que irá criar uma ligação do Python ao jogo, podes testá-la com a mensagem `Olá Mundo` no ecrâ.
 
 ```python
 from mcpi.minecraft import Minecraft
@@ -106,13 +106,12 @@ Nota que `getPos()` devolve a localização do jogador naquela altura e se mexer
 
 Podes também especificar uma localização para te teletransportares para ela.
 
-
 ```python
 x, y, z = mc.player.getPos()
 mc.player.setPos(x, y+100, z)
 ```
 
-Isto fará com que o joagador se teletransporte para 100 espaços no ar. O que significa que irás teletransportar-te para o meio do céu e começarás a cair para onde começaste.
+Isto fará com que o jogador se teletransporte para 100 espaços no ar. O que significa que irás teletransportar-te para o meio do céu e começarás a cair para onde começaste.
 
 Tenta teletransportar-te para outro local!
 
@@ -140,7 +139,6 @@ Dirt:  3
 ```
 
 Agora com o bloco em vista, tenta altera-lo para algo diferente:
-
 
 ```python
 mc.setBlock(x+1, y, z, 2)
@@ -247,14 +245,13 @@ while True:
     x, y, z = mc.player.getPos()
     mc.setBlock(x, y, z, flower)
     sleep(0.1)
-
 ```
 
 Agora caminha um pouco e vira-te para trás para veres as flores no teu caminho.
 
 ![](https://www.raspberrypi.org/learning/getting-started-with-minecraft-pi/images/mcpi-flowers.png)
 
-Como usamos um ciclo `while True` (enquanto Verdade) este ciclo nunca irá terminar. 
+Como usamos um ciclo `while True` (enquanto Verdadeiro) este ciclo nunca irá terminar. 
 
 Para o parar pressiona `CTRL + C`na janela do Python para interromper.
 
@@ -336,7 +333,6 @@ Agora podemos andar e se estivermos a pisar erva, deixamos uma flor. Se o próxi
 Outro bloco interessante é o TNT!
 Para criarmos um bloco de TNT usamos:
 
-
 ```python
 tnt = 46
 mc.setBlock(x, y, z, tnt)
@@ -389,7 +385,6 @@ Encontra o bloco que acabaste de criar e deverás ver lava a fluir do bloco para
 A parte interessante da lava é que quando arrefece torna-se pedra.
 Move-te para outra localização do mundo e experimenta o seguinte:
 
-
 ```python
 from mcpi.minecraft import Minecraft
 from time import sleep
@@ -415,9 +410,9 @@ Podes ajustar o `sleep` (esperar) para deixar mais, ou menos, lava fluir.
 
 ## E agora?
 
-Há muita coisa que podes explorar no Minecraft ainda por cima agora já sabes usar o Python para criares mais depressa!
+Há muita coisa que podes explorar no Minecraft ainda por cima agora já sabes usar o Python para criares os teus mundos mais depressa!
 
-Podes criar um jogo em rede com os teus colegas, de modo a poderem todos ver-se no mesmo mundo. Basta para isso ligarem todos os Raspberry Pis na mesma rede.
+Podes criar um jogo em rede com os teus colegas, de modo a poderem todos ver-se no mesmo mundo. Basta para isso que se liguem todos os Raspberry Pis na mesma rede.
 
 Para saberes mais sobre as opções de programação do Minecraft podes consultar [stuffaboutcode.com](http://www.stuffaboutcode.com/p/minecraft-api-reference.html).
 
