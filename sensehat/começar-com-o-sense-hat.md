@@ -593,7 +593,7 @@ yaw = orientation['yaw']
 
 ## Juntar tudo
 
-Podemos agora combinar todas estas ideias num só projeto, como por exemplo num jogo para testar os reflexos!
+Podemos agora combinar todas estas ideias num só projeto, como por exemplo num jogo para testarmos os nossos reflexos!
 
 Este jogo vai mostrar uma seta na matriz de LEDs e selecionar uma orientação aleatória. O jogador tem que rodar o Sense HAT para que corresponda à seta. Se corresponder a seta fica verde e a pontuação aumenta; Se não, a seta fica vermelha e termina o jogo e diz a pontuação. O jogo continua a mostrar setas e orientações até o jogador perder e em cada turno fica mais rápido.
 
