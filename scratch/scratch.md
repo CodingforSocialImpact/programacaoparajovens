@@ -21,3 +21,5 @@ Normalmente apresentam-se os seguintes conceitos nas atividades relacionadas com
 * mostrar/esconder elementos
 
 Descarrega aqui o guião para o [Scratch](https://docs.google.com/document/d/1clzD5LW0C8pvzM9sbRW5-1PzrYOPGpGlsa7r448uUJw/export?format=pdf).
+
+Podes usar também o [Scratch online](https://scratch.mit.edu/projects/editor/?tip_bar=home) para testar os teus projetos!
