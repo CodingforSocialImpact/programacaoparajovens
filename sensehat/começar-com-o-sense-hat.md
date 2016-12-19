@@ -226,7 +226,7 @@ A matriz de imagens pode mostrar mais do que texto! Nós conseguimos controlar c
     ]
     ```
 
-    Depois, passamo a _imagem_ ao método `sense.set_pixels` e programa ficará alo do género:
+    Depois, passamo a _imagem_ ao método `sense.set_pixels` e programa ficará parecido com o seguinte:
 
     ```python
     from sense_hat import SenseHat
@@ -707,7 +707,7 @@ Clica `File`->`Save As`, dá um nome ao teu programa [`reaction_game.py`](https:
 
 ## E agora?
 
-Experimenta ligar o Sense HAT ao Minecraft!
+Experimenta [ligar o Sense HAT ao Minecraft](/minecraft/o-mapa-do-minecraft-com-o-sense-hat.md)!
 
 ---
 Referências: 
