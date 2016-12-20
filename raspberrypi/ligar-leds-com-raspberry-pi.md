@@ -17,7 +17,7 @@ Duração da atividade: `90 minutos.`
 
 ## Material
 
-| Nome | Quantidade | Preço |
+| Nome | Quantidade | Preço/Unidade |
 | --- | --- | --- |
 |Raspberry Pi |1 |35€ |
 |Breadboard |1 |2,5€ |
