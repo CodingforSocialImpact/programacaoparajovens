@@ -11,6 +11,7 @@ Ao percorreres este desafio vais aprender:
 * Como controlar a matriz de LEDs
 * Como recolher informação dos sensores do Sense HAT
 * Como combinar pequenas ideias em projetos
+* Como usar as funções do Python
 
 Duração da atividade: `90 minutos.`
 
@@ -24,7 +25,7 @@ Duração da atividade: `90 minutos.`
 
 ## Mostrar texto
 
-Abre o `Python 3` (Menu->Desenvolvimento->Python3) e cria um novo ficheiro (File->New File).
+Abre o `Python 3` (Menu->Desenvolvimento->Python3) e cria um novo ficheiro (`File`->`New File`).
 
 Testa o programa seguinte para colocares texto a correr no mostrador do Sense HAT.
 
