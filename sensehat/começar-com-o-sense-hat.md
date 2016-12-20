@@ -60,10 +60,10 @@ sense.show_message("Olá Sense HAT!")
 
     sense.show_message("Astro Pi is awesome!!", scroll_speed=0.05, text_colour=[255,255,0], back_colour=[0,0,255])
     ```
+    
+ <div><iframe src="https://trinket.io/embed/python/d62aa7f30a" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></div>
 
-    <div><iframe src="https://trinket.io/embed/python/d62aa7f30a" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></div>
-
-    Podes fazer a mensagem repetir com um ciclo:
+ Podes fazer a mensagem repetir com um ciclo:
 
     ```python
     from sense_hat import SenseHat
@@ -73,14 +73,13 @@ sense.show_message("Olá Sense HAT!")
     while True:
         sense.show_message("Astro Pi is awesome!!", scroll_speed=0.05, text_colour=[255,255,0], back_colour=[0,0,255])
     ```
-
-    <div><iframe src="https://trinket.io/embed/python/f833a60218" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></div>
+ <div><iframe src="https://trinket.io/embed/python/f833a60218" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></div>
 
 1. Clica `File`->`Save As`, dá um nome ao teu programa [`loop_text.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/loop_text.py) e carrega `F5` para correr.
 
 1. A matriz de LED pode também mostrar uma letra apenas com a função `sense.show_letter`
 
-    Experimenta:
+ Experimenta:
 
     ```python
     from sense_hat import SenseHat
@@ -90,7 +89,7 @@ sense.show_message("Olá Sense HAT!")
     sense.show_letter("J",text_colour=[255, 0, 0])
     ```
 
-    Este programa mostra letras separadas por uma pausa, graças à função `sleep`:
+ Este programa mostra letras separadas por uma pausa, graças à função `sleep`:
 
     ```python
     from sense_hat import SenseHat
@@ -109,12 +108,13 @@ sense.show_message("Olá Sense HAT!")
     sense.clear()
     ```
 
-    Clica `File`->`Save As`, dá um nome ao teu programa [`omg.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/omg.py) e carrega `F5` para correr.
+ Clica `File`->`Save As`, dá um nome ao teu programa [`omg.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/omg.py) e carrega `F5` para correr.
 
-    <div><iframe src="https://trinket.io/embed/python/ccb58a3d9d" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></div>
+ <div><iframe src="https://trinket.io/embed/python/ccb58a3d9d" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></div>
 
-    Podes adicionar números aleatórios para escolher as cores, com números entre `0` e `255`:
-```python
+ Podes adicionar números aleatórios para escolher as cores, com números entre `0` e `255`:
+ 
+ ```python
     from sense_hat import SenseHat
     from time import sleep
     from random import randint
@@ -136,13 +136,13 @@ sense.show_message("Olá Sense HAT!")
     sense.show_letter("!", text_colour=[0, 0, 0], back_colour=[255, 255, 255])
     sleep(1)
     sense.clear()
-    ```
+```
 
 1. Clica `File`->`Save As`, dá um nome ao teu programa [`random_omg.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/random_omg.py) e carrega `F5` para correr.
 
-    Em âmbos os programas o método `sense.clear()` foi usado para limpar a matriz.
+ Em âmbos os programas o método `sense.clear()` foi usado para limpar a matriz.
     
-    <div><iframe src="https://trinket.io/embed/python/45b0f19b65" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></div>
+ <div><iframe src="https://trinket.io/embed/python/45b0f19b65" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></div>
 
 ## Mostrar imagens
 
