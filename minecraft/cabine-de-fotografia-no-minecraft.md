@@ -122,7 +122,7 @@ Como estamos a usar o Minecraft podemos usar também `mc.postToChat` para vermos
 ## Testar se estás na cabine de fotografias
 
 Neste ponto temos uma cabine, as coordenadas do bloco que desencadeia a ação, e código para controlar o módulo da câmara e tirar uma fotografia.  
-O próximo passo é testar se o programa consegue identificar quando estás na cabine. Para alcançares isto tens que criar um ciclo que verifica se as coordenadas do teu jogador correspondem às coordenadas do bloco que desencadeia a ação. Caso estas coincidam, então estás na cabine. Para fazeres isto basta um simples `if` (se), que nós chamamos um condicional.
+O próximo passo é testar se o programa consegue identificar quando estás na cabine. Para alcançares isto tens que criar um ciclo que verifica se as coordenadas do teu jogador correspondem às coordenadas do bloco que desencadeia a ação. Caso estas coincidam, então estás na cabine. Para fazeres isto basta um simples `if` (se), que nós chamamos uma instrução ***condicional***.
 
 1. Altera as linhas dentro teu ciclo `while` (enquanto) para que correspondam ao código em baixo.
 

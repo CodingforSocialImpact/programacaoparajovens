@@ -69,7 +69,7 @@ Podes escrever comandos diretamente na janela do Python ou criar um ficheiro par
 
 Se quiseres criar um ficheiro, vai a `File > New File` (Novo Ficheiro) e `File > Save` (Guardar). Guarda numa pasta à tua escolha.
 
-Começa por importar a libraria do Minecraft, o que irá criar uma ligação do Python ao jogo, podes testá-la com a mensagem `Olá Mundo` no ecrâ.
+Começa por importar a biblioteca do Minecraft, o que irá criar uma ligação do Python ao jogo, podes testá-la com a mensagem `Olá Mundo` no ecrâ.
 
 ```python
 from mcpi.minecraft import Minecraft
