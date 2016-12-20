@@ -9,7 +9,8 @@ O  Raspberry Pi pode ser ligado a componentes externos, tais como lâmpadas, se
 Ao percorreres este desafio vais aprender:
 
 * Os princípios básicos de eletrónica e montar um sistema eletrónico simples, com recurso a uma Breadboard, LEDs e resistências
-* A explorar como o RPi pode alimentar e controlar um sistema eletrónico externo com recurso aos pinos GPIO e a linha de comandos ( Shell) do RPi● Utilizar a linguagem de programação introdutória Scratch para controlar o sistema eletrónico
+* A explorar como o RPi pode alimentar e controlar um sistema eletrónico externo com recurso aos pinos GPIO e a linha de comandos ( Shell) do RPi
+* Utilizar a linguagem de programação introdutória Scratch para controlar o sistema eletrónico
 
 Duração da atividade: `90 minutos.`
 
@@ -23,9 +24,20 @@ Duração da atividade: `90 minutos.`
 |LED |5 |0,02€ |
 |Resistência 1KΩ |5 |0,05€ |
 
-## Obter os atributs do jogo
+## Montar o circuito
 
-Para este projeto, vais precisar de uma `sprite` e de um `background`. Podes descarregar um ficheiro com todos os atributos do jogo [aqui](https://www.raspberrypi.org/learning/scratch-olympics-weightlifter/images/scratch_olympics_weightlifter.zip).
+Agora que já sabes montar um circuito simples, que tal irmos mais além? Para o Jogo das Luzes vais ter que montar o seguinte circuito:
+
+![](/assets/images/jogo-leds.png)
+
+Ficam aqui o número dos pinos por disposição física.
+
+![](https://www.raspberrypi.org/learning/physical-computing-guide/images/physical-pin-numbers.png)
+
+![](/assets/images/jogo-leds.png)
+
+  
+    esquematizado na Figura 1. Lembra-te de verificar as posições corretas dos pinos do esquema de pinos
 
 Descomprime o ficheiro.
 
