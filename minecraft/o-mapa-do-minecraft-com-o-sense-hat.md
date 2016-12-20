@@ -421,7 +421,7 @@ De modo a reduzires a lentidão, vais usar uma tecnica chamada de caching. Isto 
     known_blocks = {}
     ```
 
-1. Vais precisar de aceder ao dicionário `known_blocks` na tua função `get_blocks`. O Python vai deixar-te ler a variável declarada fora da função, mas não te vai permitir escrever. De modo a poderes escrever, precisas de a tornar numa <i class="octicon octicon-book">**global**</i> dentro da função:
+1. Vais precisar de aceder ao dicionário `known_blocks` na tua função `get_blocks`. O Python vai deixar-te ler a variável declarada fora da função, mas não te vai permitir escrever. De modo a poderes escrever, precisas de a tornar numa <i class="octicon octicon-book">**global**</i>:
 
     ```python
     def get_blocks():
