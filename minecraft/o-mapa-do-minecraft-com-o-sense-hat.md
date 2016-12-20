@@ -185,7 +185,7 @@ Agora que já exploraste o mundo do Minecraft e viste os diferentes tipos de blo
 
     Deverás ver o código da cor do bloco que estás a pisar. Caminha para veres os diferentes códigos.
 
-1. Se caminhares num bloco que não se encontar no dicionário, vais ter uma mensagem de erro. Se ainda não te aconteceu isto salta no ar com a tecla de `ESPAÇO` e devrás ver:
+1. Se caminhares num bloco que não se encontar no dicionário, vais ter uma mensagem de erro. Se ainda não te aconteceu isto salta no ar com a tecla de `Espaço` e devrás ver:
 
     ![Dictionary KeyError](https://www.raspberrypi.org/learning/sense-hat-minecraft-map/images/dictionary-keyerror.png)
 
@@ -421,7 +421,7 @@ De modo a reduzires a lentidão, vais usar uma tecnica chamada de caching. Isto 
     known_blocks = {}
     ```
 
-1. Vais precisar de aceder ao dicionário `known_blocks` na tua função `get_blocks`. O Python vai deixar-te ler a variável declarada fora da função, mas não te vai permitir escrever. De modo a poderes escrever, precisas de a tornar numa **global** dentro da função:
+1. Vais precisar de aceder ao dicionário `known_blocks` na tua função `get_blocks`. O Python vai deixar-te ler a variável declarada fora da função, mas não te vai permitir escrever. De modo a poderes escrever, precisas de a tornar numa <i class="octicon octicon-book">**global**</i> dentro da função:
 
     ```python
     def get_blocks():
