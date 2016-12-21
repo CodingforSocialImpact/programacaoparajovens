@@ -75,25 +75,34 @@ Para isso vais usar as ações do ponto anterior.
 Quando se clica na tecla espaço, o jogo deverá parar.
 
 1. Insere um controlo que recebe a tecla `espaço`.
-1. Adiciona o bloco ‘ stop all’  que está no separador  Control.
+1. Adiciona o bloco `pare todos` que está no separador `Controlo`.
  
 ### Verificar se ganhou o jogo, ou não
 
-Para verificar se ganhámos o jogo, temos que verificar que após parar LED aceso é o 3o. Para isso é preciso fazer alterações nas ações piscar para definir o LED que estamos a acender.14.Cria a variável ‘LedAtual’:  Variables > ‘ make variable’15. Em cada uma das ações piscar (x1, x2, etc..) define a variável ‘LedAtual’ com o número do LED correspondente. Por exemplo, na ação do pin11, define ‘LedAtual’ como 11. Para isso, insere este a instrução seguinte antes do ‘ pinXXhigh’:Variables > ‘ set LedAtual to X’
+Para verificar se ganhámos o jogo, temos que verificar que após parar LED aceso é o 3º. 
+Para isso é preciso fazer alterações nas ações piscar para definir o LED que estamos a acender.
+
+1. Cria a variável ‘LedAtual’:  `Variáveis` -> `Criar uma variável`
+1. Em cada uma das ações piscar (x1, x2, etc..) define a variável ‘LedAtual’ com o número do LED correspondente. Por exemplo, na ação do pin11, define ‘LedAtual’ como 11. 
+1. Para isso, insere a instrução seguinte antes do `pinnXXhigh`: `Variáveis` > `mude LedAtual para X`
 
 ### Mostrar mensagem ‘Ganhou’ ou ‘Perdeu’
 
-Ao parar, se o LED for o correto deverá aparecer a mensagem ‘Ganhou’. Caso contrário deverá aparecer a mensagem ‘Perdeu’. Faz as mudanças no bloco que está a parar o jogo para que as mensagens apareçam (‘ When space key pressed’).16.Verificar se ‘LedAtual’ é igual a 13a. Control > ‘ if __ else __’b. Dentro do bloco ‘ if AQUI else __’, adicionar: Operators > ‘ _=_’17. Se for igual, ‘ if _ AQUI else’, mostra a mensagem ‘Ganhou’ erepita 5 vezes o seguinte:a. Execute a ação do LED 13 (anuncie e espere)b. Espere 1 segundo18. Se for diferente, ‘ if _ else AQUI’, mostra a mensagem ‘Perdeu’.
+Ao parar, se o LED for o correto deverá aparecer a mensagem `Ganhou`. Caso contrário, deverá aparecer a mensagem `Perdeu`. 
+Faz as mudanças no bloco que está a parar o jogo para que as mensagens apareçam (`quando a tecla espaço for pressionada`).
+
+1. Verificar se `LedAtual’ é igual a 13
+ 1. `Controlo` -> `se AQUI senão __`
+ 1. Dentro do bloco ‘se AQUI senão __`, adicionar: `Operadores` -> `_=_` 17. Se for igual,`se AQUI senão __`, mostra a mensagem `Ganhou` e repita 5 vezes o seguinte:
+  1. Execute a ação do LED 13 (anuncie e espere)
+  1. Espere 1 segundo
+  1. Se for diferente, `se senão AQUI`, mostra a mensagem `Perdeu`.
 
 ### Apagar os LED e terminar
 
-Como medida de segurança, ao parar o jogo, todos os LED devem ser desligados.19.Para cada um dos LED, execute (anuncie) a ação ‘ pinXXlow’ no bloco anterior.
+Como medida de segurança, ao parar o jogo, todos os LED devem ser desligados.
 
-### Adicionar um botão (opcional)
-
-Introduz um sensor de pressão (botão) para parar o jogo, em vez da tecla de espaço.20. Introduz a seguinte alteração ao teu circuito:
-
- No programa, adiciona um controlo que recebe a letra ‘G’ doteclado22. Define um ciclo (‘ forever’) e dentro dele:a. Verifica se valor do sensor, ‘pin26’ (‘ pin26 sensor value”) é igual a 0.b. Repete os passos 15 ao 17
+1. Para cada um dos LED, execute (anuncie) a ação `pinXXlow` no bloco anterior.
 
 ## E agora?
 
