@@ -91,7 +91,7 @@ Para isso é preciso fazer alterações nas ações piscar para definir o LED
 Ao parar, se o LED for o correto deverá aparecer a mensagem `Ganhou`. Caso contrário, deverá aparecer a mensagem `Perdeu`. 
 Faz as mudanças no bloco que está a parar o jogo para que as mensagens apareçam (`quando a tecla espaço for pressionada`).
 
-1. Verificar se `LedAtual’ é igual a 13
+1. Verificar se `LedAtual` é igual a `13`
  1. `Controlo` -> `se AQUI senão __`
  1. Dentro do bloco ‘se AQUI senão __`, adicionar: `Operadores` -> `_=_` 17. Se for igual,`se AQUI senão __`, mostra a mensagem `Ganhou` e repita 5 vezes o seguinte:
   1. Execute a ação do LED 13 (anuncie e espere)
