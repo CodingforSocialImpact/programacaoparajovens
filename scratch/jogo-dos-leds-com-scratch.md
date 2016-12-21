@@ -108,8 +108,6 @@ Como medida de segurança, ao parar o jogo, todos os LED devem ser desligados.
 
 Gostaste do Scratch e queres saber mais, podes descarregar aqui vários guiões com atividades em [Scratch](https://docs.google.com/document/d/1clzD5LW0C8pvzM9sbRW5-1PzrYOPGpGlsa7r448uUJw/export?format=pdf).
 
-
-
 Queres perceber o que se encontra por detrás de cada bloco que usaste?
 Pronto para usar uma linguagem de programação como os prós?
 
