@@ -3,7 +3,7 @@
 # Programação para Jovens
 ## _Versão em desenvolvimento!_
 
-Uma livro interativo do [Coding for Social Impact Labs](http://codingforsocialimpact.org) da [Faculdade de Engenharia da Universidade do Porto](http://fe.up.pt) para levar o ensino da programação a jovens do 12 aos 18 anos. Com o objetivo global de sensibilizar, promover e facilitar o ensino da programação.
+Um livro interativo do [Coding for Social Impact Labs](http://codingforsocialimpact.org) da [Faculdade de Engenharia da Universidade do Porto](http://fe.up.pt) para levar o ensino da programação a jovens do 12 aos 18 anos. Com o objetivo global de sensibilizar, promover e facilitar o ensino da programação.
 
 ## Contextualização
 
