@@ -1,6 +1,6 @@
 # Começar com o Sense HAT
 
-Com este desafio vais explorar o hardware do Sense HAT e a sua libraria de Python.
+Com este desafio vais explorar o hardware do Sense HAT e a sua biblioteca de Python.
 
 ![](https://www.raspberrypi.org/learning/resources/getting-started-with-the-sense-hat/cover.png)
 
