@@ -1,6 +1,6 @@
 # O mapa do Minecraft com o Sense HAT
 
-Usa o Sense HAT apra criares um mapa do mundo à volta do teu jogador no Minecraft.
+Usa o Sense HAT para criares um mapa do mundo à volta do teu jogador no Minecraft.
 
 ![](https://www.raspberrypi.org/learning/resources/sense-hat-minecraft-map/cover.png)
 
@@ -8,7 +8,7 @@ Usa o Sense HAT apra criares um mapa do mundo à volta do teu jogador no Minecra
 
 Ao percorreres este desafio vais aprender:
 
-* Como definir a cor de todos os pixeis do display do Sense HAT, através da libraria do Sense HAT para Python
+* Como definir a cor de todos os pixeis do display do Sense HAT, através da biblioteca do Sense HAT para Python
 * Como descobri os IDs dos blocos do mundo do Minecraft com a biblioteca `mcpi` do Python
 * Como é que as cores são criadas com valores RGB (Vermelho, Verde, Azul)
 * Como definir LEDs individuais no Sense HAT
