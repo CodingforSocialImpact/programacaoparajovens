@@ -9,7 +9,7 @@ Usa o Sense HAT apra criares um mapa do mundo à volta do teu jogador no Minecra
 Ao percorreres este desafio vais aprender:
 
 * Como definir a cor de todos os pixeis do display do Sense HAT, através da libraria do Sense HAT para Python
-* Como descobri os IDs dos blocos do mundo do Minecraft com a libraria `mcpi` do Python
+* Como descobri os IDs dos blocos do mundo do Minecraft com a biblioteca `mcpi` do Python
 * Como é que as cores são criadas com valores RGB (Vermelho, Verde, Azul)
 * Como definir LEDs individuais no Sense HAT
 * O uso apropriado de estruturas de dados em Python: túpulos e dicionários
