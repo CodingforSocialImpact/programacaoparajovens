@@ -202,14 +202,14 @@ A matriz de imagens pode mostrar mais do que texto! Nós conseguimos controlar c
     Em vez disso podemos usar variáveis para definir as cores:
 
     ```python
-    r = [255, 0, 0]
-    o = [255, 127, 0]
-    y = [255, 255, 0]
-    g = [0, 255, 0]
-    b = [0, 0, 255]
-    i = [75, 0, 130]
-    v = [159, 0, 255]
-    e = [0, 0, 0]  # vazio/preto
+r = [255, 0, 0]
+o = [255, 127, 0]
+y = [255, 255, 0]
+g = [0, 255, 0]
+b = [0, 0, 255]
+i = [75, 0, 130]
+v = [159, 0, 255]
+e = [0, 0, 0]  # vazio/preto
     ```
 
     E podemos descrever a nossa matriz 2D com cores apenas:
