@@ -115,27 +115,27 @@ sense.show_message("Olá Sense HAT!")
  Podes adicionar números aleatórios para escolher as cores, com números entre `0` e `255`:
  
  ```python
-    from sense_hat import SenseHat
-    from time import sleep
-    from random import randint
+ from sense_hat import SenseHat
+ from time import sleep
+ from random import randint
 
-    sense = SenseHat()
+ sense = SenseHat()
 
-    r = randint(0,255)
-    sense.show_letter("O", text_colour=[r, 0, 0])
-    sleep(1)
+ r = randint(0,255)
+ sense.show_letter("O", text_colour=[r, 0, 0])
+ sleep(1)
 
-    r = randint(0,255)
-    sense.show_letter("M", text_colour=[0, 0, r])
-    sleep(1)
+ r = randint(0,255)
+ sense.show_letter("M", text_colour=[0, 0, r])
+ sleep(1)
 
-    r = randint(0,255)
-    sense.show_letter("G", text_colour=[0, r, 0])
-    sleep(1)
+ r = randint(0,255)
+ sense.show_letter("G", text_colour=[0, r, 0])
+ sleep(1)
 
-    sense.show_letter("!", text_colour=[0, 0, 0], back_colour=[255, 255, 255])
-    sleep(1)
-    sense.clear()
+ sense.show_letter("!", text_colour=[0, 0, 0], back_colour=[255, 255, 255])
+ sleep(1)
+ sense.clear()
 ```
 
 1. Clica `File`->`Save As`, dá um nome ao teu programa [`random_omg.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/random_omg.py) e carrega `F5` para correr.
