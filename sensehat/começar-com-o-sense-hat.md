@@ -160,12 +160,12 @@ A matriz de imagens pode mostrar mais do que texto! Nós conseguimos controlar c
     Experimenta!
 
     ```python
-    from sense_hat import SenseHat
+from sense_hat import SenseHat
 
-    sense = SenseHat()
+sense = SenseHat()
 
-    sense.set_pixel(0, 2, [0, 0, 255])
-    sense.set_pixel(7, 4, [255, 0, 0])
+sense.set_pixel(0, 2, [0, 0, 255])
+sense.set_pixel(7, 4, [255, 0, 0])
     ```
 
     <div><iframe src="https://trinket.io/embed/python/9a4266d360" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe></div>
@@ -173,18 +173,18 @@ A matriz de imagens pode mostrar mais do que texto! Nós conseguimos controlar c
     Consegues adivinhar o que o código seguinte faz? Edita-o e experimenta!
 
     ```python
-    from sense_hat import SenseHat
+from sense_hat import SenseHat
 
-    sense = SenseHat()
+sense = SenseHat()
 
-    sense.set_pixel(2, 2, [0, 0, 255])
-    sense.set_pixel(4, 2, [0, 0, 255])
-    sense.set_pixel(3, 4, [100, 0, 0])
-    sense.set_pixel(1, 5, [255, 0, 0])
-    sense.set_pixel(2, 6, [255, 0, 0])
-    sense.set_pixel(3, 6, [255, 0, 0])
-    sense.set_pixel(4, 6, [255, 0, 0])
-    sense.set_pixel(5, 5, [255, 0, 0])
+sense.set_pixel(2, 2, [0, 0, 255])
+sense.set_pixel(4, 2, [0, 0, 255])
+sense.set_pixel(3, 4, [100, 0, 0])
+sense.set_pixel(1, 5, [255, 0, 0])
+sense.set_pixel(2, 6, [255, 0, 0])
+sense.set_pixel(3, 6, [255, 0, 0])
+sense.set_pixel(4, 6, [255, 0, 0])
+sense.set_pixel(5, 5, [255, 0, 0])                    
     ```
 
 1. Clica `File`->`Save As`, dá um nome ao teu programa [`simple_image.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/simple_image.py) e carrega `F5` para correr.
@@ -194,7 +194,7 @@ A matriz de imagens pode mostrar mais do que texto! Nós conseguimos controlar c
     Algo do género...
 
     ```python
-    sense.set_pixels([[255, 0, 0], [255, 0, 0], [255, 0, 0], [255, 0, 0],......])
+sense.set_pixels([[255, 0, 0], [255, 0, 0], [255, 0, 0], [255, 0, 0],......])
     ```
 
     ...mas isto iria demorar muito tempo.
@@ -215,25 +215,25 @@ e = [0, 0, 0]  # vazio/preto
     E podemos descrever a nossa matriz 2D com cores apenas:
 
     ```python
-    image = [
-    e,e,e,e,e,e,e,e,
-    e,e,e,r,r,e,e,e,
-    e,r,r,o,o,r,r,e,
-    r,o,o,y,y,o,o,r,
-    o,y,y,g,g,y,y,o,
-    y,g,g,b,b,g,g,y,
-    b,b,b,i,i,b,b,b,
-    b,i,i,v,v,i,i,b
-    ]
+image = [
+e,e,e,e,e,e,e,e,
+e,e,e,r,r,e,e,e,
+e,r,r,o,o,r,r,e,
+r,o,o,y,y,o,o,r,
+o,y,y,g,g,y,y,o,
+y,g,g,b,b,g,g,y,
+b,b,b,i,i,b,b,b,
+b,i,i,v,v,i,i,b
+]
     ```
 
     Depois, passamo a _imagem_ ao método `sense.set_pixels` e programa ficará parecido com o seguinte:
 
     ```python
     from sense_hat import SenseHat
-
+    
     sense = SenseHat()
-
+    
     r = [255,0,0]
     o = [255,127,0]
     y = [255,255,0]
@@ -242,7 +242,7 @@ e = [0, 0, 0]  # vazio/preto
     i = [75,0,130]
     v = [159,0,255]
     e = [0,0,0]
-
+    
     image = [
     e,e,e,e,e,e,e,e,
     e,e,e,r,r,e,e,e,
@@ -253,8 +253,8 @@ e = [0, 0, 0]  # vazio/preto
     b,b,b,i,i,b,b,b,
     b,i,i,v,v,i,i,b
     ]
-
-    sense.set_pixels(image)
+    
+    sense.set_pixels(image)            
     ```
     
 1. Clica `File`->`Save As`, dá um nome ao teu programa [`rainbow.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/rainbow.py) e carrega `F5` para correr.    
@@ -300,7 +300,7 @@ sense.set_rotation(180)
 
     ```python
     from sense_hat import SenseHat
-
+    
     sense = SenseHat()
     
     # Cores
@@ -312,7 +312,7 @@ sense.set_rotation(180)
     i = [75, 0, 130]
     v = [159, 0, 255]
     e = [0, 0, 0]
-
+    
     image = [
     e,e,e,e,e,e,e,e,
     e,e,e,r,r,e,e,e,
@@ -323,7 +323,7 @@ sense.set_rotation(180)
     b,b,b,i,i,b,b,b,
     b,i,i,v,v,i,i,b
     ]
-
+    
     sense.set_pixels(image)
     sense.set_rotation(180)
     ```
@@ -335,17 +335,16 @@ sense.set_rotation(180)
     ```python
     from sense_hat import SenseHat
     from time import sleep
-
+    
     sense = SenseHat()
-
+    
     sense.show_letter("J")
-
+    
     angles = [0, 90, 180, 270, 0, 90, 180, 270]
     for r in angles:
         sense.set_rotation(r)
-        sleep(0.5)
+        sleep(0.5)            
     ```
-
 
 1. Clica `File`->`Save As`, dá um nome ao teu programa [`spinning_j.py`](https://www.raspberrypi.org/learning/getting-started-with-the-sense-hat/code/spinning_j.py)e carrega `F5` para correr.
 
