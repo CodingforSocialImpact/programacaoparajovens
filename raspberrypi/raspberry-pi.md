@@ -17,20 +17,20 @@ Os principais componentes de um computador são os seguintes:
 
 ## Como funciona
 
-Tudo funciona à base de 0’s e 1’s. Por isso o computador está cheio de pequenos interruptores que deixam passar corrente, ou não – os transístores. Se houver corrente é um 1, se não houver é um 0.
+Tudo funciona à base de 0’s e 1’s. Por isso o computador está cheio de pequenos interruptores que deixam passar corrente, ou não – os transístores. Se houver corrente é 1, se não houver é 0.
 
 1. Os dados são armazenados no disco rígido
 2. O sistema operativo é carregado para a memória
 3. O processador efetua os cálculos necessários
 4. Pode haver necessidade de interagir com dispositivos externos, como ratos, teclados ou o monitor
-5. Se for preciso guardaros dados,estes passam da memória parao disco rígido, uma vez que a memória é volátil
+5. Se for preciso guardar os dados, estes passam da memória para o disco rígido, uma vez que a memória é volátil
 
-A memória principal tem tamanhos inferiores ao dos discos rígidos, porque é muito mais cara. Mas é necessária porque é extremamente mais rápida.
+A memória principal tem tamanhos inferiores ao dos discos rígidos, porque é muito mais cara. Mas é necessária porque é bastante mais rápida.
 
 ## E no Raspberry Pi?
 
 1. Microprocessador: idêntico aos que se encontram nos smartphones; pequeno, barato e consome pouca energia; possui controlador gráfico.
-2. RAM: 512 MB.
+2. RAM: (512 MB a 1GB).
 3. “Disco rígido”: um cartão SD ou micro SD
 4. Dispositivos de entrada + saída
  1. Alimentação
@@ -49,7 +49,7 @@ A memória principal tem tamanhos inferiores ao dos discos rígidos, porque e�
 </div>
 
 1. Insere o cartão de memória na  ranhura de cartões SD
-2. Liga o cabo de ligação à Internet à porta  Ethernet. Caso pretendas ligação via wireless, liga o adaptador wireless a uma das portas USB (O RPi 3 já possuí WIFI, logo não precisa de adaptador)
+2. Liga o cabo de ligação à Internet à porta  Ethernet. Caso pretendas ligação sem fios, liga o adaptador WIFI a uma das portas USB (O RPi 3 já possuí WIFI, logo não precisa de adaptador)
 3. Liga o cabo de alimentação à  entrada de alimentação MicroUSB
 4. Parabéns! O RPi vai agora arrancar!
 
